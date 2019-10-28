@@ -35,35 +35,34 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author  AO Industries, Inc.
  */
-public class HtmlEE extends Html {
+public class HtmlEE {
 
-	public static HtmlEE get(ServletContext servletContext, HttpServletRequest request, Writer out) {
-		return new HtmlEE(
+	// Make no instances
+	private HtmlEE() {}
+
+	public static Html get(ServletContext servletContext, HttpServletRequest request, Writer out) {
+		return new Html(
 			SerializationEE.get(servletContext, request),
 			DoctypeEE.get(servletContext, request),
 			out
 		);
 	}
 
-	public static HtmlEE get(HttpServletRequest request, Writer out) {
+	public static Html get(HttpServletRequest request, Writer out) {
 		return get(request.getServletContext(), request, out);
 	}
 
 	/**
 	 * Unwraps the given chain writer.
 	 */
-	public static HtmlEE get(ServletContext servletContext, HttpServletRequest request, ChainWriter out) {
+	public static Html get(ServletContext servletContext, HttpServletRequest request, ChainWriter out) {
 		return get(servletContext, request, out.getPrintWriter());
 	}
 
 	/**
 	 * Unwraps the given chain writer.
 	 */
-	public static HtmlEE get(HttpServletRequest request, ChainWriter out) {
+	public static Html get(HttpServletRequest request, ChainWriter out) {
 		return get(request.getServletContext(), request, out.getPrintWriter());
-	}
-
-	public HtmlEE(Serialization serialization, Doctype doctype, Writer out) {
-		super(serialization, doctype, out);
 	}
 }
