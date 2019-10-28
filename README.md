@@ -35,8 +35,8 @@ Fluent Java DSL for high-performance HTML generation in a Servlet environment.
 
 ## Features
 * TODO: Thread-local and lambdas to reduce "dot-chaining".
-** TODO: Interoperable with [SemanticCMS](https://github.com/aoindustries/semanticcms).
-** TODO: Interoperable with [AO Taglib](https://github.com/aoindustries/ao-taglib).
+    * TODO: Interoperable with [SemanticCMS](https://github.com/aoindustries/semanticcms).
+    * TODO: Interoperable with [AO Taglib](https://github.com/aoindustries/ao-taglib).
 
 ## Contact Us
 For questions or support, please [contact us](https://aoindustries.com/contact):
