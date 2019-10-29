@@ -23,9 +23,7 @@
 package com.aoindustries.html.servlet;
 
 import com.aoindustries.encoding.ChainWriter;
-import com.aoindustries.html.Doctype;
 import com.aoindustries.html.Html;
-import com.aoindustries.html.Serialization;
 import java.io.Writer;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -55,6 +53,7 @@ public class HtmlEE {
 	/**
 	 * Unwraps the given chain writer.
 	 */
+	// TODO: Get rid of these, and the dependency on ao-encoding, once we're no longer so ChainWriter-focused
 	public static Html get(ServletContext servletContext, HttpServletRequest request, ChainWriter out) {
 		return get(servletContext, request, out.getPrintWriter());
 	}
@@ -62,6 +61,7 @@ public class HtmlEE {
 	/**
 	 * Unwraps the given chain writer.
 	 */
+	// TODO: Get rid of these, and the dependency on ao-encoding, once we're no longer so ChainWriter-focused
 	public static Html get(HttpServletRequest request, ChainWriter out) {
 		return get(request.getServletContext(), request, out.getPrintWriter());
 	}
