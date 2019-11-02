@@ -43,7 +43,7 @@ public class DoctypeEE {
 
 	/**
 	 * Determines the default doctype by first checking for {@linkplain ServletContext#getInitParameter(java.lang.String) context-param}
-	 * of {@link #DEFAULT_INIT_PARAM}, the using {@link #HTML5} when unspecified or "default".
+	 * of {@link #DEFAULT_INIT_PARAM}, the using {@link Doctype#HTML5} when unspecified or "default".
 	 */
 	public static Doctype getDefault(ServletContext servletContext) {
 		String initParam = servletContext.getInitParameter(DEFAULT_INIT_PARAM);

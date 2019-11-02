@@ -68,7 +68,6 @@ public class SerializationEE {
 
 	/**
 	 * @see #getDefault(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest)
-	 * @return 
 	 */
 	public static Serialization getDefault(HttpServletRequest request) {
 		return getDefault(request.getServletContext(), request);
