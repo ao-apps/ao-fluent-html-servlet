@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
-Copyright (C) 2019  AO Industries, Inc.
+Copyright (C) 2019, 2020  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -36,6 +36,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2019-10-28T07:26:00-0500"
+		dateModified="2020-02-13T12:46:19-0600"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.aoindustries:ao-fluent-html-servlet:pom.version}" />
@@ -53,32 +54,6 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			>
 				<ul>
 					<li>New project for fluent Java DSL for high-performance HTML generation in a Servlet environment.</li>
-					<li>
-						New <ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/ServletContext.html#getInitParameter(java.lang.String)">context-param</ao:a>
-						<code>com.aoindustries.html.Serialization.default</code>
-						that allows an application to control the selection of HTML versus XHTML.
-						Supports three values:
-						<ul>
-							<li><code>SGML</code> - Use HTML always</li>
-							<li><code>XML</code> - Use XHTML always</li>
-							<li><code>auto</code> - (default) - Automatically choose based on the client's <code>Accept</code> header</li>
-						</ul>
-					</li>
-					<li>
-						New methods <code>Serialization.set(…)</code> and <code>Serialization.get(…)</code> that allow
-						the registration of the serialization in effect on the request.
-					</li>
-					<li>
-						New method <code>Doctype.getDefault(…)</code> that provides the default
-						doctype for an application.  First checks
-						<ao:a rel="nofollow" href="@{javac.link.javaeeApi.6}javax/servlet/ServletContext.html#getInitParameter(java.lang.String)">context-param</ao:a>
-						<code>com.aoindustries.html.Doctype.default</code>,
-						then defaults to "HTML5" when not present, empty, or "default".
-					</li>
-					<li>
-						New methods <code>Doctype.set(…)</code> and <code>Doctype.get(…)</code> that allow
-						the registration of the doctype in effect on the request.
-					</li>
 				</ul>
 			</changelog:release>
 		</c:if>
