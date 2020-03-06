@@ -35,7 +35,7 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author  AO Industries, Inc.
  */
-public class HtmlEE {
+final public class HtmlEE {
 
 	// Make no instances
 	private HtmlEE() {}
