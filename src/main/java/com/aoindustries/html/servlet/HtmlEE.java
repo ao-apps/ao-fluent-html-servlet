@@ -22,11 +22,7 @@
  */
 package com.aoindustries.html.servlet;
 
-import com.aoindustries.encoding.Doctype;
-import com.aoindustries.encoding.Serialization;
-import com.aoindustries.encoding.servlet.DoctypeEE;
 import com.aoindustries.encoding.servlet.EncodingContextEE;
-import com.aoindustries.encoding.servlet.SerializationEE;
 import com.aoindustries.html.Html;
 import java.io.IOException;
 import java.io.Writer;
@@ -47,24 +43,8 @@ final public class HtmlEE {
 	private HtmlEE() {}
 
 	public static Html get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
-		Serialization serialization = SerializationEE.get(servletContext, request);
-		Doctype doctype = DoctypeEE.get(servletContext, request);
 		return new Html(
-			// TODO: Should we continue to override this context to be fixed values, as we are doing here?
-			// TODO: Seems that context changing with Html not changing would be reasonable?
-			// TODO: Or don't store serialization at all?  This, however, would incur more lookups and what would happen if changing output mid-page?
-			new EncodingContextEE(servletContext, request, response) {
-				@Override
-				public Serialization getSerialization() {
-					return serialization;
-				}
-				@Override
-				public Doctype getDoctype() {
-					return doctype;
-				}
-			},
-			serialization,
-			doctype,
+			new EncodingContextEE(servletContext, request, response),
 			out
 		);
 	}
