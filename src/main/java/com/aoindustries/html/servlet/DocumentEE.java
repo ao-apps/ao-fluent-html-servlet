@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -23,7 +23,7 @@
 package com.aoindustries.html.servlet;
 
 import com.aoindustries.encoding.servlet.EncodingContextEE;
-import com.aoindustries.html.Html;
+import com.aoindustries.html.Document;
 import java.io.IOException;
 import java.io.Writer;
 import javax.servlet.ServletContext;
@@ -37,13 +37,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author  AO Industries, Inc.
  */
-final public class HtmlEE {
+final public class DocumentEE {
 
 	// Make no instances
-	private HtmlEE() {}
+	private DocumentEE() {}
 
-	public static Html get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
-		return new Html(
+	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
+		return new Document(
 			new EncodingContextEE(servletContext, request, response),
 			out
 		);
@@ -52,11 +52,11 @@ final public class HtmlEE {
 	/**
 	 * @see  ServletResponse#getWriter()
 	 */
-	public static Html get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		return get(servletContext, request, response, response.getWriter());
 	}
 
-	public static Html get(HttpServletRequest request, HttpServletResponse response, Writer out) {
+	public static Document get(HttpServletRequest request, HttpServletResponse response, Writer out) {
 		return get(request.getServletContext(), request, response, out);
 	}
 
@@ -64,7 +64,7 @@ final public class HtmlEE {
 	 * @see  ServletRequest#getServletContext()
 	 * @see  ServletResponse#getWriter()
 	 */
-	public static Html get(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public static Document get(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		return get(request.getServletContext(), request, response, response.getWriter());
 	}
 }
