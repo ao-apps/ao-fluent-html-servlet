@@ -118,6 +118,13 @@ final public class DocumentEE {
 		return indent;
 	}
 
+	// TODO: Track Document that is current on the request (maybe in a Stack)
+	//       Default new Document to settings and indentation depth of the last Document.
+	//           Use default settings when no existing document, unless settings specified by caller then use them.
+	//       Possibly re-use the existing Document when has the same out object - but this might cause unexpected interaction (nested code changing configuration affecting outer)
+	//       Caller would then need to release the Document, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves)
+	//       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
+	//           Sub-requests include semanticcms-core-servlet:capturePage along with aoweb-framework searches
 	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out, boolean indent) {
 		return new Document(
 			new EncodingContextEE(servletContext, request, response),
