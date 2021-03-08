@@ -42,6 +42,85 @@ final public class DocumentEE {
 	// Make no instances
 	private DocumentEE() {}
 
+	// <editor-fold desc="Automatic Newline and Indentation">
+	/**
+	 * Context init parameter that may be used to configure the default document autonli within an application.
+	 * Must be one of "true", "false", or "auto" (the default).
+	 */
+	public static final String AUTONLI_INIT_PARAM = Document.class.getName() + ".autonli";
+
+	/**
+	 * Determines the default document autonli by first checking for {@linkplain ServletContext#getInitParameter(java.lang.String) context-param}
+	 * of {@link #AUTONLI_INIT_PARAM}, then using {@code false} when unspecified or "auto".
+	 */
+	public static boolean getDefaultAutonli(ServletContext servletContext) {
+		String initParam = servletContext.getInitParameter(AUTONLI_INIT_PARAM);
+		if(initParam != null) {
+			initParam = initParam.trim();
+			if(!initParam.isEmpty()) {
+				if("true".equalsIgnoreCase(initParam)) {
+					return true;
+				} else if("false".equalsIgnoreCase(initParam)) {
+					return false;
+				} else if(!"auto".equalsIgnoreCase(initParam)) {
+					throw new IllegalArgumentException("Unexpected value for " + AUTONLI_INIT_PARAM + ": Must be one of \"true\", \"false\", or \"auto\": " + initParam);
+				}
+			}
+		}
+		return false;
+	}
+
+	private static final String AUTONLI_REQUEST_ATTRIBUTE = AUTONLI_INIT_PARAM;
+
+	/**
+	 * Registers the document autonli in effect for the request.
+	 * <p>
+	 * This does not change existing instances of {@link Document};
+	 * it only affects the configuration of new instances.
+	 * </p>
+	 */
+	public static void setAutonli(ServletRequest request, Boolean autonli) {
+		request.setAttribute(AUTONLI_REQUEST_ATTRIBUTE, autonli);
+	}
+
+	/**
+	 * Replaces the document autonli in effect for the request.
+	 * <p>
+	 * This does not change existing instances of {@link Document};
+	 * it only affects the configuration of new instances.
+	 * </p>
+	 *
+	 * @return  The previous attribute value, if any
+	 */
+	public static Boolean replaceAutonli(ServletRequest request, Boolean autonli) {
+		Boolean old = (Boolean)request.getAttribute(AUTONLI_REQUEST_ATTRIBUTE);
+		request.setAttribute(AUTONLI_REQUEST_ATTRIBUTE, autonli);
+		return old;
+	}
+
+	/**
+	 * Gets the document autonli in effect for the request, or {@linkplain #getDefaultAutonli(javax.servlet.ServletContext) the default}
+	 * when not yet {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) set}.
+	 * <p>
+	 * Once the default is resolved,
+	 * {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.
+	 * </p>
+	 * <p>
+	 * This does not change existing instances of {@link Document};
+	 * it only affects the configuration of new instances.
+	 * </p>
+	 */
+	public static boolean getAutonli(ServletContext servletContext, ServletRequest request) {
+		Boolean autonli = (Boolean)request.getAttribute(AUTONLI_REQUEST_ATTRIBUTE);
+		if(autonli == null) {
+			autonli = getDefaultAutonli(servletContext);
+			request.setAttribute(AUTONLI_REQUEST_ATTRIBUTE, autonli);
+		}
+		return autonli;
+	}
+	// </editor-fold>
+
+	// <editor-fold desc="Indentation">
 	/**
 	 * Context init parameter that may be used to configure the default document indent within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
@@ -117,6 +196,7 @@ final public class DocumentEE {
 		}
 		return indent;
 	}
+	// </editor-fold>
 
 	// TODO: Track Document that is current on the request (maybe in a Stack)
 	//       Default new Document to settings and indentation depth of the last Document.
@@ -125,22 +205,29 @@ final public class DocumentEE {
 	//       Caller would then need to release the Document, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves)
 	//       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
 	//           Sub-requests include semanticcms-core-servlet:capturePage along with aoweb-framework searches
-	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out, boolean indent) {
+	public static Document get(
+		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out,
+		boolean autonli, boolean indent
+	) {
 		return new Document(
 			new EncodingContextEE(servletContext, request, response),
 			out
-		).setIndent(indent);
+		).setAutonli(autonli)
+		.setIndent(indent);
 	}
 
 	/**
-	 * Uses the {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+	 * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+	 * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
 	 *
+	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean)
+	 * @see  #get(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
 	 */
 	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
 		return get(
 			servletContext, request, response, out,
+			getAutonli(servletContext, request),
 			getIndent(servletContext, request)
 		);
 	}
@@ -148,32 +235,43 @@ final public class DocumentEE {
 	/**
 	 * @see  ServletResponse#getWriter()
 	 */
-	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, boolean indent) throws IOException {
-		return get(servletContext, request, response, response.getWriter(), indent);
+	public static Document get(
+		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
+		boolean autonli, boolean indent
+	) throws IOException {
+		return get(servletContext, request, response, response.getWriter(), autonli, indent);
 	}
 
 	/**
-	 * Uses the {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+	 * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+	 * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
 	 *
+	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean)
+	 * @see  #get(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
 	 */
 	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		return get(
 			servletContext, request, response,
+			getAutonli(servletContext, request),
 			getIndent(servletContext, request)
 		);
 	}
 
-	public static Document get(HttpServletRequest request, HttpServletResponse response, Writer out, boolean indent) {
-		return get(request.getServletContext(), request, response, out, indent);
+	public static Document get(
+		HttpServletRequest request, HttpServletResponse response, Writer out,
+		boolean autonli, boolean indent
+	) {
+		return get(request.getServletContext(), request, response, out, autonli, indent);
 	}
 
 	/**
-	 * Uses the {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+	 * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+	 * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
 	 *
+	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean)
+	 * @see  #get(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
 	 */
 	public static Document get(HttpServletRequest request, HttpServletResponse response, Writer out) {
 		return get(request.getServletContext(), request, response, out);
@@ -183,15 +281,20 @@ final public class DocumentEE {
 	 * @see  ServletRequest#getServletContext()
 	 * @see  ServletResponse#getWriter()
 	 */
-	public static Document get(HttpServletRequest request, HttpServletResponse response, boolean indent) throws IOException {
-		return get(request.getServletContext(), request, response, response.getWriter(), indent);
+	public static Document get(
+		HttpServletRequest request, HttpServletResponse response,
+		boolean autonli, boolean indent
+	) throws IOException {
+		return get(request.getServletContext(), request, response, response.getWriter(), autonli, indent);
 	}
 
 	/**
-	 * Uses the {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+	 * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+	 * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
 	 *
+	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean)
+	 * @see  #get(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
 	 */
 	public static Document get(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		return get(request.getServletContext(), request, response, response.getWriter());
