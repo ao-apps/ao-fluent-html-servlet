@@ -23,6 +23,7 @@
 package com.aoindustries.html.servlet;
 
 import com.aoindustries.encoding.servlet.EncodingContextEE;
+import com.aoindustries.html.AnyDocument;
 import com.aoindustries.html.Document;
 import java.io.IOException;
 import java.io.Writer;
@@ -37,10 +38,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author  AO Industries, Inc.
  */
-final public class DocumentEE {
-
-	// Make no instances
-	private DocumentEE() {}
+public class DocumentEE extends AnyDocument<DocumentEE> {
 
 	// <editor-fold desc="Automatic Newline and Indentation">
 	/**
@@ -75,7 +73,7 @@ final public class DocumentEE {
 	/**
 	 * Registers the document autonli in effect for the request.
 	 * <p>
-	 * This does not change existing instances of {@link Document};
+	 * This does not change existing instances of {@link DocumentEE};
 	 * it only affects the configuration of new instances.
 	 * </p>
 	 */
@@ -86,7 +84,7 @@ final public class DocumentEE {
 	/**
 	 * Replaces the document autonli in effect for the request.
 	 * <p>
-	 * This does not change existing instances of {@link Document};
+	 * This does not change existing instances of {@link DocumentEE};
 	 * it only affects the configuration of new instances.
 	 * </p>
 	 *
@@ -106,7 +104,7 @@ final public class DocumentEE {
 	 * {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.
 	 * </p>
 	 * <p>
-	 * This does not change existing instances of {@link Document};
+	 * This does not change existing instances of {@link DocumentEE};
 	 * it only affects the configuration of new instances.
 	 * </p>
 	 */
@@ -153,7 +151,7 @@ final public class DocumentEE {
 	/**
 	 * Registers the document indent in effect for the request.
 	 * <p>
-	 * This does not change existing instances of {@link Document};
+	 * This does not change existing instances of {@link DocumentEE};
 	 * it only affects the configuration of new instances.
 	 * </p>
 	 */
@@ -164,7 +162,7 @@ final public class DocumentEE {
 	/**
 	 * Replaces the document indent in effect for the request.
 	 * <p>
-	 * This does not change existing instances of {@link Document};
+	 * This does not change existing instances of {@link DocumentEE};
 	 * it only affects the configuration of new instances.
 	 * </p>
 	 *
@@ -184,7 +182,7 @@ final public class DocumentEE {
 	 * {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.
 	 * </p>
 	 * <p>
-	 * This does not change existing instances of {@link Document};
+	 * This does not change existing instances of {@link DocumentEE};
 	 * it only affects the configuration of new instances.
 	 * </p>
 	 */
@@ -198,22 +196,40 @@ final public class DocumentEE {
 	}
 	// </editor-fold>
 
-	// TODO: Track Document that is current on the request (maybe in a Stack)
-	//       Default new Document to settings and indentation depth of the last Document.
+	private final HttpServletResponse response;
+
+	// TODO: Track DocumentEE that is current on the request (maybe in a Stack)
+	//       Default new DocumentEE to settings and indentation depth of the last DocumentEE.
 	//           Use default settings when no existing document, unless settings specified by caller then use them.
-	//       Possibly re-use the existing Document when has the same out object - but this might cause unexpected interaction (nested code changing configuration affecting outer)
-	//       Caller would then need to release the Document, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves)
+	//       Possibly re-use the existing DocumentEE when has the same out object - but this might cause unexpected interaction (nested code changing configuration affecting outer)
+	//       Caller would then need to release the DocumentEE, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves) - implements AutoCloseable for this?
 	//       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
-	//           Sub-requests include semanticcms-core-servlet:capturePage along with aoweb-framework searches
-	public static Document get(
+	//           Sub-requests include semanticcms-core-servlet:capturePage along with aoweb-framework searches.
+	public DocumentEE(
+		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
+		EncodingContextEE encodingContext,
+		Writer out,
+		boolean autonli, boolean indent
+	) {
+		super(
+			encodingContext,
+			out
+		);
+		this.response = response;
+		setAutonli(autonli);
+		setIndent(indent);
+	}
+
+	public DocumentEE(
 		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out,
 		boolean autonli, boolean indent
 	) {
-		return new Document(
+		this(
+			servletContext, request, response,
 			new EncodingContextEE(servletContext, request, response),
-			out
-		).setAutonli(autonli)
-		.setIndent(indent);
+			out,
+			autonli, indent
+		);
 	}
 
 	/**
@@ -222,10 +238,10 @@ final public class DocumentEE {
 	 *
 	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
+	 * @see  #DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
 	 */
-	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
-		return get(
+	public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
+		this(
 			servletContext, request, response, out,
 			getAutonli(servletContext, request),
 			getIndent(servletContext, request)
@@ -235,11 +251,11 @@ final public class DocumentEE {
 	/**
 	 * @see  ServletResponse#getWriter()
 	 */
-	public static Document get(
+	public DocumentEE(
 		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
 		boolean autonli, boolean indent
 	) throws IOException {
-		return get(servletContext, request, response, response.getWriter(), autonli, indent);
+		this(servletContext, request, response, response.getWriter(), autonli, indent);
 	}
 
 	/**
@@ -248,21 +264,21 @@ final public class DocumentEE {
 	 *
 	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
+	 * @see  #DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
 	 */
-	public static Document get(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
-		return get(
+	public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		this(
 			servletContext, request, response,
 			getAutonli(servletContext, request),
 			getIndent(servletContext, request)
 		);
 	}
 
-	public static Document get(
+	public DocumentEE(
 		HttpServletRequest request, HttpServletResponse response, Writer out,
 		boolean autonli, boolean indent
 	) {
-		return get(request.getServletContext(), request, response, out, autonli, indent);
+		this(request.getServletContext(), request, response, out, autonli, indent);
 	}
 
 	/**
@@ -271,21 +287,21 @@ final public class DocumentEE {
 	 *
 	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
+	 * @see  #DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
 	 */
-	public static Document get(HttpServletRequest request, HttpServletResponse response, Writer out) {
-		return get(request.getServletContext(), request, response, out);
+	public DocumentEE(HttpServletRequest request, HttpServletResponse response, Writer out) {
+		this(request.getServletContext(), request, response, out);
 	}
 
 	/**
 	 * @see  ServletRequest#getServletContext()
 	 * @see  ServletResponse#getWriter()
 	 */
-	public static Document get(
+	public DocumentEE(
 		HttpServletRequest request, HttpServletResponse response,
 		boolean autonli, boolean indent
 	) throws IOException {
-		return get(request.getServletContext(), request, response, response.getWriter(), autonli, indent);
+		this(request.getServletContext(), request, response, response.getWriter(), autonli, indent);
 	}
 
 	/**
@@ -294,9 +310,21 @@ final public class DocumentEE {
 	 *
 	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-	 * @see  #get(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
+	 * @see  #DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
 	 */
-	public static Document get(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		return get(request.getServletContext(), request, response, response.getWriter());
+	public DocumentEE(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		this(request.getServletContext(), request, response, response.getWriter());
 	}
+
+	// <editor-fold desc="Versions of methods that benefit from servlet API state">
+	/**
+	 * Writes the XML declaration, if needed, using the character encoding of the current response.
+	 *
+	 * @see  ServletResponse#getCharacterEncoding()
+	 * @see  #xmlDeclaration(java.lang.String)
+	 */
+	public DocumentEE xmlDeclaration() throws IOException {
+		return xmlDeclaration(response.getCharacterEncoding());
+	}
+	// </editor-fold>
 }
