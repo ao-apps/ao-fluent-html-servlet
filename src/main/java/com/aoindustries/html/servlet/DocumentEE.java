@@ -23,8 +23,8 @@
 package com.aoindustries.html.servlet;
 
 import com.aoindustries.encoding.servlet.EncodingContextEE;
-import com.aoindustries.html.AnyDocument;
 import com.aoindustries.html.Document;
+import com.aoindustries.html.servlet.any.AnyDocumentEE;
 import java.io.IOException;
 import java.io.Writer;
 import javax.servlet.ServletContext;
@@ -38,9 +38,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author  AO Industries, Inc.
  */
-public class DocumentEE extends AnyDocument<DocumentEE> {
+public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
 
 	// <editor-fold desc="Automatic Newline and Indentation">
+	// TODO: Configure at AnyDocumentEE level?
 	/**
 	 * Context init parameter that may be used to configure the default document autonli within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
@@ -119,6 +120,7 @@ public class DocumentEE extends AnyDocument<DocumentEE> {
 	// </editor-fold>
 
 	// <editor-fold desc="Indentation">
+	// TODO: Configure at AnyDocumentEE level?
 	/**
 	 * Context init parameter that may be used to configure the default document indent within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
@@ -196,8 +198,6 @@ public class DocumentEE extends AnyDocument<DocumentEE> {
 	}
 	// </editor-fold>
 
-	private final HttpServletResponse response;
-
 	// TODO: Track DocumentEE that is current on the request (maybe in a Stack)
 	//       Default new DocumentEE to settings and indentation depth of the last DocumentEE.
 	//           Use default settings when no existing document, unless settings specified by caller then use them.
@@ -205,6 +205,7 @@ public class DocumentEE extends AnyDocument<DocumentEE> {
 	//       Caller would then need to release the DocumentEE, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves) - implements AutoCloseable for this?
 	//       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
 	//           Sub-requests include semanticcms-core-servlet:capturePage along with aoweb-framework searches.
+	//       Track at AnyDocumentEE level?
 	public DocumentEE(
 		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
 		EncodingContextEE encodingContext,
@@ -212,10 +213,10 @@ public class DocumentEE extends AnyDocument<DocumentEE> {
 		boolean autonli, boolean indent
 	) {
 		super(
+			servletContext, request, response,
 			encodingContext,
 			out
 		);
-		this.response = response;
 		setAutonli(autonli);
 		setIndent(indent);
 	}
@@ -315,16 +316,4 @@ public class DocumentEE extends AnyDocument<DocumentEE> {
 	public DocumentEE(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		this(request.getServletContext(), request, response, response.getWriter());
 	}
-
-	// <editor-fold desc="Versions of methods that benefit from servlet API state">
-	/**
-	 * Writes the XML declaration, if needed, using the character encoding of the current response.
-	 *
-	 * @see  ServletResponse#getCharacterEncoding()
-	 * @see  #xmlDeclaration(java.lang.String)
-	 */
-	public DocumentEE xmlDeclaration() throws IOException {
-		return xmlDeclaration(response.getCharacterEncoding());
-	}
-	// </editor-fold>
 }
