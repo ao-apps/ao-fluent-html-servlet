@@ -29,7 +29,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 		<relativePath>../ao-oss-parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-servlet</artifactId><version>0.2.0-SNAPSHOT</version>
+	<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-servlet</artifactId><version>0.4.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 
 	<properties>
@@ -117,9 +117,9 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-encoding-servlet</outputDirectory>
 										</artifactItem>
 										<artifactItem>
-											<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><classifier>javadoc</classifier>
+											<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
-											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-fluent-html</outputDirectory>
+											<outputDirectory>${project.build.directory}/offlineLinks/com.aoindustries/ao-fluent-html-any</outputDirectory>
 										</artifactItem>
 										<artifactItem>
 											<groupId>com.aoindustries</groupId><artifactId>ao-lang</artifactId><classifier>javadoc</classifier>
@@ -128,7 +128,8 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 										</artifactItem>
 										<!-- ao-javadoc-offline: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
 										<!-- Test Direct -->
-										<!-- Not published: <groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><classifier>tests</classifier> -->
+										<!-- Not published: <groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><classifier>tests</classifier> -->
+										<!-- No transitive dependencies: <groupId>org.apache.bcel</groupId><artifactId>bcel</artifactId> -->
 										<artifactItem>
 											<groupId>junit</groupId><artifactId>junit</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
@@ -153,8 +154,8 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-encoding-servlet</location>
 								</offlineLink>
 								<offlineLink>
-									<url>https://aoindustries.com/ao-fluent-html/apidocs/</url>
-									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-fluent-html</location>
+									<url>https://aoindustries.com/ao-fluent-html/any/apidocs/</url>
+									<location>${project.build.directory}/offlineLinks/com.aoindustries/ao-fluent-html-any</location>
 								</offlineLink>
 								<offlineLink>
 									<url>https://aoindustries.com/ao-lang/apidocs/</url>
@@ -162,7 +163,8 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 								</offlineLink>
 								<!-- Java EE: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
 								<!-- Test Direct -->
-								<!-- Not published: <groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><classifier>tests</classifier> -->
+								<!-- Not published: <groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><classifier>tests</classifier> -->
+								<!-- No transitive dependencies: <groupId>org.apache.bcel</groupId><artifactId>bcel</artifactId> -->
 								<offlineLink>
 									<url>https://junit.org/junit4/javadoc/latest/</url>
 									<location>${project.build.directory}/offlineLinks/junit/junit</location>
@@ -195,7 +197,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 				<groupId>com.aoindustries</groupId><artifactId>ao-encoding-servlet</artifactId><version>3.0.0${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
 				<groupId>com.aoindustries</groupId><artifactId>ao-lang</artifactId><version>4.17.0${POST-SNAPSHOT}</version>
@@ -219,7 +221,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			</dependency>
 			<!-- Test Direct -->
 			<dependency>
-				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><classifier>tests</classifier><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><classifier>tests</classifier><version>0.4.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.bcel</groupId><artifactId>bcel</artifactId><version>6.5.0</version>
@@ -253,7 +255,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			<groupId>com.aoindustries</groupId><artifactId>ao-encoding-servlet</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId>
+			<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.aoindustries</groupId><artifactId>ao-lang</artifactId>
@@ -263,7 +265,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 		</dependency>
 		<!-- Test Direct -->
 		<dependency>
-			<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html</artifactId><classifier>tests</classifier>
+			<groupId>com.aoindustries</groupId><artifactId>ao-fluent-html-any</artifactId><classifier>tests</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

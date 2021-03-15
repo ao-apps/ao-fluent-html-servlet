@@ -23,7 +23,6 @@
 package com.aoindustries.html.servlet;
 
 import com.aoindustries.encoding.servlet.EncodingContextEE;
-import com.aoindustries.html.Document;
 import com.aoindustries.html.servlet.any.AnyDocumentEE;
 import java.io.IOException;
 import java.io.Writer;
@@ -46,7 +45,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * Context init parameter that may be used to configure the default document autonli within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
 	 */
-	public static final String AUTONLI_INIT_PARAM = Document.class.getName() + ".autonli";
+	public static final String AUTONLI_INIT_PARAM = DocumentEE.class.getName() + ".autonli";
 
 	/**
 	 * Determines the default document autonli by first checking for {@linkplain ServletContext#getInitParameter(java.lang.String) context-param}
@@ -125,7 +124,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * Context init parameter that may be used to configure the default document indent within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
 	 */
-	public static final String INDENT_INIT_PARAM = Document.class.getName() + ".indent";
+	public static final String INDENT_INIT_PARAM = DocumentEE.class.getName() + ".indent";
 
 	/**
 	 * Determines the default document indent by first checking for {@linkplain ServletContext#getInitParameter(java.lang.String) context-param}
