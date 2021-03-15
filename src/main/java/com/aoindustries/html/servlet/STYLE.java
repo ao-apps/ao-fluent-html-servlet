@@ -36,12 +36,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class STYLE<
+final public class STYLE<
 	PC extends MetadataContent<PC>
 > extends
 	AnySTYLE<DocumentEE, PC, STYLE<PC>> {
 
-	protected STYLE(DocumentEE document, PC pc) {
+	STYLE(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

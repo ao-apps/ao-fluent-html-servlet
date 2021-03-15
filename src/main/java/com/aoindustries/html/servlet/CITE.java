@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class CITE<
+final public class CITE<
 	PC extends Union_Palpable_Phrasing<PC>
 > extends
 	AnyCITE<DocumentEE, PC, CITE<PC>, CITE__<PC>, CITE_c<PC>> {
 
-	protected CITE(DocumentEE document, PC pc) {
+	CITE(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

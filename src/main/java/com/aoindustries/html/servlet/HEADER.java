@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class HEADER<
+final public class HEADER<
 	PC extends PalpableContent<PC>
 > extends
 	AnyHEADER<DocumentEE, PC, HEADER<PC>, HEADER__<PC>, HEADER_c<PC>> {
 
-	protected HEADER(DocumentEE document, PC pc) {
+	HEADER(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

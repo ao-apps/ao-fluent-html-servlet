@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class TFOOT<
+final public class TFOOT<
 	PC extends TABLE_content<PC>
 > extends
 	AnyTFOOT<DocumentEE, PC, TFOOT<PC>, TFOOT__<PC>, TFOOT_c<PC>> {
 
-	protected TFOOT(DocumentEE document, PC pc) {
+	TFOOT(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

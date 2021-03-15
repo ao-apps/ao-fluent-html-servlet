@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class OL<
+final public class OL<
 	PC extends PalpableContent<PC>
 > extends
 	AnyOL<DocumentEE, PC, OL<PC>, OL__<PC>, OL_c<PC>> {
 
-	protected OL(DocumentEE document, PC pc) {
+	OL(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

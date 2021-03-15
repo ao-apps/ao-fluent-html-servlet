@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class OPTGROUP<
+final public class OPTGROUP<
 	PC extends SELECT_content<PC>
 > extends
 	AnyOPTGROUP<DocumentEE, PC, OPTGROUP<PC>, OPTGROUP__<PC>, OPTGROUP_c<PC>> {
 
-	protected OPTGROUP(DocumentEE document, PC pc) {
+	OPTGROUP(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

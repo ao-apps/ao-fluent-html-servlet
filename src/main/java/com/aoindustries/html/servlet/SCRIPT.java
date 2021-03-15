@@ -37,19 +37,20 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 // TODO: Extend RawTextElement: https://html.spec.whatwg.org/multipage/syntax.html#raw-text-elements
-public class SCRIPT<
+final public class SCRIPT<
 	PC extends ScriptSupportingContent<PC>
-> extends AnySCRIPT<DocumentEE, PC, SCRIPT<PC>> {
+> extends
+	AnySCRIPT<DocumentEE, PC, SCRIPT<PC>> {
 
-	protected SCRIPT(DocumentEE document, PC pc) {
+	SCRIPT(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 
-	protected SCRIPT(DocumentEE document, PC pc, String type) {
+	SCRIPT(DocumentEE document, PC pc, String type) {
 		super(document, pc, type);
 	}
 
-	protected SCRIPT(DocumentEE document, PC pc, Type type) {
+	SCRIPT(DocumentEE document, PC pc, Type type) {
 		super(document, pc, type);
 	}
 

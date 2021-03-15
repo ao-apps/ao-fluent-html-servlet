@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class TH<
+final public class TH<
 	PC extends TR_content<PC>
 > extends
 	AnyTH<DocumentEE, PC, TH<PC>, TH__<PC>, TH_c<PC>> {
 
-	protected TH(DocumentEE document, PC pc) {
+	TH(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

@@ -37,12 +37,12 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 @SuppressWarnings("deprecation")
-public class HR<
+final public class HR<
 	PC extends FlowContent<PC>
 > extends
 	AnyHR<DocumentEE, PC, HR<PC>> {
 
-	protected HR(DocumentEE document, PC pc) {
+	HR(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

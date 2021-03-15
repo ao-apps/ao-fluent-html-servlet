@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class B<
+final public class B<
 	PC extends Union_Palpable_Phrasing<PC>
 > extends
 	AnyB<DocumentEE, PC, B<PC>, B__<PC>, B_c<PC>> {
 
-	protected B(DocumentEE document, PC pc) {
+	B(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class DATALIST<
+final public class DATALIST<
 	PC extends PhrasingContent<PC>
 > extends
 	AnyDATALIST<DocumentEE, PC, DATALIST<PC>, DATALIST__<PC>, DATALIST_c<PC>> {
 
-	protected DATALIST(DocumentEE document, PC pc) {
+	DATALIST(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

@@ -36,12 +36,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class OPTION<
+final public class OPTION<
 	PC extends Union_DATALIST_OPTGROUP<PC>
 > extends
 	AnyOPTION<DocumentEE, PC, OPTION<PC>> {
 
-	protected OPTION(DocumentEE document, PC pc) {
+	OPTION(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class SELECT<
+final public class SELECT<
 	PC extends Union_Interactive_Phrasing<PC>
 > extends
 	AnySELECT<DocumentEE, PC, SELECT<PC>, SELECT__<PC>, SELECT_c<PC>> {
 
-	protected SELECT(DocumentEE document, PC pc) {
+	SELECT(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

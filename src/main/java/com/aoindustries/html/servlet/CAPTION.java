@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class CAPTION<
+final public class CAPTION<
 	PC extends TABLE_content<PC>
 > extends
 	AnyCAPTION<DocumentEE, PC, CAPTION<PC>, CAPTION__<PC>, CAPTION_c<PC>> {
 
-	protected CAPTION(DocumentEE document, PC pc) {
+	CAPTION(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

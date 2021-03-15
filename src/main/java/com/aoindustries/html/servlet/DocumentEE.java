@@ -38,7 +38,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author  AO Industries, Inc.
  */
-public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
+final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
 
 	// <editor-fold desc="Automatic Newline and Indentation">
 	// TODO: Configure at AnyDocumentEE level?

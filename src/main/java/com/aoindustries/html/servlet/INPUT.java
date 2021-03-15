@@ -32,7 +32,7 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class INPUT {
+final public class INPUT {
 
 	private INPUT() {}
 
@@ -52,7 +52,7 @@ public class INPUT {
 	 * @param  <PC>  The parent content model this element is within
 	 */
 	@SuppressWarnings("deprecation")
-	public static class Dynamic<
+	final public static class Dynamic<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Dynamic<DocumentEE, PC, Dynamic<PC>> {
@@ -81,7 +81,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Button<
+	final public static class Button<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Button<DocumentEE, PC, Button<PC>> {
@@ -102,7 +102,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Checkbox<
+	final public static class Checkbox<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Checkbox<DocumentEE, PC, Checkbox<PC>> {
@@ -123,7 +123,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Color<
+	final public static class Color<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Color<DocumentEE, PC, Color<PC>> {
@@ -144,7 +144,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Date<
+	final public static class Date<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Date<DocumentEE, PC, Date<PC>> {
@@ -165,7 +165,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class DatetimeLocal<
+	final public static class DatetimeLocal<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.DatetimeLocal<DocumentEE, PC, DatetimeLocal<PC>> {
@@ -186,7 +186,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Email<
+	final public static class Email<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Email<DocumentEE, PC, Email<PC>> {
@@ -210,7 +210,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class File<
+	final public static class File<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.File<DocumentEE, PC, File<PC>> {
@@ -231,7 +231,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Hidden<
+	final public static class Hidden<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Hidden<DocumentEE, PC, Hidden<PC>> {
@@ -256,7 +256,7 @@ public class INPUT {
 	 * @param  <PC>  The parent content model this element is within
 	 */
 	@SuppressWarnings("deprecation")
-	public static class Image<
+	final public static class Image<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Image<DocumentEE, PC, Image<PC>> {
@@ -277,7 +277,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Month<
+	final public static class Month<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Month<DocumentEE, PC, Month<PC>> {
@@ -298,7 +298,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Number<
+	final public static class Number<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Number<DocumentEE, PC, Number<PC>> {
@@ -319,7 +319,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Password<
+	final public static class Password<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Password<DocumentEE, PC, Password<PC>> {
@@ -340,7 +340,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Radio<
+	final public static class Radio<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Radio<DocumentEE, PC, Radio<PC>> {
@@ -361,7 +361,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Range<
+	final public static class Range<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Range<DocumentEE, PC, Range<PC>> {
@@ -382,7 +382,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Reset<
+	final public static class Reset<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Reset<DocumentEE, PC, Reset<PC>> {
@@ -403,7 +403,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Search<
+	final public static class Search<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Search<DocumentEE, PC, Search<PC>> {
@@ -427,7 +427,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Submit<
+	final public static class Submit<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Submit<DocumentEE, PC, Submit<PC>> {
@@ -448,7 +448,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Tel<
+	final public static class Tel<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Tel<DocumentEE, PC, Tel<PC>> {
@@ -469,7 +469,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Text<
+	final public static class Text<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Text<DocumentEE, PC, Text<PC>> {
@@ -490,7 +490,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Time<
+	final public static class Time<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Time<DocumentEE, PC, Time<PC>> {
@@ -511,7 +511,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Url<
+	final public static class Url<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Url<DocumentEE, PC, Url<PC>> {
@@ -532,7 +532,7 @@ public class INPUT {
 	 *
 	 * @param  <PC>  The parent content model this element is within
 	 */
-	public static class Week<
+	final public static class Week<
 		PC extends Union_Interactive_Phrasing<PC>
 	> extends
 		AnyINPUT.Week<DocumentEE, PC, Week<PC>> {

@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class ARTICLE<
+final public class ARTICLE<
 	PC extends SectioningContent<PC>
 > extends
 	AnyARTICLE<DocumentEE, PC, ARTICLE<PC>, ARTICLE__<PC>, ARTICLE_c<PC>> {
 
-	protected ARTICLE(DocumentEE document, PC pc) {
+	ARTICLE(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

@@ -31,13 +31,13 @@ import com.aoindustries.html.servlet.any.AnyHTMLEE_c;
  *
  * @author  AO Industries, Inc.
  */
-public class HTML_c<
+final public class HTML_c<
 	PC extends ContentEE<PC>
 >
 	extends AnyHTMLEE_c<DocumentEE, PC, HTML_c<PC>>
 	implements HTML_content<HTML_c<PC>> {
 
-	protected HTML_c(HTML<PC> element) {
+	HTML_c(HTML<PC> element) {
 		super(element);
 	}
 }

@@ -37,12 +37,12 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 @SuppressWarnings("deprecation")
-public class IMG<
+final public class IMG<
 	PC extends Union_Embedded_Interactive<PC>
 > extends
 	AnyIMG<DocumentEE, PC, IMG<PC>> {
 
-	protected IMG(DocumentEE document, PC pc) {
+	IMG(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

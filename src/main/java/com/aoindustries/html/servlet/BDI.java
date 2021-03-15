@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class BDI<
+final public class BDI<
 	PC extends Union_Palpable_Phrasing<PC>
 > extends
 	AnyBDI<DocumentEE, PC, BDI<PC>, BDI__<PC>, BDI_c<PC>> {
 
-	protected BDI(DocumentEE document, PC pc) {
+	BDI(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

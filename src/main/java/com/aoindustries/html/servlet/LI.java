@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class LI<
+final public class LI<
 	PC extends ListContent<PC>
 > extends
 	AnyLI<DocumentEE, PC, LI<PC>, LI__<PC>, LI_c<PC>> {
 
-	protected LI(DocumentEE document, PC pc) {
+	LI(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

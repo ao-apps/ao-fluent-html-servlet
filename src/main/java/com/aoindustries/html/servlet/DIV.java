@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class DIV<
+final public class DIV<
 	PC extends Union_DL_Palpable<PC>
 > extends
 	AnyDIV<DocumentEE, PC, DIV<PC>, DIV__<PC>, DIV_c<PC>> {
 
-	protected DIV(DocumentEE document, PC pc) {
+	DIV(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class TR<
+final public class TR<
 	PC extends Union_TBODY_THEAD_TFOOT<PC>
 > extends
 	AnyTR<DocumentEE, PC, TR<PC>, TR__<PC>, TR_c<PC>> {
 
-	protected TR(DocumentEE document, PC pc) {
+	TR(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

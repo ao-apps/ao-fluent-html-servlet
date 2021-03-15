@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class THEAD<
+final public class THEAD<
 	PC extends TABLE_content<PC>
 > extends
 	AnyTHEAD<DocumentEE, PC, THEAD<PC>, THEAD__<PC>, THEAD_c<PC>> {
 
-	protected THEAD(DocumentEE document, PC pc) {
+	THEAD(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

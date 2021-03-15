@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class HTML<
+final public class HTML<
 	PC extends ContentEE<PC>
 > extends
 	AnyHTMLEE<DocumentEE, PC, HTML<PC>, HTML__<PC>, HTML_c<PC>> {
 
-	protected HTML(DocumentEE document, PC pc) {
+	HTML(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

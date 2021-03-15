@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class PROGRESS<
+final public class PROGRESS<
 	PC extends Union_Palpable_Phrasing<PC>
 > extends
 	AnyPROGRESS<DocumentEE, PC, PROGRESS<PC>, PROGRESS__<PC>, PROGRESS_c<PC>> {
 
-	protected PROGRESS(DocumentEE document, PC pc) {
+	PROGRESS(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

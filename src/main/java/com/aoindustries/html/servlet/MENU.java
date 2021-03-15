@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class MENU<
+final public class MENU<
 	PC extends InteractiveContent<PC>
 > extends
 	AnyMENU<DocumentEE, PC, MENU<PC>, MENU__<PC>, MENU_c<PC>> {
 
-	protected MENU(DocumentEE document, PC pc) {
+	MENU(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

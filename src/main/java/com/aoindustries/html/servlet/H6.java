@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class H6<
+final public class H6<
 	PC extends HeadingContent<PC>
 > extends
 	AnyH6<DocumentEE, PC, H6<PC>, H6__<PC>, H6_c<PC>> {
 
-	protected H6(DocumentEE document, PC pc) {
+	H6(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

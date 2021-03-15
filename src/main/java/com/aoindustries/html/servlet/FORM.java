@@ -36,12 +36,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class FORM<
+final public class FORM<
 	PC extends PalpableContent<PC>
 > extends
 	AnyFORM<DocumentEE, PC, FORM<PC>, FORM__<PC>, FORM_c<PC>> {
 
-	protected FORM(DocumentEE document, PC pc) {
+	FORM(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

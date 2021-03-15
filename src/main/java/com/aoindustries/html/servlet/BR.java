@@ -36,12 +36,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class BR<
+final public class BR<
 	PC extends PhrasingContent<PC>
 > extends
 	AnyBR<DocumentEE, PC, BR<PC>> {
 
-	protected BR(DocumentEE document, PC pc) {
+	BR(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 

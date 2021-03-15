@@ -33,12 +33,12 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public class DATA<
+final public class DATA<
 	PC extends Union_Palpable_Phrasing<PC>
 > extends
 	AnyDATA<DocumentEE, PC, DATA<PC>, DATA__<PC>, DATA_c<PC>> {
 
-	protected DATA(DocumentEE document, PC pc) {
+	DATA(DocumentEE document, PC pc) {
 		super(document, pc);
 	}
 
