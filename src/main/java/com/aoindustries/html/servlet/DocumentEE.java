@@ -40,7 +40,6 @@ import javax.servlet.http.HttpServletResponse;
 final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
 
 	// <editor-fold desc="Automatic Newline and Indentation">
-	// TODO: Configure at AnyDocumentEE level?
 	/**
 	 * Context init parameter that may be used to configure the default document autonli within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
@@ -119,7 +118,6 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	// </editor-fold>
 
 	// <editor-fold desc="Indentation">
-	// TODO: Configure at AnyDocumentEE level?
 	/**
 	 * Context init parameter that may be used to configure the default document indent within an application.
 	 * Must be one of "true", "false", or "auto" (the default).
