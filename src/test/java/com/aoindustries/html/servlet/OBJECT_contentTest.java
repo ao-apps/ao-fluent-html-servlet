@@ -22,50 +22,70 @@
  */
 package com.aoindustries.html.servlet;
 
+import com.aoindustries.collections.AoArrays;
+import com.aoindustries.html.any.AnyOBJECT_contentTest;
 import com.aoindustries.html.any.InheritanceTests;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Tests <code>*_content</code> per-element content model interfaces,
- * which confirm a class implements the expected set of interfaces.
+ * @see  OBJECT_content
  *
  * @author  AO Industries, Inc.
  */
-@SuppressWarnings({"rawtypes", "unchecked"})
-public class ElementContentModelTest {
+public class OBJECT_contentTest extends AnyOBJECT_contentTest {
 
-	/**
-	 * Gets the set of all <code>*_content</code> per-element content model interfaces.
-	 */
-	static Class<? extends ContentEE>[] getAllElementContentModels() {
-		return new Class[] {
-			COLGROUP_content.class,
-			DATALIST_content.class,
-			DIV_content.class,
-			DL_content.class,
-			HTML_content.class,
-			OBJECT_content.class,
-			OPTGROUP_content.class,
-			SELECT_content.class,
-			TABLE_content.class,
-			TR_content.class
-		};
+	public OBJECT_contentTest() {
+		super(OBJECT_content.class);
 	}
 
-	static void testElementContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTests.testInterfaces(
-			ContentEE.class,
-			iface -> iface.getSimpleName().endsWith("_content"),
-			getAllElementContentModels(),
-			clazz,
-			expected
+	@Test
+	@SuppressWarnings("unchecked")
+	@Override
+	public void testUnions() {
+		UnionContentTest.testUnions(
+			OBJECT_content.class,
+			//
+			// Unions:
+			//
+			Union_Embedded_Interactive.class
 		);
 	}
 
 	@Test
+	@SuppressWarnings("unchecked")
+	@Override
+	public void testContentModels() {
+		ContentModelTest.testContentModels(
+			OBJECT_content.class,
+			//
+			// Content models:
+			//
+			ContentEE.class
+		);
+	}
+
+	@Test
+	@SuppressWarnings("unchecked")
+	@Override
+	public void testElementContentModels() {
+		ElementContentModelTest.testElementContentModels(
+			OBJECT_content.class
+			//
+			// Per-element content models:
+			//
+			// None
+		);
+	}
+
+	@Test
+	@Override
 	public void testNoImplementInherited() {
-		for(Class<? extends ContentEE> iface : getAllElementContentModels()) {
-			InheritanceTests.testNoImplementInherited(ContentEE.class, iface);
-		}
+		Assert.assertNotEquals(
+			"Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+			-1,
+			AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), OBJECT_content.class)
+		);
+		InheritanceTests.testNoImplementInherited(ContentEE.class, OBJECT_content.class);
 	}
 }

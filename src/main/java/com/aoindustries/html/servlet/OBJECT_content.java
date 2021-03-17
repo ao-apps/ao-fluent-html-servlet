@@ -22,62 +22,45 @@
  */
 package com.aoindustries.html.servlet;
 
-import com.aoindustries.html.any.AnyListContent;
-import com.aoindustries.io.function.IOConsumerE;
+import com.aoindustries.html.any.AnyOBJECT_content;
 import java.io.IOException;
 
 /**
- * See <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element">4.4.8 The li element</a>.
+ * See <a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element">4.8.7 The object element</a>.
  *
  * @param  <__>  This content model, which will be the parent content model of child elements
  *
  * @author  AO Industries, Inc.
  */
-public interface ListContent<
-	__ extends ListContent<__>
-> extends AnyListContent<DocumentEE, __>,
+public interface OBJECT_content<
+	__ extends OBJECT_content<__>
+> extends AnyOBJECT_content<DocumentEE, __>,
 	//
 	// Unions:
 	//
-	// Inherited: Union_COLGROUP_ScriptSupporting<__>
+	Union_Embedded_Interactive<__>
 
 	//
 	// Content models:
 	//
-	// Inherited: ContentEE<__>
-	ScriptSupportingContent<__>
+	// Inherited: Content<__>
 {
 	//
 	// Factories:
 	//
-	// <editor-fold defaultstate="collapsed" desc="LI">
+	// Inherited: AUDIO
+	// Inherited: EMBED
+	// Inherited: IFRAME
+	// Inherited: IMG
+	// Inherited: OBJECT
+	// <editor-fold defaultstate="collapsed" desc="PARAM">
 	@Override
-	default LI<__> li() throws IOException {
+	default PARAM<__> param() throws IOException {
 		@SuppressWarnings("unchecked")
 		__ pc = (__)this;
 		DocumentEE document = getDocument();
-		return new LI<>(document, pc).writeOpen(document.getUnsafe(null));
-	}
-
-	/**
-	 * Creates a li element with no attributes and the given body.
-	 * <p>
-	 * See <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element">4.4.8 The li element</a>.
-	 * </p>
-	 *
-	 * @param  <Ex>  An arbitrary exception type that may be thrown
-	 *
-	 * @return  This content model, which will be the parent content model of child elements
-	 */
-	default <Ex extends Throwable> __ li__(IOConsumerE<? super LI__<__>, Ex> li) throws IOException, Ex {
-		return li().__(li);
-	}
-
-	@Override
-	default LI_c<__> li_c() throws IOException {
-		return li()._c();
+		return new PARAM<>(document, pc).writeOpen(document.getUnsafe(null));
 	}
 	// </editor-fold>
-	// Inherited: SCRIPT
-	// Inherited: TEMPLATE
+	// Inherited: VIDEO
 }
