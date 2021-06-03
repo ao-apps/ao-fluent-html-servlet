@@ -201,7 +201,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	//       Possibly re-use the existing DocumentEE when has the same out object - but this might cause unexpected interaction (nested code changing configuration affecting outer)
 	//       Caller would then need to release the DocumentEE, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves) - implements AutoCloseable for this?
 	//       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
-	//           Sub-requests include semanticcms-core-servlet:capturePage along with aoweb-framework searches.
+	//           Sub-requests include semanticcms-core-servlet:capturePage along with ao-web-framework searches.
 	//       Track at AnyDocumentEE level?
 	public DocumentEE(
 		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
