@@ -23,8 +23,8 @@
 package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
-import com.aoapps.html.any.AnyUnion_DIV_DLTest;
-import com.aoapps.html.any.InheritanceTests;
+import com.aoapps.html.any.tests.AnyUnion_DIV_DLTest;
+import com.aoapps.html.any.tests.InheritanceTests;
 import org.junit.Assert;
 import org.junit.Test;
 

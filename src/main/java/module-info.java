@@ -20,43 +20,16 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoapps.html.servlet.any;
-
-import com.aoapps.html.any.tests.InheritanceTests;
-import org.junit.Test;
-
-/**
- * Tests <code>Union_*</code> interfaces,
- * which confirm a class implements the expected set of interfaces.
- *
- * @author  AO Industries, Inc.
- */
-@SuppressWarnings({"rawtypes", "unchecked"})
-public class AnyUnionContentTest {
-
-	/**
-	 * Gets the set of all <code>Union_*</code> interfaces.
-	 */
-	static Class<? extends ContentEE>[] getAllUnions() {
-		return new Class[] {
-			// None
-		};
-	}
-
-	static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTests.testInterfaces(
-			ContentEE.class,
-			iface -> iface.getSimpleName().startsWith("AnyUnion_"),
-			getAllUnions(),
-			clazz,
-			expected
-		);
-	}
-
-	@Test
-	public void testNoImplementInherited() {
-		for(Class<? extends ContentEE> iface : getAllUnions()) {
-			InheritanceTests.testNoImplementInherited(ContentEE.class, iface);
-		}
-	}
+module com.aoapps.html.servlet {
+	exports com.aoapps.html.servlet;
+	exports com.aoapps.html.servlet.any;
+	// Direct
+	requires com.aoapps.collections; // <groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
+	requires com.aoapps.encoding; // <groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>
+	requires com.aoapps.encoding.servlet; // <groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId>
+	requires com.aoapps.html.any; // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId>
+	requires com.aoapps.lang; // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
+	requires javax.servlet.api; // <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
+	// Java SE
+	requires java.desktop;
 }

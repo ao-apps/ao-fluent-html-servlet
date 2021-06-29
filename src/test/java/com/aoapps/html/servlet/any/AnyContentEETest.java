@@ -22,8 +22,8 @@
  */
 package com.aoapps.html.servlet.any;
 
-import com.aoapps.html.any.AnyContentTest;
-import com.aoapps.html.any.InheritanceTests;
+import com.aoapps.html.any.tests.AnyContentTest;
+import com.aoapps.html.any.tests.InheritanceTests;
 import org.junit.Test;
 
 /**

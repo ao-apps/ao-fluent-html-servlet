@@ -20,43 +20,12 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoapps.html.servlet.any;
-
-import com.aoapps.html.any.tests.InheritanceTests;
-import org.junit.Test;
-
-/**
- * Tests <code>Union_*</code> interfaces,
- * which confirm a class implements the expected set of interfaces.
- *
- * @author  AO Industries, Inc.
- */
-@SuppressWarnings({"rawtypes", "unchecked"})
-public class AnyUnionContentTest {
-
-	/**
-	 * Gets the set of all <code>Union_*</code> interfaces.
-	 */
-	static Class<? extends ContentEE>[] getAllUnions() {
-		return new Class[] {
-			// None
-		};
-	}
-
-	static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTests.testInterfaces(
-			ContentEE.class,
-			iface -> iface.getSimpleName().startsWith("AnyUnion_"),
-			getAllUnions(),
-			clazz,
-			expected
-		);
-	}
-
-	@Test
-	public void testNoImplementInherited() {
-		for(Class<? extends ContentEE> iface : getAllUnions()) {
-			InheritanceTests.testNoImplementInherited(ContentEE.class, iface);
-		}
-	}
+module com.aoapps.html.servlet.book {
+	// Direct
+	requires com.aoapps.badges; // <groupId>com.aoapps</groupId><artifactId>ao-badges</artifactId>
+	requires com.aoapps.taglib; // <groupId>com.aoapps</groupId><artifactId>ao-taglib</artifactId>
+	requires com.semanticcms.changelog.taglib; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-changelog-taglib</artifactId>
+	requires com.semanticcms.core.taglib; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-core-taglib</artifactId>
+	requires com.semanticcms.section.taglib; // <groupId>com.semanticcms</groupId><artifactId>semanticcms-section-taglib</artifactId>
+	requires taglibs.standard.spec; // <groupId>org.apache.taglibs</groupId><artifactId>taglibs-standard-spec</artifactId>
 }

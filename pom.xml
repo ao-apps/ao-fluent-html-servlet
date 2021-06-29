@@ -33,6 +33,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 	<packaging>bundle</packaging>
 
 	<properties>
+		<module.name>com.aoapps.html.servlet</module.name>
 		<!-- Java 1.8 -->
 		<javase.version>1.8</javase.version>
 		<javase.release>8</javase.release>
@@ -95,6 +96,39 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 						https://issues.apache.org/jira/browse/MNG-1378
 					-->
 					<ignoreNonCompile>true</ignoreNonCompile>
+					<usedDependencies>
+						<!-- Direct -->
+						<dependency>com.aoapps:ao-encoding</dependency><!-- Required for module-info.java -->
+					</usedDependencies>
+				</configuration>
+			</plugin>
+			<!-- Java 1.8: see https://maven.apache.org/plugins/maven-compiler-plugin/examples/module-info.html -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId>
+				<executions>
+					<!-- compile everything to ensure module-info contains right entries -->
+					<execution>
+						<id>default-compile</id>
+						<configuration>
+							<release>9</release>
+						</configuration>
+					</execution>
+					<!-- recompile everything for target VM except the module-info.java -->
+					<execution>
+						<id>base-compile</id><goals><goal>compile</goal></goals>
+						<configuration>
+							<excludes>
+								<exclude>module-info.java</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- Cannot use module path due to additional test dependencies -->
+					<useModulePath>false</useModulePath>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -102,6 +136,9 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 				<configuration>
 					<!-- Only show public docs, since this project is not intended to be extended. -->
 					<show>public</show>
+					<!-- Java 1.8: generate future-proof modular javadocs -->
+					<source>11</source>
+					<release>11</release>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -124,6 +161,11 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 											<groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId><classifier>javadoc</classifier>
 											<includes>element-list, package-list</includes>
 											<outputDirectory>${project.build.directory}/offlineLinks/com.aoapps/ao-collections</outputDirectory>
+										</artifactItem>
+										<artifactItem>
+											<groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId><classifier>javadoc</classifier>
+											<includes>element-list, package-list</includes>
+											<outputDirectory>${project.build.directory}/offlineLinks/com.aoapps/ao-encoding</outputDirectory>
 										</artifactItem>
 										<artifactItem>
 											<groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId><classifier>javadoc</classifier>
@@ -164,6 +206,10 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-collections</location>
 								</offlineLink>
 								<offlineLink>
+									<url>https://oss.aoapps.com/encoding/apidocs/</url>
+									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-encoding</location>
+								</offlineLink>
+								<offlineLink>
 									<url>https://oss.aoapps.com/encoding/servlet/apidocs/</url>
 									<location>${project.build.directory}/offlineLinks/com.aoapps/ao-encoding-servlet</location>
 								</offlineLink>
@@ -199,6 +245,26 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 				</plugins>
 			</build>
 		</profile>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.felix</groupId><artifactId>maven-bundle-plugin</artifactId>
+						<configuration>
+							<instructions>
+								<!--
+									Releases use "Automatic-Module-Name" instead of "module-info.java"
+									since has direct dependencies that are not yet modularized.
+								-->
+								<Automatic-Module-Name>${module.name}</Automatic-Module-Name>
+								<Private-Package>!.</Private-Package>
+							</instructions>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 
 	<dependencyManagement>
@@ -206,6 +272,9 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			<!-- Direct -->
 			<dependency>
 				<groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId><version>2.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+			</dependency>
+			<dependency>
+				<groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId><version>5.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
 			<dependency>
 				<groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId><version>4.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
@@ -218,9 +287,6 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			</dependency>
 			<!-- javaee-web-api-bom: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId> -->
 			<!-- Transitive -->
-			<dependency>
-				<groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId><version>5.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
-			</dependency>
 			<dependency>
 				<groupId>com.aoapps</groupId><artifactId>ao-hodgepodge</artifactId><version>5.0.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
 			</dependency>
@@ -264,6 +330,9 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 		<!-- Direct -->
 		<dependency>
 			<groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId>

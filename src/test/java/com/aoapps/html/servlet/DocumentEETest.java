@@ -22,7 +22,7 @@
  */
 package com.aoapps.html.servlet;
 
-import com.aoapps.html.any.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTests;
 import com.aoapps.html.servlet.any.AnyDocumentEETest;
 import org.junit.Test;
 
