@@ -10,6 +10,12 @@
 
 [![Build](https://github.com/aoindustries/ao-fluent-html-servlet/workflows/Build/badge.svg?branch=master)](https://github.com/aoindustries/ao-fluent-html-servlet/actions?query=workflow%3ABuild)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.aoapps/ao-fluent-html-servlet/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.aoapps/ao-fluent-html-servlet)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-fluent-html-servlet&metric=alert_status)](https://sonarcloud.io/dashboard?branch=master&id=com.aoapps%3Aao-fluent-html-servlet)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-fluent-html-servlet&metric=ncloc)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-fluent-html-servlet&metric=ncloc)  
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-fluent-html-servlet&metric=reliability_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-fluent-html-servlet&metric=Reliability)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-fluent-html-servlet&metric=security_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-fluent-html-servlet&metric=Security)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-fluent-html-servlet&metric=sqale_rating)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-fluent-html-servlet&metric=Maintainability)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?branch=master&project=com.aoapps%3Aao-fluent-html-servlet&metric=coverage)](https://sonarcloud.io/component_measures?branch=master&id=com.aoapps%3Aao-fluent-html-servlet&metric=Coverage)
 
 Fluent Java DSL for high-performance HTML generation in a Servlet environment.
 
