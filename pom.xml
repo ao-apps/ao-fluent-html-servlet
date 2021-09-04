@@ -296,7 +296,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 				<groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId><version>4.0.0${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.5.2-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
+				<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.5.2${POST-SNAPSHOT}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId><version>5.0.0${POST-SNAPSHOT}</version>
@@ -317,7 +317,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			</dependency>
 			<!-- Test Direct -->
 			<dependency>
-				<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.5.2-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version><classifier>tests</classifier>
+				<groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.5.2${POST-SNAPSHOT}</version><classifier>tests</classifier>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.bcel</groupId><artifactId>bcel</artifactId><version>6.5.0</version>
