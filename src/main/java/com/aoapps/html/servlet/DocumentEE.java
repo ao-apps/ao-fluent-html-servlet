@@ -24,6 +24,8 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.encoding.servlet.EncodingContextEE;
 import com.aoapps.html.servlet.any.AnyDocumentEE;
+import com.aoapps.servlet.attribute.AttributeEE;
+import com.aoapps.servlet.attribute.ScopeEE;
 import java.io.IOException;
 import java.io.Writer;
 import javax.servlet.ServletContext;
@@ -67,7 +69,8 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 		return false;
 	}
 
-	private static final String AUTONLI_REQUEST_ATTRIBUTE = AUTONLI_INIT_PARAM;
+	private static final ScopeEE.Request.Attribute<Boolean> AUTONLI_REQUEST_ATTRIBUTE =
+		ScopeEE.REQUEST.attribute(AUTONLI_INIT_PARAM);
 
 	/**
 	 * Registers the document autonli in effect for the request.
@@ -77,7 +80,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * </p>
 	 */
 	public static void setAutonli(ServletRequest request, Boolean autonli) {
-		request.setAttribute(AUTONLI_REQUEST_ATTRIBUTE, autonli);
+		AUTONLI_REQUEST_ATTRIBUTE.context(request).set(autonli);
 	}
 
 	/**
@@ -90,8 +93,9 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * @return  The previous attribute value, if any
 	 */
 	public static Boolean replaceAutonli(ServletRequest request, Boolean autonli) {
-		Boolean old = (Boolean)request.getAttribute(AUTONLI_REQUEST_ATTRIBUTE);
-		request.setAttribute(AUTONLI_REQUEST_ATTRIBUTE, autonli);
+		AttributeEE.Request<Boolean> attribute = AUTONLI_REQUEST_ATTRIBUTE.context(request);
+		Boolean old = attribute.get();
+		attribute.set(autonli);
 		return old;
 	}
 
@@ -108,12 +112,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * </p>
 	 */
 	public static boolean getAutonli(ServletContext servletContext, ServletRequest request) {
-		Boolean autonli = (Boolean)request.getAttribute(AUTONLI_REQUEST_ATTRIBUTE);
-		if(autonli == null) {
-			autonli = getDefaultAutonli(servletContext);
-			request.setAttribute(AUTONLI_REQUEST_ATTRIBUTE, autonli);
-		}
-		return autonli;
+		return AUTONLI_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(__ -> getDefaultAutonli(servletContext));
 	}
 	// </editor-fold>
 
@@ -145,7 +144,8 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 		return false;
 	}
 
-	private static final String INDENT_REQUEST_ATTRIBUTE = INDENT_INIT_PARAM;
+	private static final ScopeEE.Request.Attribute<Boolean> INDENT_REQUEST_ATTRIBUTE =
+		ScopeEE.REQUEST.attribute(INDENT_INIT_PARAM);
 
 	/**
 	 * Registers the document indent in effect for the request.
@@ -155,7 +155,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * </p>
 	 */
 	public static void setIndent(ServletRequest request, Boolean indent) {
-		request.setAttribute(INDENT_REQUEST_ATTRIBUTE, indent);
+		INDENT_REQUEST_ATTRIBUTE.context(request).set(indent);
 	}
 
 	/**
@@ -168,8 +168,9 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * @return  The previous attribute value, if any
 	 */
 	public static Boolean replaceIndent(ServletRequest request, Boolean indent) {
-		Boolean old = (Boolean)request.getAttribute(INDENT_REQUEST_ATTRIBUTE);
-		request.setAttribute(INDENT_REQUEST_ATTRIBUTE, indent);
+		AttributeEE.Request<Boolean> attribute = INDENT_REQUEST_ATTRIBUTE.context(request);
+		Boolean old = attribute.get();
+		attribute.set(indent);
 		return old;
 	}
 
@@ -186,12 +187,7 @@ final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	 * </p>
 	 */
 	public static boolean getIndent(ServletContext servletContext, ServletRequest request) {
-		Boolean indent = (Boolean)request.getAttribute(INDENT_REQUEST_ATTRIBUTE);
-		if(indent == null) {
-			indent = getDefaultIndent(servletContext);
-			request.setAttribute(INDENT_REQUEST_ATTRIBUTE, indent);
-		}
-		return indent;
+		return INDENT_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(__ -> getDefaultIndent(servletContext));
 	}
 	// </editor-fold>
 
