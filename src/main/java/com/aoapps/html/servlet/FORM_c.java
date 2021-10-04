@@ -34,7 +34,7 @@ import com.aoapps.html.any.AnyFORM_c;
  *
  * @author  AO Industries, Inc.
  */
-final public class FORM_c<
+public final class FORM_c<
 	PC extends PalpableContent<PC>
 >
 	extends AnyFORM_c<DocumentEE, PC, FORM_c<PC>>

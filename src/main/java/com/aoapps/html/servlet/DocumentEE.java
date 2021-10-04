@@ -39,7 +39,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author  AO Industries, Inc.
  */
-final public class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
+public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
 
 	// <editor-fold desc="Automatic Newline and Indentation">
 	/**

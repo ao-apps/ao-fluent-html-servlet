@@ -31,7 +31,7 @@ import com.aoapps.html.any.AnyHEAD_c;
  *
  * @author  AO Industries, Inc.
  */
-final public class HEAD_c<
+public final class HEAD_c<
 	PC extends HTML_content<PC>
 >
 	extends AnyHEAD_c<DocumentEE, PC, HEAD_c<PC>>

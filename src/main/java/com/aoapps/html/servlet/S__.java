@@ -31,7 +31,7 @@ import com.aoapps.html.any.AnyS__;
  *
  * @author  AO Industries, Inc.
  */
-final public class S__<
+public final class S__<
 	PC extends Union_Palpable_Phrasing<PC>
 >
 	extends AnyS__<DocumentEE, PC, S__<PC>>

@@ -33,7 +33,7 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-final public class COLGROUP<
+public final class COLGROUP<
 	PC extends TABLE_content<PC>
 > extends
 	AnyCOLGROUP<DocumentEE, PC, COLGROUP<PC>, COLGROUP__<PC>, COLGROUP_c<PC>> {

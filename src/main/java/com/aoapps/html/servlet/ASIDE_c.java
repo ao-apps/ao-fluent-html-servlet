@@ -31,7 +31,7 @@ import com.aoapps.html.any.AnyASIDE_c;
  *
  * @author  AO Industries, Inc.
  */
-final public class ASIDE_c<
+public final class ASIDE_c<
 	PC extends SectioningContent<PC>
 >
 	extends AnyASIDE_c<DocumentEE, PC, ASIDE_c<PC>>

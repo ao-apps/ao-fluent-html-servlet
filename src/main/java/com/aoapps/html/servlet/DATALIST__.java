@@ -31,7 +31,7 @@ import com.aoapps.html.any.AnyDATALIST__;
  *
  * @author  AO Industries, Inc.
  */
-final public class DATALIST__<
+public final class DATALIST__<
 	PC extends PhrasingContent<PC>
 >
 	extends AnyDATALIST__<DocumentEE, PC, DATALIST__<PC>>

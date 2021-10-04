@@ -34,7 +34,7 @@ import com.aoapps.html.any.Closeable;
  *
  * @author  AO Industries, Inc.
  */
-abstract public class AnyHTMLEE_c<
+public abstract class AnyHTMLEE_c<
 	D  extends AnyDocumentEE<D>,
 	PC extends ContentEE<D, PC>,
 	_c extends AnyHTMLEE_c<D, PC, _c>

@@ -31,7 +31,7 @@ import com.aoapps.html.any.AnyOUTPUT__;
  *
  * @author  AO Industries, Inc.
  */
-final public class OUTPUT__<
+public final class OUTPUT__<
 	PC extends Union_Palpable_Phrasing<PC>
 >
 	extends AnyOUTPUT__<DocumentEE, PC, OUTPUT__<PC>>

@@ -33,7 +33,7 @@ import com.aoapps.html.any.AnyHTML__;
  *
  * @author  AO Industries, Inc.
  */
-abstract public class AnyHTMLEE__<
+public abstract class AnyHTMLEE__<
 	D  extends AnyDocumentEE<D>,
 	PC extends ContentEE<D, PC>,
 	__ extends AnyHTMLEE__<D, PC, __>

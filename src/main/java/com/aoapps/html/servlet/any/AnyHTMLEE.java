@@ -38,7 +38,7 @@ import javax.servlet.ServletResponse;
  *
  * @author  AO Industries, Inc.
  */
-abstract public class AnyHTMLEE<
+public abstract class AnyHTMLEE<
 	D  extends AnyDocumentEE<D>,
 	PC extends ContentEE<D, PC>,
 	E  extends AnyHTMLEE<D, PC, E, __, _c>,

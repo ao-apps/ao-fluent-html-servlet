@@ -33,7 +33,7 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-final public class MAP<
+public final class MAP<
 	PC extends Union_Palpable_Phrasing<PC>
 > extends
 	AnyMAP<DocumentEE, PC, MAP<PC>, MAP_c<PC>> {

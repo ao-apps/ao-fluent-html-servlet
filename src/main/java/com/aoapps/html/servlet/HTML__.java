@@ -31,7 +31,7 @@ import com.aoapps.html.servlet.any.AnyHTMLEE__;
  *
  * @author  AO Industries, Inc.
  */
-final public class HTML__<
+public final class HTML__<
 	PC extends ContentEE<PC>
 >
 	extends AnyHTMLEE__<DocumentEE, PC, HTML__<PC>>
