@@ -34,7 +34,7 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 		title="@{documented.name}"
 		description="@{documented.description}"
 		datePublished="2019-10-28T07:26:00-05:00"
-		dateModified="2021-07-16T03:48:08-05:00"
+		dateModified="2021-10-05T04:07:33-05:00"
 	>
 		<core:child page="changelog.jspx" />
 		<core:child page="apidocs/index.jspx" />
@@ -77,8 +77,8 @@ along with ao-fluent-html-servlet.  If not, see <http://www.gnu.org/licenses />.
 			<ul>
 				<li>TODO: Thread-local and lambdas to reduce "dot-chaining".
 					<ul>
-						<li>TODO: Interoperable with <ao:a href="https://github.com/aoindustries/semanticcms">SemanticCMS</ao:a>.</li>
-						<li>TODO: Interoperable with <ao:a href="https://github.com/aoindustries/ao-taglib">AO Taglib</ao:a>.</li>
+						<li>TODO: Interoperable with <ao:a href="https://github.com/ao-apps/semanticcms">SemanticCMS</ao:a>.</li>
+						<li>TODO: Interoperable with <ao:a href="https://github.com/ao-apps/ao-taglib">AO Taglib</ao:a>.</li>
 					</ul>
 				</li>
 			</ul>
