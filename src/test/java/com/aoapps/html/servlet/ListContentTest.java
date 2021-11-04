@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyListContentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -87,6 +87,6 @@ public class ListContentTest extends AnyListContentTest {
 			-1,
 			AoArrays.indexOf(ContentModelTest.getAllContentModels(), ListContent.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, ListContent.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, ListContent.class);
 	}
 }

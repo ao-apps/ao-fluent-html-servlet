@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyUnion_DIV_DLTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -86,6 +86,6 @@ public class Union_DIV_DLTest extends AnyUnion_DIV_DLTest {
 			-1,
 			AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_DIV_DL.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, Union_DIV_DL.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_DIV_DL.class);
 	}
 }

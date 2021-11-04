@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyTABLE_contentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -88,6 +88,6 @@ public class TABLE_contentTest extends AnyTABLE_contentTest {
 			-1,
 			AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), TABLE_content.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, TABLE_content.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, TABLE_content.class);
 	}
 }

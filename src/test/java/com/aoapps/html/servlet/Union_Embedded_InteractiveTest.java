@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyUnion_Embedded_InteractiveTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -86,6 +86,6 @@ public class Union_Embedded_InteractiveTest extends AnyUnion_Embedded_Interactiv
 			-1,
 			AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Embedded_Interactive.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, Union_Embedded_Interactive.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_Embedded_Interactive.class);
 	}
 }

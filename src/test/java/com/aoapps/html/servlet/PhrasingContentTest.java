@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyPhrasingContentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -94,6 +94,6 @@ public class PhrasingContentTest extends AnyPhrasingContentTest {
 			-1,
 			AoArrays.indexOf(ContentModelTest.getAllContentModels(), PhrasingContent.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, PhrasingContent.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, PhrasingContent.class);
 	}
 }

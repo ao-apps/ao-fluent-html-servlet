@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyOPTGROUP_contentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -88,6 +88,6 @@ public class OPTGROUP_contentTest extends AnyOPTGROUP_contentTest {
 			-1,
 			AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), OPTGROUP_content.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, OPTGROUP_content.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, OPTGROUP_content.class);
 	}
 }

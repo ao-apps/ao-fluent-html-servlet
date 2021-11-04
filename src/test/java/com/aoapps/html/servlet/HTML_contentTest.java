@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyHTML_contentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -86,6 +86,6 @@ public class HTML_contentTest extends AnyHTML_contentTest {
 			-1,
 			AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), HTML_content.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, HTML_content.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, HTML_content.class);
 	}
 }

@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyPalpableContentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -94,6 +94,6 @@ public class PalpableContentTest extends AnyPalpableContentTest {
 			-1,
 			AoArrays.indexOf(ContentModelTest.getAllContentModels(), PalpableContent.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, PalpableContent.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, PalpableContent.class);
 	}
 }

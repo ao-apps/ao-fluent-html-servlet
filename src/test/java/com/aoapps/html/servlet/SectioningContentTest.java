@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnySectioningContentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -86,6 +86,6 @@ public class SectioningContentTest extends AnySectioningContentTest {
 			-1,
 			AoArrays.indexOf(ContentModelTest.getAllContentModels(), SectioningContent.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, SectioningContent.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, SectioningContent.class);
 	}
 }

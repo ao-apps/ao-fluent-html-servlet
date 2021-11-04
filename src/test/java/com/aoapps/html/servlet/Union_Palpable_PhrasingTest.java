@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyUnion_Palpable_PhrasingTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -89,6 +89,6 @@ public class Union_Palpable_PhrasingTest extends AnyUnion_Palpable_PhrasingTest 
 			-1,
 			AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Palpable_Phrasing.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, Union_Palpable_Phrasing.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_Palpable_Phrasing.class);
 	}
 }

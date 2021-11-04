@@ -22,7 +22,7 @@
  */
 package com.aoapps.html.servlet;
 
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Test;
 
 /**
@@ -56,7 +56,7 @@ public class ContentModelTest {
 	}
 
 	static void testContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTests.testInterfaces(
+		InheritanceTestHelper.testInterfaces(
 			ContentEE.class,
 			iface -> {
 				String simpleName = iface.getSimpleName();
@@ -71,7 +71,7 @@ public class ContentModelTest {
 	@Test
 	public void testNoImplementInherited() {
 		for(Class<? extends ContentEE> iface : getAllContentModels()) {
-			InheritanceTests.testNoImplementInherited(ContentEE.class, iface);
+			InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
 		}
 	}
 }

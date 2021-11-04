@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyFlowContentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -100,6 +100,6 @@ public class FlowContentTest extends AnyFlowContentTest {
 			-1,
 			AoArrays.indexOf(ContentModelTest.getAllContentModels(), FlowContent.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, FlowContent.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, FlowContent.class);
 	}
 }

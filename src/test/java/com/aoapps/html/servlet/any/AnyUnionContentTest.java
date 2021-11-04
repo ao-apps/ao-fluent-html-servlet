@@ -22,7 +22,7 @@
  */
 package com.aoapps.html.servlet.any;
 
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Test;
 
 /**
@@ -44,7 +44,7 @@ public class AnyUnionContentTest {
 	}
 
 	static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTests.testInterfaces(
+		InheritanceTestHelper.testInterfaces(
 			ContentEE.class,
 			iface -> iface.getSimpleName().startsWith("AnyUnion_"),
 			getAllUnions(),
@@ -56,7 +56,7 @@ public class AnyUnionContentTest {
 	@Test
 	public void testNoImplementInherited() {
 		for(Class<? extends ContentEE> iface : getAllUnions()) {
-			InheritanceTests.testNoImplementInherited(ContentEE.class, iface);
+			InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
 		}
 	}
 }

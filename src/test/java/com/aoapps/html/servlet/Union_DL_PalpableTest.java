@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyUnion_DL_PalpableTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -86,6 +86,6 @@ public class Union_DL_PalpableTest extends AnyUnion_DL_PalpableTest {
 			-1,
 			AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_DL_Palpable.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, Union_DL_Palpable.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_DL_Palpable.class);
 	}
 }

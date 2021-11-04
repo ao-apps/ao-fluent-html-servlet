@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyDIV_contentTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -102,6 +102,6 @@ public class DIV_contentTest extends AnyDIV_contentTest {
 			-1,
 			AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), DIV_content.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, DIV_content.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, DIV_content.class);
 	}
 }

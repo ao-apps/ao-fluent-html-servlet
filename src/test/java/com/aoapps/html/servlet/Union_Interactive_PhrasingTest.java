@@ -24,7 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.collections.AoArrays;
 import com.aoapps.html.any.tests.AnyUnion_Interactive_PhrasingTest;
-import com.aoapps.html.any.tests.InheritanceTests;
+import com.aoapps.html.any.tests.InheritanceTestHelper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -86,6 +86,6 @@ public class Union_Interactive_PhrasingTest extends AnyUnion_Interactive_Phrasin
 			-1,
 			AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Interactive_Phrasing.class)
 		);
-		InheritanceTests.testNoImplementInherited(ContentEE.class, Union_Interactive_Phrasing.class);
+		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_Interactive_Phrasing.class);
 	}
 }
