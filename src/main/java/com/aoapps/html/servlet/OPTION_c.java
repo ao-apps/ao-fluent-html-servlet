@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,38 +22,25 @@
  */
 package com.aoapps.html.servlet;
 
-import com.aoapps.html.any.AnyTITLE;
-import java.io.IOException;
-import java.io.Writer;
+import com.aoapps.html.any.AnyOPTION_c;
 
 /**
- * See <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element">4.2.2 The title element</a>.
+ * <ul>
+ * <li>See <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element">4.10.10 The option element</a>.</li>
+ * <li>See <a href="https://www.w3schools.com/tags/tag_option.asp">HTML option tag</a>.</li>
+ * </ul>
  *
  * @param  <PC>  The parent content model this element is within
  *
  * @author  AO Industries, Inc.
  */
-public final class TITLE<
-	PC extends MetadataContent<PC>
-> extends AnyTITLE<DocumentEE, PC, TITLE<PC>, TITLE__<PC>, TITLE_c<PC>> {
+public final class OPTION_c<
+	PC extends Union_DATALIST_OPTGROUP<PC>
+>
+	extends AnyOPTION_c<DocumentEE, PC, OPTION_c<PC>>
+	implements TextContent<OPTION_c<PC>> {
 
-	TITLE(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
-
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected TITLE<PC> writeOpen(Writer out) throws IOException {
-		return super.writeOpen(out);
-	}
-
-	@Override
-	protected TITLE__<PC> new__() {
-		return new TITLE__<>(this);
-	}
-
-	@Override
-	protected TITLE_c<PC> new_c() {
-		return new TITLE_c<>(this);
+	OPTION_c(OPTION<PC> element) {
+		super(element);
 	}
 }

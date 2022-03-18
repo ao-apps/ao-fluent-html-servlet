@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -38,8 +38,7 @@ import java.io.Writer;
  */
 public final class OPTION<
 	PC extends Union_DATALIST_OPTGROUP<PC>
-> extends
-	AnyOPTION<DocumentEE, PC, OPTION<PC>> {
+> extends AnyOPTION<DocumentEE, PC, OPTION<PC>, OPTION__<PC>, OPTION_c<PC>> {
 
 	OPTION(DocumentEE document, PC pc) {
 		super(document, pc);
@@ -49,5 +48,15 @@ public final class OPTION<
 	@Override
 	protected OPTION<PC> writeOpen(Writer out) throws IOException {
 		return super.writeOpen(out);
+	}
+
+	@Override
+	protected OPTION__<PC> new__() {
+		return new OPTION__<>(this);
+	}
+
+	@Override
+	protected OPTION_c<PC> new_c() {
+		return new OPTION_c<>(this);
 	}
 }
