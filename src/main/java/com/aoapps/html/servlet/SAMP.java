@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -35,8 +35,7 @@ import java.io.Writer;
  */
 public final class SAMP<
 	PC extends Union_Palpable_Phrasing<PC>
-> extends
-	AnySAMP<DocumentEE, PC, SAMP<PC>, SAMP__<PC>, SAMP_c<PC>> {
+> extends AnySAMP<DocumentEE, PC, SAMP<PC>, SAMP__<PC>, SAMP_c<PC>> {
 
 	SAMP(DocumentEE document, PC pc) {
 		super(document, pc);

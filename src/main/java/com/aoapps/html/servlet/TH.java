@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -35,8 +35,7 @@ import java.io.Writer;
  */
 public final class TH<
 	PC extends TR_content<PC>
-> extends
-	AnyTH<DocumentEE, PC, TH<PC>, TH__<PC>, TH_c<PC>> {
+> extends AnyTH<DocumentEE, PC, TH<PC>, TH__<PC>, TH_c<PC>> {
 
 	TH(DocumentEE document, PC pc) {
 		super(document, pc);

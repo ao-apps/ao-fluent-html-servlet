@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -45,8 +45,7 @@ public abstract class AnyHTMLEE<
 	__ extends AnyHTMLEE__<D, PC, __>,
 	// Would prefer "_c extends __ & Closeable<D, PC>", but "a type variable may not be followed by other bounds"
 	_c extends AnyHTMLEE_c<D, PC, _c>
-> extends
-	AnyHTML<D, PC, E, __, _c> {
+> extends AnyHTML<D, PC, E, __, _c> {
 
 	protected AnyHTMLEE(D document, PC pc) {
 		super(document, pc);

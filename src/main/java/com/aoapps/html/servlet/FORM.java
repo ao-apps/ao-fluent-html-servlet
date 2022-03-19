@@ -39,8 +39,7 @@ import java.io.Writer;
 // TODO: Write name attribute also when id is set?  At least by doctype?  See ao-taglib
 public final class FORM<
 	PC extends PalpableContent<PC>
-> extends
-	AnyFORM<DocumentEE, PC, FORM<PC>, FORM__<PC>, FORM_c<PC>> {
+> extends AnyFORM<DocumentEE, PC, FORM<PC>, FORM__<PC>, FORM_c<PC>> {
 
 	FORM(DocumentEE document, PC pc) {
 		super(document, pc);

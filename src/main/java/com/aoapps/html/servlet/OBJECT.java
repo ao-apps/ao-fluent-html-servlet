@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -35,8 +35,7 @@ import java.io.Writer;
  */
 public final class OBJECT<
 	PC extends Union_Embedded_Interactive<PC>
-> extends
-	AnyOBJECT<DocumentEE, PC, OBJECT<PC>, OBJECT__<PC>, OBJECT_c<PC>> {
+> extends AnyOBJECT<DocumentEE, PC, OBJECT<PC>, OBJECT__<PC>, OBJECT_c<PC>> {
 
 	OBJECT(DocumentEE document, PC pc) {
 		super(document, pc);
