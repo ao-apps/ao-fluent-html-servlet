@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -208,7 +208,37 @@ public interface AnyContentEE<
 	// Inherited: TBODY
 	// Inherited: THEAD
 	// Inherited: TFOOT
-	// Inherited: TR
+	// <editor-fold defaultstate="collapsed" desc="Inherited: TR (removed deprecated since context is unknown)">
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@SuppressWarnings("deprecation")
+	default TR<__> tr() throws IOException {
+		return TABLE_content.super.tr();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param  <Ex>  An arbitrary exception type that may be thrown
+	 *              it is recommended to always use <code>&lt;tbody&gt;</code>.
+	 */
+	@Override
+	@SuppressWarnings("deprecation")
+	default <Ex extends Throwable> __ tr__(IOConsumerE<? super TR__<__>, Ex> tr) throws IOException, Ex {
+		return TABLE_content.super.tr__(tr);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	@SuppressWarnings("deprecation")
+	default TR_c<__> tr_c() throws IOException {
+		return TABLE_content.super.tr_c();
+	}
+	// </editor-fold>
 	// Inherited: TD
 	// Inherited: TH
 	// Inherited: FORM
