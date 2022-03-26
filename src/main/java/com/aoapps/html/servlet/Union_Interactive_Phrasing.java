@@ -98,7 +98,7 @@ public interface Union_Interactive_Phrasing<
 		__ extends Union_Interactive_Phrasing<__>
 	> extends AnyUnion_Interactive_Phrasing.InputFactory<DocumentEE, __> {
 
-		public InputFactory(DocumentEE document, __ pc) {
+		InputFactory(DocumentEE document, __ pc) {
 			super(document, pc);
 		}
 
