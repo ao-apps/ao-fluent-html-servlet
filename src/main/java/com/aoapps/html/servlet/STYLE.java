@@ -44,11 +44,11 @@ public final class STYLE<
 		super(document, pc);
 	}
 
-	public STYLE(DocumentEE document, PC pc, String type) {
+	STYLE(DocumentEE document, PC pc, String type) {
 		super(document, pc, type);
 	}
 
-	public STYLE(DocumentEE document, PC pc, Type type) {
+	STYLE(DocumentEE document, PC pc, Type type) {
 		super(document, pc, type);
 	}
 
