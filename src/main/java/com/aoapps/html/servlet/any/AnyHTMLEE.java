@@ -55,6 +55,9 @@ public abstract class AnyHTMLEE<
 	 * Adds a lang attribute based on the {@linkplain ServletResponse#getLocale() response locale}.
 	 */
 	public E lang() throws IOException {
+		// TODO: Add getLocale() to EncodingContext, and move this method to AnyDocument?
+		//       This might also tie into the idea of automatic lang attributes where language changed
+		//       Have to decide to use response locale (probably not since cannot change after committed?), ThreadLocale, or other.
 		return lang(document.response.getLocale());
 	}
 }

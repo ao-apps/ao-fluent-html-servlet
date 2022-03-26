@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -200,13 +200,13 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	//           Sub-requests include semanticcms-core-servlet:capturePage along with ao-web-framework searches.
 	//       Track at AnyDocumentEE level?
 	public DocumentEE(
-		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
+		HttpServletResponse response,
 		EncodingContextEE encodingContext,
 		Writer out,
 		boolean autonli, boolean indent
 	) {
 		super(
-			servletContext, request, response,
+			response,
 			encodingContext,
 			out
 		);
@@ -219,7 +219,7 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 		boolean autonli, boolean indent
 	) {
 		this(
-			servletContext, request, response,
+			response,
 			new EncodingContextEE(servletContext, request, response),
 			out,
 			autonli, indent
