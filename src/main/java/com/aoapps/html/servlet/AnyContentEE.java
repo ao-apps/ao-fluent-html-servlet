@@ -82,7 +82,7 @@ public interface AnyContentEE<
 	//
 	// Others:
 	//
-	// Inherited: WhitespaceWriter<D>
+	// Inherited: WhitespaceWriter
 {
 	//
 	// Factories:
