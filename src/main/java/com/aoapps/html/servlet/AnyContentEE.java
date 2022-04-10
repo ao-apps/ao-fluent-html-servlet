@@ -89,11 +89,12 @@ public interface AnyContentEE<
 	//
 	// <editor-fold defaultstate="collapsed" desc="HTML">
 	@Override
+	@SuppressWarnings("deprecation")
 	default HTML<__> html() throws IOException {
 		@SuppressWarnings("unchecked")
 		__ pc = (__)this;
 		DocumentEE document = getDocument();
-		return new HTML<>(document, pc).writeOpen(document.getUnsafe(null));
+		return new HTML<>(document, pc).writeOpen(document.getRawUnsafe(null));
 	}
 
 	/**
