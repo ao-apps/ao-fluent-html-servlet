@@ -24,6 +24,7 @@ package com.aoapps.html.servlet;
 
 import com.aoapps.encoding.servlet.EncodingContextEE;
 import com.aoapps.html.servlet.any.AnyDocumentEE;
+import com.aoapps.lang.Coercion;
 import com.aoapps.servlet.attribute.AttributeEE;
 import com.aoapps.servlet.attribute.ScopeEE;
 import java.io.IOException;
@@ -191,6 +192,10 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	}
 	// </editor-fold>
 
+	/**
+	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+	 *              with {@code encoder = null}.
+	 */
 	// TODO: Track DocumentEE that is current on the request (maybe in a Stack)
 	//       Default new DocumentEE to settings and indentation depth of the last DocumentEE.
 	//           Use default settings when no existing document, unless settings specified by caller then use them.
@@ -214,6 +219,10 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 		setIndent(indent);
 	}
 
+	/**
+	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+	 *              with {@code encoder = null}.
+	 */
 	public DocumentEE(
 		ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out,
 		boolean autonli, boolean indent
@@ -229,6 +238,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	/**
 	 * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
 	 * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+	 *
+	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+	 *              with {@code encoder = null}.
 	 *
 	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
@@ -268,6 +280,10 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 		);
 	}
 
+	/**
+	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+	 *              with {@code encoder = null}.
+	 */
 	public DocumentEE(
 		HttpServletRequest request, HttpServletResponse response, Writer out,
 		boolean autonli, boolean indent
@@ -278,6 +294,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 	/**
 	 * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
 	 * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+	 *
+	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+	 *              with {@code encoder = null}.
 	 *
 	 * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
 	 * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)

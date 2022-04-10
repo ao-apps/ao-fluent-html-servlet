@@ -24,6 +24,7 @@ package com.aoapps.html.servlet.any;
 
 import com.aoapps.encoding.servlet.EncodingContextEE;
 import com.aoapps.html.any.AnyDocument;
+import com.aoapps.lang.Coercion;
 import java.io.Writer;
 import javax.servlet.http.HttpServletResponse;
 
@@ -37,6 +38,10 @@ public abstract class AnyDocumentEE<D extends AnyDocumentEE<D>> extends AnyDocum
 
 	protected final HttpServletResponse response;
 
+	/**
+	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+	 *              with {@code encoder = null}.
+	 */
 	protected AnyDocumentEE(
 		HttpServletResponse response,
 		EncodingContextEE encodingContext,
