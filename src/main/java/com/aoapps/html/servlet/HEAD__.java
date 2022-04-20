@@ -37,12 +37,12 @@ import com.aoapps.html.any.AnyHEAD__;
  * @author  AO Industries, Inc.
  */
 public final class HEAD__<
-	PC extends HTML_content<PC>
+  PC extends HTML_content<PC>
 >
-	extends AnyHEAD__<DocumentEE, PC, HEAD__<PC>>
-	implements MetadataContent<HEAD__<PC>> {
+  extends AnyHEAD__<DocumentEE, PC, HEAD__<PC>>
+  implements MetadataContent<HEAD__<PC>> {
 
-	HEAD__(HEAD<PC> element) {
-		super(element);
-	}
+  HEAD__(HEAD<PC> element) {
+    super(element);
+  }
 }

@@ -35,29 +35,29 @@ import org.junit.Test;
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class AnyUnionContentTest {
 
-	/**
-	 * Gets the set of all <code>Union_*</code> interfaces.
-	 */
-	static Class<? extends ContentEE>[] getAllUnions() {
-		return new Class[] {
-			// None
-		};
-	}
+  /**
+   * Gets the set of all <code>Union_*</code> interfaces.
+   */
+  static Class<? extends ContentEE>[] getAllUnions() {
+    return new Class[] {
+      // None
+    };
+  }
 
-	static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTestHelper.testInterfaces(
-			ContentEE.class,
-			iface -> iface.getSimpleName().startsWith("AnyUnion_"),
-			getAllUnions(),
-			clazz,
-			expected
-		);
-	}
+  static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
+    InheritanceTestHelper.testInterfaces(
+      ContentEE.class,
+      iface -> iface.getSimpleName().startsWith("AnyUnion_"),
+      getAllUnions(),
+      clazz,
+      expected
+    );
+  }
 
-	@Test
-	public void testNoImplementInherited() {
-		for(Class<? extends ContentEE> iface : getAllUnions()) {
-			InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
-		}
-	}
+  @Test
+  public void testNoImplementInherited() {
+    for (Class<? extends ContentEE> iface : getAllUnions()) {
+      InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
+    }
+  }
 }

@@ -40,16 +40,16 @@ import java.io.Writer;
  */
 @SuppressWarnings("deprecation")
 public final class HR<
-	PC extends FlowContent<PC>
+  PC extends FlowContent<PC>
 > extends AnyHR<DocumentEE, PC, HR<PC>> {
 
-	HR(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
+  HR(DocumentEE document, PC pc) {
+    super(document, pc);
+  }
 
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected HR<PC> writeOpen(Writer unsafe) throws IOException {
-		return super.writeOpen(unsafe);
-	}
+  // Expose to this package, avoiding public to keep a clean API for optimal code assist
+  @Override
+  protected HR<PC> writeOpen(Writer unsafe) throws IOException {
+    return super.writeOpen(unsafe);
+  }
 }

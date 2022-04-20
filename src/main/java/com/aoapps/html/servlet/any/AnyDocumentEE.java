@@ -37,21 +37,21 @@ import javax.servlet.http.HttpServletResponse;
 // TODO: Add tests
 public abstract class AnyDocumentEE<D extends AnyDocumentEE<D>> extends AnyDocument<D> implements AnyContentEE<D, D> {
 
-	protected final HttpServletResponse response;
+  protected final HttpServletResponse response;
 
-	/**
-	 * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
-	 *              with {@code encoder = null}.
-	 */
-	protected AnyDocumentEE(
-		HttpServletResponse response,
-		EncodingContextEE encodingContext,
-		Writer out
-	) {
-		super(
-			encodingContext,
-			out
-		);
-		this.response = response;
-	}
+  /**
+   * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
+   *              with {@code encoder = null}.
+   */
+  protected AnyDocumentEE(
+    HttpServletResponse response,
+    EncodingContextEE encodingContext,
+    Writer out
+  ) {
+    super(
+      encodingContext,
+      out
+    );
+    this.response = response;
+  }
 }

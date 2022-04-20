@@ -33,49 +33,49 @@ import org.junit.Test;
  */
 public class AnyContentEETest extends com.aoapps.html.servlet.any.AnyContentEETest {
 
-	public AnyContentEETest() {
-		super(AnyContentEE.class);
-	}
+  public AnyContentEETest() {
+    super(AnyContentEE.class);
+  }
 
-	@Test
-	@Override
-	public void testUnions() {
-		UnionContentTest.testUnions(
-			AnyContentEE.class,
-			//
-			// Unions:
-			//
-			UnionContentTest.getAllUnions()
-		);
-	}
+  @Test
+  @Override
+  public void testUnions() {
+    UnionContentTest.testUnions(
+      AnyContentEE.class,
+      //
+      // Unions:
+      //
+      UnionContentTest.getAllUnions()
+    );
+  }
 
-	@Test
-	@Override
-	public void testContentModels() {
-		ContentModelTest.testContentModels(
-			AnyContentEE.class,
-			//
-			// Content models:
-			//
-			ContentModelTest.getAllContentModels()
-		);
-	}
+  @Test
+  @Override
+  public void testContentModels() {
+    ContentModelTest.testContentModels(
+      AnyContentEE.class,
+      //
+      // Content models:
+      //
+      ContentModelTest.getAllContentModels()
+    );
+  }
 
-	@Test
-	@Override
-	public void testElementContentModels() {
-		ElementContentModelTest.testElementContentModels(
-			AnyContentEE.class,
-			//
-			// Per-element content models:
-			//
-			ElementContentModelTest.getAllElementContentModels()
-		);
-	}
+  @Test
+  @Override
+  public void testElementContentModels() {
+    ElementContentModelTest.testElementContentModels(
+      AnyContentEE.class,
+      //
+      // Per-element content models:
+      //
+      ElementContentModelTest.getAllElementContentModels()
+    );
+  }
 
-	@Test
-	@Override
-	public void testNoImplementInherited() {
-		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, AnyContentEE.class);
-	}
+  @Test
+  @Override
+  public void testNoImplementInherited() {
+    InheritanceTestHelper.testNoImplementInherited(ContentEE.class, AnyContentEE.class);
+  }
 }

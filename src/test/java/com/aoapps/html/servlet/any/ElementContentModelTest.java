@@ -35,29 +35,29 @@ import org.junit.Test;
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class ElementContentModelTest {
 
-	/**
-	 * Gets the set of all <code>*_content</code> per-element content model interfaces.
-	 */
-	static Class<? extends ContentEE>[] getAllElementContentModels() {
-		return new Class[] {
-			// None
-		};
-	}
+  /**
+   * Gets the set of all <code>*_content</code> per-element content model interfaces.
+   */
+  static Class<? extends ContentEE>[] getAllElementContentModels() {
+    return new Class[] {
+      // None
+    };
+  }
 
-	static void testElementContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTestHelper.testInterfaces(
-			ContentEE.class,
-			iface -> iface.getSimpleName().endsWith("_content"),
-			getAllElementContentModels(),
-			clazz,
-			expected
-		);
-	}
+  static void testElementContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
+    InheritanceTestHelper.testInterfaces(
+      ContentEE.class,
+      iface -> iface.getSimpleName().endsWith("_content"),
+      getAllElementContentModels(),
+      clazz,
+      expected
+    );
+  }
 
-	@Test
-	public void testNoImplementInherited() {
-		for(Class<? extends ContentEE> iface : getAllElementContentModels()) {
-			InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
-		}
-	}
+  @Test
+  public void testNoImplementInherited() {
+    for (Class<? extends ContentEE> iface : getAllElementContentModels()) {
+      InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
+    }
+  }
 }

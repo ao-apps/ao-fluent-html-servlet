@@ -39,26 +39,26 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class DFN<
-	PC extends Union_Palpable_Phrasing<PC>
+  PC extends Union_Palpable_Phrasing<PC>
 > extends AnyDFN<DocumentEE, PC, DFN<PC>, DFN__<PC>, DFN_c<PC>> {
 
-	DFN(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
+  DFN(DocumentEE document, PC pc) {
+    super(document, pc);
+  }
 
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected DFN<PC> writeOpen(Writer unsafe) throws IOException {
-		return super.writeOpen(unsafe);
-	}
+  // Expose to this package, avoiding public to keep a clean API for optimal code assist
+  @Override
+  protected DFN<PC> writeOpen(Writer unsafe) throws IOException {
+    return super.writeOpen(unsafe);
+  }
 
-	@Override
-	protected DFN__<PC> new__() {
-		return new DFN__<>(this);
-	}
+  @Override
+  protected DFN__<PC> new__() {
+    return new DFN__<>(this);
+  }
 
-	@Override
-	protected DFN_c<PC> new_c() {
-		return new DFN_c<>(this);
-	}
+  @Override
+  protected DFN_c<PC> new_c() {
+    return new DFN_c<>(this);
+  }
 }

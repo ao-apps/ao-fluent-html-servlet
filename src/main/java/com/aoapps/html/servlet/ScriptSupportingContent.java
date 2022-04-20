@@ -37,64 +37,64 @@ import java.io.IOException;
  * @author  AO Industries, Inc.
  */
 public interface ScriptSupportingContent<
-	__ extends ScriptSupportingContent<__>
+  __ extends ScriptSupportingContent<__>
 > extends AnyScriptSupportingContent<DocumentEE, __>,
-	//
-	// Unions:
-	//
-	Union_COLGROUP_ScriptSupporting<__>
+  //
+  // Unions:
+  //
+  Union_COLGROUP_ScriptSupporting<__>
 
-	//
-	// Content models:
-	//
-	// Inherited: ContentEE<__>
+  //
+  // Content models:
+  //
+  // Inherited: ContentEE<__>
 {
-	//
-	// Factories:
-	//
-	// <editor-fold defaultstate="collapsed" desc="SCRIPT">
-	@Override
-	@SuppressWarnings("deprecation")
-	default SCRIPT<__> script() throws IOException {
-		@SuppressWarnings("unchecked")
-		__ pc = (__)this;
-		DocumentEE document = getDocument();
-		return new SCRIPT<>(document, pc).writeOpen(document.getRawUnsafe(null));
-	}
+  //
+  // Factories:
+  //
+  // <editor-fold defaultstate="collapsed" desc="SCRIPT">
+  @Override
+  @SuppressWarnings("deprecation")
+  default SCRIPT<__> script() throws IOException {
+    @SuppressWarnings("unchecked")
+    __ pc = (__)this;
+    DocumentEE document = getDocument();
+    return new SCRIPT<>(document, pc).writeOpen(document.getRawUnsafe(null));
+  }
 
-	@Override
-	@SuppressWarnings("deprecation")
-	default SCRIPT<__> script(String type) throws IOException {
-		@SuppressWarnings("unchecked")
-		__ pc = (__)this;
-		DocumentEE document = getDocument();
-		return new SCRIPT<>(document, pc, type).writeOpen(document.getRawUnsafe(null));
-	}
+  @Override
+  @SuppressWarnings("deprecation")
+  default SCRIPT<__> script(String type) throws IOException {
+    @SuppressWarnings("unchecked")
+    __ pc = (__)this;
+    DocumentEE document = getDocument();
+    return new SCRIPT<>(document, pc, type).writeOpen(document.getRawUnsafe(null));
+  }
 
-	/**
-	 * @param  <Ex>  An arbitrary exception type that may be thrown
-	 */
-	@Override
-	default <Ex extends Throwable> SCRIPT<__> script(Suppliers.String<Ex> type) throws IOException, Ex {
-		return script((type == null) ? null : type.get());
-	}
+  /**
+   * @param  <Ex>  An arbitrary exception type that may be thrown
+   */
+  @Override
+  default <Ex extends Throwable> SCRIPT<__> script(Suppliers.String<Ex> type) throws IOException, Ex {
+    return script((type == null) ? null : type.get());
+  }
 
-	@Override
-	@SuppressWarnings("deprecation")
-	default SCRIPT<__> script(AnySCRIPT.Type type) throws IOException {
-		@SuppressWarnings("unchecked")
-		__ pc = (__)this;
-		DocumentEE document = getDocument();
-		return new SCRIPT<>(document, pc, type).writeOpen(document.getRawUnsafe(null));
-	}
+  @Override
+  @SuppressWarnings("deprecation")
+  default SCRIPT<__> script(AnySCRIPT.Type type) throws IOException {
+    @SuppressWarnings("unchecked")
+    __ pc = (__)this;
+    DocumentEE document = getDocument();
+    return new SCRIPT<>(document, pc, type).writeOpen(document.getRawUnsafe(null));
+  }
 
-	/**
-	 * @param  <Ex>  An arbitrary exception type that may be thrown
-	 */
-	@Override
-	default <Ex extends Throwable> SCRIPT<__> script(IOSupplierE<? extends AnySCRIPT.Type, Ex> type) throws IOException, Ex {
-		return script((type == null) ? null : type.get());
-	}
-	// </editor-fold>
-	// Inherited: TEMPLATE
+  /**
+   * @param  <Ex>  An arbitrary exception type that may be thrown
+   */
+  @Override
+  default <Ex extends Throwable> SCRIPT<__> script(IOSupplierE<? extends AnySCRIPT.Type, Ex> type) throws IOException, Ex {
+    return script((type == null) ? null : type.get());
+  }
+  // </editor-fold>
+  // Inherited: TEMPLATE
 }

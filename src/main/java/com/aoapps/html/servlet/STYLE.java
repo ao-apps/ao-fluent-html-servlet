@@ -39,24 +39,24 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class STYLE<
-	PC extends MetadataContent<PC>
+  PC extends MetadataContent<PC>
 > extends AnySTYLE<DocumentEE, PC, STYLE<PC>> {
 
-	STYLE(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
+  STYLE(DocumentEE document, PC pc) {
+    super(document, pc);
+  }
 
-	STYLE(DocumentEE document, PC pc, String type) {
-		super(document, pc, type);
-	}
+  STYLE(DocumentEE document, PC pc, String type) {
+    super(document, pc, type);
+  }
 
-	STYLE(DocumentEE document, PC pc, Type type) {
-		super(document, pc, type);
-	}
+  STYLE(DocumentEE document, PC pc, Type type) {
+    super(document, pc, type);
+  }
 
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected STYLE<PC> writeOpen(Writer unsafe) throws IOException {
-		return super.writeOpen(unsafe);
-	}
+  // Expose to this package, avoiding public to keep a clean API for optimal code assist
+  @Override
+  protected STYLE<PC> writeOpen(Writer unsafe) throws IOException {
+    return super.writeOpen(unsafe);
+  }
 }

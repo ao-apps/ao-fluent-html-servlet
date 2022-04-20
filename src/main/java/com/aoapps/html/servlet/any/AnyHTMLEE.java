@@ -44,25 +44,25 @@ import javax.servlet.ServletResponse;
  * @author  AO Industries, Inc.
  */
 public abstract class AnyHTMLEE<
-	D  extends AnyDocumentEE<D>,
-	PC extends ContentEE<D, PC>,
-	E  extends AnyHTMLEE<D, PC, E, __, _c>,
-	__ extends AnyHTMLEE__<D, PC, __>,
-	// Would prefer "_c extends __ & Closeable<D, PC>", but "a type variable may not be followed by other bounds"
-	_c extends AnyHTMLEE_c<D, PC, _c>
+  D  extends AnyDocumentEE<D>,
+  PC extends ContentEE<D, PC>,
+  E  extends AnyHTMLEE<D, PC, E, __, _c>,
+  __ extends AnyHTMLEE__<D, PC, __>,
+  // Would prefer "_c extends __ & Closeable<D, PC>", but "a type variable may not be followed by other bounds"
+  _c extends AnyHTMLEE_c<D, PC, _c>
 > extends AnyHTML<D, PC, E, __, _c> {
 
-	protected AnyHTMLEE(D document, PC pc) {
-		super(document, pc);
-	}
+  protected AnyHTMLEE(D document, PC pc) {
+    super(document, pc);
+  }
 
-	/**
-	 * Adds a lang attribute based on the {@linkplain ServletResponse#getLocale() response locale}.
-	 */
-	public E lang() throws IOException {
-		// TODO: Add getLocale() to EncodingContext, and move this method to AnyDocument?
-		//       This might also tie into the idea of automatic lang attributes where language changed
-		//       Have to decide to use response locale (probably not since cannot change after committed?), ThreadLocale, or other.
-		return lang(document.response.getLocale());
-	}
+  /**
+   * Adds a lang attribute based on the {@linkplain ServletResponse#getLocale() response locale}.
+   */
+  public E lang() throws IOException {
+    // TODO: Add getLocale() to EncodingContext, and move this method to AnyDocument?
+    //       This might also tie into the idea of automatic lang attributes where language changed
+    //       Have to decide to use response locale (probably not since cannot change after committed?), ThreadLocale, or other.
+    return lang(document.response.getLocale());
+  }
 }

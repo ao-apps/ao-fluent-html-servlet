@@ -37,61 +37,61 @@ import org.junit.Test;
 @SuppressWarnings("rawtypes")
 public class ContentEETest extends ContentTest {
 
-	protected ContentEETest(Class<? extends ContentEE> testingClass) {
-		super(testingClass);
-	}
+  protected ContentEETest(Class<? extends ContentEE> testingClass) {
+    super(testingClass);
+  }
 
-	public ContentEETest() {
-		this(ContentEE.class);
-	}
+  public ContentEETest() {
+    this(ContentEE.class);
+  }
 
-	@Test
-	@SuppressWarnings("unchecked")
-	@Override
-	public void testUnions() {
-		AnyUnionContentTest.testUnions(
-			ContentEE.class
-			//
-			// Unions:
-			//
-			// None
-		);
-	}
+  @Test
+  @SuppressWarnings("unchecked")
+  @Override
+  public void testUnions() {
+    AnyUnionContentTest.testUnions(
+      ContentEE.class
+      //
+      // Unions:
+      //
+      // None
+    );
+  }
 
-	@Test
-	@SuppressWarnings("unchecked")
-	@Override
-	public void testContentModels() {
-		ContentModelTest.testContentModels(
-			ContentEE.class
-			//
-			// Content models:
-			//
-			// None
-		);
-	}
+  @Test
+  @SuppressWarnings("unchecked")
+  @Override
+  public void testContentModels() {
+    ContentModelTest.testContentModels(
+      ContentEE.class
+      //
+      // Content models:
+      //
+      // None
+    );
+  }
 
-	@Test
-	@SuppressWarnings("unchecked")
-	@Override
-	public void testElementContentModels() {
-		ElementContentModelTest.testElementContentModels(
-			ContentEE.class
-			//
-			// Per-element content models:
-			//
-			// None
-		);
-	}
+  @Test
+  @SuppressWarnings("unchecked")
+  @Override
+  public void testElementContentModels() {
+    ElementContentModelTest.testElementContentModels(
+      ContentEE.class
+      //
+      // Per-element content models:
+      //
+      // None
+    );
+  }
 
-	@Test
-	@Override
-	public void testNoImplementInherited() {
-		Assert.assertNotEquals(
-			"Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
-			-1,
-			AoArrays.indexOf(ContentModelTest.getAllContentModels(), ContentEE.class)
-		);
-		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, ContentEE.class);
-	}
+  @Test
+  @Override
+  public void testNoImplementInherited() {
+    Assert.assertNotEquals(
+      "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
+      -1,
+      AoArrays.indexOf(ContentModelTest.getAllContentModels(), ContentEE.class)
+    );
+    InheritanceTestHelper.testNoImplementInherited(ContentEE.class, ContentEE.class);
+  }
 }

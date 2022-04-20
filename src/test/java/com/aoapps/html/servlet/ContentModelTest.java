@@ -35,44 +35,44 @@ import org.junit.Test;
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class ContentModelTest {
 
-	/**
-	 * Gets the set of all <code>*Content</code> and <code>*ContentEE</code> content model interfaces.
-	 */
-	static Class<? extends ContentEE>[] getAllContentModels() {
-		return new Class[] {
-			AnyContentEE.class,
-			ContentEE.class,
-			EmbeddedContent.class,
-			FlowContent.class,
-			HeadingContent.class,
-			InteractiveContent.class,
-			ListContent.class,
-			MetadataContent.class,
-			PalpableContent.class,
-			PhrasingContent.class,
-			ScriptSupportingContent.class,
-			SectioningContent.class,
-			TextContent.class
-		};
-	}
+  /**
+   * Gets the set of all <code>*Content</code> and <code>*ContentEE</code> content model interfaces.
+   */
+  static Class<? extends ContentEE>[] getAllContentModels() {
+    return new Class[] {
+      AnyContentEE.class,
+      ContentEE.class,
+      EmbeddedContent.class,
+      FlowContent.class,
+      HeadingContent.class,
+      InteractiveContent.class,
+      ListContent.class,
+      MetadataContent.class,
+      PalpableContent.class,
+      PhrasingContent.class,
+      ScriptSupportingContent.class,
+      SectioningContent.class,
+      TextContent.class
+    };
+  }
 
-	static void testContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
-		InheritanceTestHelper.testInterfaces(
-			ContentEE.class,
-			iface -> {
-				String simpleName = iface.getSimpleName();
-				return simpleName.endsWith("Content") || simpleName.endsWith("ContentEE");
-			},
-			getAllContentModels(),
-			clazz,
-			expected
-		);
-	}
+  static void testContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
+    InheritanceTestHelper.testInterfaces(
+      ContentEE.class,
+      iface -> {
+        String simpleName = iface.getSimpleName();
+        return simpleName.endsWith("Content") || simpleName.endsWith("ContentEE");
+      },
+      getAllContentModels(),
+      clazz,
+      expected
+    );
+  }
 
-	@Test
-	public void testNoImplementInherited() {
-		for(Class<? extends ContentEE> iface : getAllContentModels()) {
-			InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
-		}
-	}
+  @Test
+  public void testNoImplementInherited() {
+    for (Class<? extends ContentEE> iface : getAllContentModels()) {
+      InheritanceTestHelper.testNoImplementInherited(ContentEE.class, iface);
+    }
+  }
 }

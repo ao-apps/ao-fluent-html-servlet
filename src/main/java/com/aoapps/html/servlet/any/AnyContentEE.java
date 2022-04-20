@@ -34,22 +34,22 @@ import java.io.IOException;
  * @author  AO Industries, Inc.
  */
 public interface AnyContentEE<
-	D  extends AnyDocumentEE<D>,
-	__ extends AnyContentEE<D, __>
+  D  extends AnyDocumentEE<D>,
+  __ extends AnyContentEE<D, __>
 > extends com.aoapps.html.any.AnyContent<D, __>,
-	//
-	// Content models:
-	//
-	ContentEE<D, __>
+  //
+  // Content models:
+  //
+  ContentEE<D, __>
 {
-	//
-	// Factories:
-	//
-	// <editor-fold defaultstate="collapsed" desc="HTML">
-	@Override
-	AnyHTMLEE<D, __, ?, ?, ?> html() throws IOException;
+  //
+  // Factories:
+  //
+  // <editor-fold defaultstate="collapsed" desc="HTML">
+  @Override
+  AnyHTMLEE<D, __, ?, ?, ?> html() throws IOException;
 
-	@Override
-	AnyHTMLEE_c<D, __, ?> html_c() throws IOException;
-	// </editor-fold>
+  @Override
+  AnyHTMLEE_c<D, __, ?> html_c() throws IOException;
+  // </editor-fold>
 }

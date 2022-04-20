@@ -39,16 +39,16 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class BASE<
-	PC extends MetadataContent<PC>
+  PC extends MetadataContent<PC>
 > extends AnyBASE<DocumentEE, PC, BASE<PC>> {
 
-	BASE(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
+  BASE(DocumentEE document, PC pc) {
+    super(document, pc);
+  }
 
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected BASE<PC> writeOpen(Writer unsafe) throws IOException {
-		return super.writeOpen(unsafe);
-	}
+  // Expose to this package, avoiding public to keep a clean API for optimal code assist
+  @Override
+  protected BASE<PC> writeOpen(Writer unsafe) throws IOException {
+    return super.writeOpen(unsafe);
+  }
 }

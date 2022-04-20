@@ -41,16 +41,16 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class WBR<
-	PC extends PhrasingContent<PC>
+  PC extends PhrasingContent<PC>
 > extends AnyWBR<DocumentEE, PC, WBR<PC>> {
 
-	WBR(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
+  WBR(DocumentEE document, PC pc) {
+    super(document, pc);
+  }
 
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected WBR<PC> writeOpen(Writer unsafe) throws IOException {
-		return super.writeOpen(unsafe);
-	}
+  // Expose to this package, avoiding public to keep a clean API for optimal code assist
+  @Override
+  protected WBR<PC> writeOpen(Writer unsafe) throws IOException {
+    return super.writeOpen(unsafe);
+  }
 }

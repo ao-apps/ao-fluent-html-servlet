@@ -35,53 +35,53 @@ import org.junit.Test;
 @SuppressWarnings("rawtypes")
 public class AnyDocumentEETest extends AnyDocumentTest {
 
-	protected AnyDocumentEETest(Class<? extends AnyDocumentEE> testingClass) {
-		super(testingClass);
-	}
+  protected AnyDocumentEETest(Class<? extends AnyDocumentEE> testingClass) {
+    super(testingClass);
+  }
 
-	public AnyDocumentEETest() {
-		this(AnyDocumentEE.class);
-	}
+  public AnyDocumentEETest() {
+    this(AnyDocumentEE.class);
+  }
 
-	@Test
-	@Override
-	public void testUnions() {
-		AnyUnionContentTest.testUnions(
-			AnyDocumentEE.class,
-			//
-			// Unions:
-			//
-			AnyUnionContentTest.getAllUnions()
-		);
-	}
+  @Test
+  @Override
+  public void testUnions() {
+    AnyUnionContentTest.testUnions(
+      AnyDocumentEE.class,
+      //
+      // Unions:
+      //
+      AnyUnionContentTest.getAllUnions()
+    );
+  }
 
-	@Test
-	@Override
-	public void testContentModels() {
-		ContentModelTest.testContentModels(
-			AnyDocumentEE.class,
-			//
-			// Content models:
-			//
-			ContentModelTest.getAllContentModels()
-		);
-	}
+  @Test
+  @Override
+  public void testContentModels() {
+    ContentModelTest.testContentModels(
+      AnyDocumentEE.class,
+      //
+      // Content models:
+      //
+      ContentModelTest.getAllContentModels()
+    );
+  }
 
-	@Test
-	@Override
-	public void testElementContentModels() {
-		ElementContentModelTest.testElementContentModels(
-			AnyDocumentEE.class,
-			//
-			// Per-element content models:
-			//
-			ElementContentModelTest.getAllElementContentModels()
-		);
-	}
+  @Test
+  @Override
+  public void testElementContentModels() {
+    ElementContentModelTest.testElementContentModels(
+      AnyDocumentEE.class,
+      //
+      // Per-element content models:
+      //
+      ElementContentModelTest.getAllElementContentModels()
+    );
+  }
 
-	@Test
-	@Override
-	public void testNoImplementInherited() {
-		InheritanceTestHelper.testNoImplementInherited(ContentEE.class, AnyDocumentEE.class);
-	}
+  @Test
+  @Override
+  public void testNoImplementInherited() {
+    InheritanceTestHelper.testNoImplementInherited(ContentEE.class, AnyDocumentEE.class);
+  }
 }

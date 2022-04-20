@@ -36,6 +36,6 @@ package com.aoapps.html.servlet;
  */
 @SuppressWarnings("MarkerInterface")
 public interface ContentEE<
-	__ extends ContentEE<__>
+  __ extends ContentEE<__>
 > extends com.aoapps.html.servlet.any.ContentEE<DocumentEE, __> {
 }

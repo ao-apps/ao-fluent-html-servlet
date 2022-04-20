@@ -39,24 +39,24 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class SCRIPT<
-	PC extends ScriptSupportingContent<PC>
+  PC extends ScriptSupportingContent<PC>
 > extends AnySCRIPT<DocumentEE, PC, SCRIPT<PC>> {
 
-	SCRIPT(DocumentEE document, PC pc) {
-		super(document, pc);
-	}
+  SCRIPT(DocumentEE document, PC pc) {
+    super(document, pc);
+  }
 
-	SCRIPT(DocumentEE document, PC pc, String type) {
-		super(document, pc, type);
-	}
+  SCRIPT(DocumentEE document, PC pc, String type) {
+    super(document, pc, type);
+  }
 
-	SCRIPT(DocumentEE document, PC pc, Type type) {
-		super(document, pc, type);
-	}
+  SCRIPT(DocumentEE document, PC pc, Type type) {
+    super(document, pc, type);
+  }
 
-	// Expose to this package, avoiding public to keep a clean API for optimal code assist
-	@Override
-	protected SCRIPT<PC> writeOpen(Writer unsafe) throws IOException {
-		return super.writeOpen(unsafe);
-	}
+  // Expose to this package, avoiding public to keep a clean API for optimal code assist
+  @Override
+  protected SCRIPT<PC> writeOpen(Writer unsafe) throws IOException {
+    return super.writeOpen(unsafe);
+  }
 }
