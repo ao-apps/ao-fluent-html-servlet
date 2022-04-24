@@ -45,11 +45,11 @@ public class ScriptSupportingContentTest extends AnyScriptSupportingContentTest 
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      ScriptSupportingContent.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class
+        ScriptSupportingContent.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class
     );
   }
 
@@ -58,11 +58,11 @@ public class ScriptSupportingContentTest extends AnyScriptSupportingContentTest 
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      ScriptSupportingContent.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        ScriptSupportingContent.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -71,11 +71,11 @@ public class ScriptSupportingContentTest extends AnyScriptSupportingContentTest 
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      ScriptSupportingContent.class
-      //
-      // Per-element content models:
-      //
-      // None
+        ScriptSupportingContent.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -83,9 +83,9 @@ public class ScriptSupportingContentTest extends AnyScriptSupportingContentTest 
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
-      -1,
-      AoArrays.indexOf(ContentModelTest.getAllContentModels(), ScriptSupportingContent.class)
+        "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
+        -1,
+        AoArrays.indexOf(ContentModelTest.getAllContentModels(), ScriptSupportingContent.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, ScriptSupportingContent.class);
   }

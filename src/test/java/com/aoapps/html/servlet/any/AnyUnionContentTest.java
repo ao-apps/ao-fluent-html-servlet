@@ -39,18 +39,18 @@ public class AnyUnionContentTest {
    * Gets the set of all <code>Union_*</code> interfaces.
    */
   static Class<? extends ContentEE>[] getAllUnions() {
-    return new Class[] {
-      // None
-    };
+    return new Class[]{
+        // None
+        };
   }
 
   static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
     InheritanceTestHelper.testInterfaces(
-      ContentEE.class,
-      iface -> iface.getSimpleName().startsWith("AnyUnion_"),
-      getAllUnions(),
-      clazz,
-      expected
+        ContentEE.class,
+        iface -> iface.getSimpleName().startsWith("AnyUnion_"),
+        getAllUnions(),
+        clazz,
+        expected
     );
   }
 

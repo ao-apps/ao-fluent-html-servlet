@@ -45,18 +45,18 @@ public class DIV_contentTest extends AnyDIV_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      DIV_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_DIV_DL.class,
-      Union_DL_Palpable.class,
-      Union_Embedded_Interactive.class,
-      Union_Embedded_Palpable_Phrasing.class,
-      Union_Interactive_Phrasing.class,
-      Union_Metadata_Phrasing.class,
-      Union_Palpable_Phrasing.class
+        DIV_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_DIV_DL.class,
+        Union_DL_Palpable.class,
+        Union_Embedded_Interactive.class,
+        Union_Embedded_Palpable_Phrasing.class,
+        Union_Interactive_Phrasing.class,
+        Union_Metadata_Phrasing.class,
+        Union_Palpable_Phrasing.class
     );
   }
 
@@ -65,20 +65,20 @@ public class DIV_contentTest extends AnyDIV_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      DIV_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      EmbeddedContent.class,
-      FlowContent.class,
-      HeadingContent.class,
-      InteractiveContent.class,
-      PalpableContent.class,
-      PhrasingContent.class,
-      ScriptSupportingContent.class,
-      SectioningContent.class,
-      TextContent.class
+        DIV_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        EmbeddedContent.class,
+        FlowContent.class,
+        HeadingContent.class,
+        InteractiveContent.class,
+        PalpableContent.class,
+        PhrasingContent.class,
+        ScriptSupportingContent.class,
+        SectioningContent.class,
+        TextContent.class
     );
   }
 
@@ -87,11 +87,11 @@ public class DIV_contentTest extends AnyDIV_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      DIV_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        DIV_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -99,9 +99,9 @@ public class DIV_contentTest extends AnyDIV_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), DIV_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), DIV_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, DIV_content.class);
   }

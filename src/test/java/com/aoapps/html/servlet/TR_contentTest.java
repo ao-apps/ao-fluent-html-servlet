@@ -45,11 +45,11 @@ public class TR_contentTest extends AnyTR_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      TR_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class
+        TR_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class
     );
   }
 
@@ -58,12 +58,12 @@ public class TR_contentTest extends AnyTR_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      TR_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      ScriptSupportingContent.class
+        TR_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        ScriptSupportingContent.class
     );
   }
 
@@ -72,11 +72,11 @@ public class TR_contentTest extends AnyTR_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      TR_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        TR_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -84,9 +84,9 @@ public class TR_contentTest extends AnyTR_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), TR_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), TR_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, TR_content.class);
   }

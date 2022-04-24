@@ -57,7 +57,7 @@ public final class INPUT {
    */
   @SuppressWarnings("deprecation")
   public static final class Dynamic<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Dynamic<DocumentEE, PC, Dynamic<PC>> {
 
     protected Dynamic(DocumentEE document, PC pc) {
@@ -85,7 +85,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Button<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Button<DocumentEE, PC, Button<PC>> {
 
     protected Button(DocumentEE document, PC pc) {
@@ -105,7 +105,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Checkbox<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Checkbox<DocumentEE, PC, Checkbox<PC>> {
 
     protected Checkbox(DocumentEE document, PC pc) {
@@ -127,7 +127,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Color<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Color<DocumentEE, PC, Color<PC>> {
 
     protected Color(DocumentEE document, PC pc) {
@@ -149,7 +149,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Date<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Date<DocumentEE, PC, Date<PC>> {
 
     protected Date(DocumentEE document, PC pc) {
@@ -171,7 +171,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class DatetimeLocal<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.DatetimeLocal<DocumentEE, PC, DatetimeLocal<PC>> {
 
     protected DatetimeLocal(DocumentEE document, PC pc) {
@@ -193,7 +193,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Email<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Email<DocumentEE, PC, Email<PC>> {
 
     protected Email(DocumentEE document, PC pc) {
@@ -216,7 +216,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class File<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.File<DocumentEE, PC, File<PC>> {
 
     protected File(DocumentEE document, PC pc) {
@@ -236,7 +236,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Hidden<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Hidden<DocumentEE, PC, Hidden<PC>> {
 
     protected Hidden(DocumentEE document, PC pc) {
@@ -260,7 +260,7 @@ public final class INPUT {
    */
   @SuppressWarnings("deprecation")
   public static final class Image<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Image<DocumentEE, PC, Image<PC>> {
 
     protected Image(DocumentEE document, PC pc) {
@@ -282,7 +282,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Month<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Month<DocumentEE, PC, Month<PC>> {
 
     protected Month(DocumentEE document, PC pc) {
@@ -304,7 +304,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Number<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Number<DocumentEE, PC, Number<PC>> {
 
     protected Number(DocumentEE document, PC pc) {
@@ -324,7 +324,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Password<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Password<DocumentEE, PC, Password<PC>> {
 
     protected Password(DocumentEE document, PC pc) {
@@ -344,7 +344,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Radio<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Radio<DocumentEE, PC, Radio<PC>> {
 
     protected Radio(DocumentEE document, PC pc) {
@@ -366,7 +366,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Range<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Range<DocumentEE, PC, Range<PC>> {
 
     protected Range(DocumentEE document, PC pc) {
@@ -386,7 +386,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Reset<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Reset<DocumentEE, PC, Reset<PC>> {
 
     protected Reset(DocumentEE document, PC pc) {
@@ -408,7 +408,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Search<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Search<DocumentEE, PC, Search<PC>> {
 
     protected Search(DocumentEE document, PC pc) {
@@ -431,7 +431,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Submit<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Submit<DocumentEE, PC, Submit<PC>> {
 
     protected Submit(DocumentEE document, PC pc) {
@@ -453,7 +453,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Tel<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Tel<DocumentEE, PC, Tel<PC>> {
 
     protected Tel(DocumentEE document, PC pc) {
@@ -473,7 +473,7 @@ public final class INPUT {
    * @param  <PC>  The parent content model this element is within
    */
   public static final class Text<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Text<DocumentEE, PC, Text<PC>> {
 
     protected Text(DocumentEE document, PC pc) {
@@ -495,7 +495,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Time<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Time<DocumentEE, PC, Time<PC>> {
 
     protected Time(DocumentEE document, PC pc) {
@@ -517,7 +517,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Url<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Url<DocumentEE, PC, Url<PC>> {
 
     protected Url(DocumentEE document, PC pc) {
@@ -539,7 +539,7 @@ public final class INPUT {
    * @since HTML 5
    */
   public static final class Week<
-    PC extends Union_Interactive_Phrasing<PC>
+      PC extends Union_Interactive_Phrasing<PC>
   > extends AnyINPUT.Week<DocumentEE, PC, Week<PC>> {
 
     protected Week(DocumentEE document, PC pc) {

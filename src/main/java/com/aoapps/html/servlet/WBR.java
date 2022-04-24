@@ -41,7 +41,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class WBR<
-  PC extends PhrasingContent<PC>
+    PC extends PhrasingContent<PC>
 > extends AnyWBR<DocumentEE, PC, WBR<PC>> {
 
   WBR(DocumentEE document, PC pc) {

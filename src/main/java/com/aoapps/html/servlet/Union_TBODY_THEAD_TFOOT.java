@@ -46,18 +46,18 @@ import java.io.IOException;
  * @author  AO Industries, Inc.
  */
 public interface Union_TBODY_THEAD_TFOOT<
-  __ extends Union_TBODY_THEAD_TFOOT<__>
+    __ extends Union_TBODY_THEAD_TFOOT<__>
 > extends AnyUnion_TBODY_THEAD_TFOOT<DocumentEE, __>,
-  //
-  // Unions:
-  //
-  // Inherited: COLGROUP_ScriptSupporting<__>
+    //
+    // Unions:
+    //
+    // Inherited: COLGROUP_ScriptSupporting<__>
 
-  //
-  // Content models:
-  //
-  // Inherited: ContentEE<__>
-  ScriptSupportingContent<__>
+    //
+    // Content models:
+    //
+    // Inherited: ContentEE<__>
+    ScriptSupportingContent<__>
 {
   //
   // Factories:
@@ -67,7 +67,7 @@ public interface Union_TBODY_THEAD_TFOOT<
   @SuppressWarnings("deprecation")
   default TR<__> tr() throws IOException {
     @SuppressWarnings("unchecked")
-    __ pc = (__)this;
+    __ pc = (__) this;
     DocumentEE document = getDocument();
     return new TR<>(document, pc).writeOpen(document.getRawUnsafe(null));
   }

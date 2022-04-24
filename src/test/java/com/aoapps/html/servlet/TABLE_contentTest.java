@@ -45,12 +45,12 @@ public class TABLE_contentTest extends AnyTABLE_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      TABLE_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_TBODY_THEAD_TFOOT.class
+        TABLE_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_TBODY_THEAD_TFOOT.class
     );
   }
 
@@ -59,12 +59,12 @@ public class TABLE_contentTest extends AnyTABLE_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      TABLE_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      ScriptSupportingContent.class
+        TABLE_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        ScriptSupportingContent.class
     );
   }
 
@@ -73,11 +73,11 @@ public class TABLE_contentTest extends AnyTABLE_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      TABLE_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        TABLE_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -85,9 +85,9 @@ public class TABLE_contentTest extends AnyTABLE_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), TABLE_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), TABLE_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, TABLE_content.class);
   }

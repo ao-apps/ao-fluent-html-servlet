@@ -50,11 +50,11 @@ public class ContentEETest extends ContentTest {
   @Override
   public void testUnions() {
     AnyUnionContentTest.testUnions(
-      ContentEE.class
-      //
-      // Unions:
-      //
-      // None
+        ContentEE.class
+    //
+    // Unions:
+    //
+    // None
     );
   }
 
@@ -63,11 +63,11 @@ public class ContentEETest extends ContentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      ContentEE.class
-      //
-      // Content models:
-      //
-      // None
+        ContentEE.class
+    //
+    // Content models:
+    //
+    // None
     );
   }
 
@@ -76,11 +76,11 @@ public class ContentEETest extends ContentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      ContentEE.class
-      //
-      // Per-element content models:
-      //
-      // None
+        ContentEE.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -88,9 +88,9 @@ public class ContentEETest extends ContentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
-      -1,
-      AoArrays.indexOf(ContentModelTest.getAllContentModels(), ContentEE.class)
+        "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
+        -1,
+        AoArrays.indexOf(ContentModelTest.getAllContentModels(), ContentEE.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, ContentEE.class);
   }

@@ -47,11 +47,11 @@ public class AnyContentEETest extends AnyContentTest {
   @Override
   public void testUnions() {
     AnyUnionContentTest.testUnions(
-      AnyContentEE.class,
-      //
-      // Unions:
-      //
-      AnyUnionContentTest.getAllUnions()
+        AnyContentEE.class,
+        //
+        // Unions:
+        //
+        AnyUnionContentTest.getAllUnions()
     );
   }
 
@@ -59,11 +59,11 @@ public class AnyContentEETest extends AnyContentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      AnyContentEE.class,
-      //
-      // Content models:
-      //
-      ContentModelTest.getAllContentModels()
+        AnyContentEE.class,
+        //
+        // Content models:
+        //
+        ContentModelTest.getAllContentModels()
     );
   }
 
@@ -71,11 +71,11 @@ public class AnyContentEETest extends AnyContentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      AnyContentEE.class,
-      //
-      // Per-element content models:
-      //
-      ElementContentModelTest.getAllElementContentModels()
+        AnyContentEE.class,
+        //
+        // Per-element content models:
+        //
+        ElementContentModelTest.getAllElementContentModels()
     );
   }
 

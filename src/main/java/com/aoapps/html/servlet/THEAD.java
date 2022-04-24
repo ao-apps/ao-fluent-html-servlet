@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class THEAD<
-  PC extends TABLE_content<PC>
+    PC extends TABLE_content<PC>
 > extends AnyTHEAD<DocumentEE, PC, THEAD<PC>, THEAD__<PC>, THEAD_c<PC>> {
 
   THEAD(DocumentEE document, PC pc) {

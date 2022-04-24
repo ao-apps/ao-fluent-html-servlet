@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class BLOCKQUOTE<
-  PC extends PalpableContent<PC>
+    PC extends PalpableContent<PC>
 > extends AnyBLOCKQUOTE<DocumentEE, PC, BLOCKQUOTE<PC>, BLOCKQUOTE__<PC>, BLOCKQUOTE_c<PC>> {
 
   BLOCKQUOTE(DocumentEE document, PC pc) {

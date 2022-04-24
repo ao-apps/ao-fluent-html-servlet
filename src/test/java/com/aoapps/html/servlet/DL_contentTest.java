@@ -45,13 +45,13 @@ public class DL_contentTest extends AnyDL_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      DL_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_DIV_DL.class,
-      Union_DL_Palpable.class
+        DL_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_DIV_DL.class,
+        Union_DL_Palpable.class
     );
   }
 
@@ -60,12 +60,12 @@ public class DL_contentTest extends AnyDL_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      DL_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      ScriptSupportingContent.class
+        DL_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        ScriptSupportingContent.class
     );
   }
 
@@ -74,11 +74,11 @@ public class DL_contentTest extends AnyDL_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      DL_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        DL_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -86,9 +86,9 @@ public class DL_contentTest extends AnyDL_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), DL_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), DL_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, DL_content.class);
   }

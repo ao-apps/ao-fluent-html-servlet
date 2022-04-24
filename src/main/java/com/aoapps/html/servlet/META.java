@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class META<
-  PC extends Union_Metadata_Phrasing<PC>
+    PC extends Union_Metadata_Phrasing<PC>
 > extends AnyMETA<DocumentEE, PC, META<PC>> {
 
   META(DocumentEE document, PC pc) {

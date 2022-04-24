@@ -46,11 +46,11 @@ public class Union_DIV_DLTest extends AnyUnion_DIV_DLTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      Union_DIV_DL.class
-      //
-      // Unions:
-      //
-      // NOne
+        Union_DIV_DL.class
+    //
+    // Unions:
+    //
+    // NOne
     );
   }
 
@@ -59,11 +59,11 @@ public class Union_DIV_DLTest extends AnyUnion_DIV_DLTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      Union_DIV_DL.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        Union_DIV_DL.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -72,11 +72,11 @@ public class Union_DIV_DLTest extends AnyUnion_DIV_DLTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      Union_DIV_DL.class
-      //
-      // Per-element content models:
-      //
-      // None
+        Union_DIV_DL.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -84,8 +84,8 @@ public class Union_DIV_DLTest extends AnyUnion_DIV_DLTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals("Must be included in " + UnionContentTest.class.getSimpleName() + ".getAllUnions()",
-      -1,
-      AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_DIV_DL.class)
+        -1,
+        AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_DIV_DL.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_DIV_DL.class);
   }

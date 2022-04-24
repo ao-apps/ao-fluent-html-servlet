@@ -45,12 +45,12 @@ public class OPTGROUP_contentTest extends AnyOPTGROUP_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      OPTGROUP_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_DATALIST_OPTGROUP.class
+        OPTGROUP_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_DATALIST_OPTGROUP.class
     );
   }
 
@@ -59,12 +59,12 @@ public class OPTGROUP_contentTest extends AnyOPTGROUP_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      OPTGROUP_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      ScriptSupportingContent.class
+        OPTGROUP_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        ScriptSupportingContent.class
     );
   }
 
@@ -73,11 +73,11 @@ public class OPTGROUP_contentTest extends AnyOPTGROUP_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      OPTGROUP_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        OPTGROUP_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -85,9 +85,9 @@ public class OPTGROUP_contentTest extends AnyOPTGROUP_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), OPTGROUP_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), OPTGROUP_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, OPTGROUP_content.class);
   }

@@ -45,15 +45,15 @@ public class PalpableContentTest extends AnyPalpableContentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      PalpableContent.class,
-      //
-      // Unions:
-      //
-      Union_DL_Palpable.class,
-      Union_Embedded_Interactive.class,
-      Union_Embedded_Palpable_Phrasing.class,
-      Union_Interactive_Phrasing.class,
-      Union_Palpable_Phrasing.class
+        PalpableContent.class,
+        //
+        // Unions:
+        //
+        Union_DL_Palpable.class,
+        Union_Embedded_Interactive.class,
+        Union_Embedded_Palpable_Phrasing.class,
+        Union_Interactive_Phrasing.class,
+        Union_Palpable_Phrasing.class
     );
   }
 
@@ -62,15 +62,15 @@ public class PalpableContentTest extends AnyPalpableContentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      PalpableContent.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      SectioningContent.class,
-      HeadingContent.class,
-      InteractiveContent.class,
-      TextContent.class // that is not inter-element whitespace
+        PalpableContent.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        SectioningContent.class,
+        HeadingContent.class,
+        InteractiveContent.class,
+        TextContent.class // that is not inter-element whitespace
     );
   }
 
@@ -79,11 +79,11 @@ public class PalpableContentTest extends AnyPalpableContentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      PalpableContent.class
-      //
-      // Per-element content models:
-      //
-      // None
+        PalpableContent.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -91,9 +91,9 @@ public class PalpableContentTest extends AnyPalpableContentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
-      -1,
-      AoArrays.indexOf(ContentModelTest.getAllContentModels(), PalpableContent.class)
+        "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
+        -1,
+        AoArrays.indexOf(ContentModelTest.getAllContentModels(), PalpableContent.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, PalpableContent.class);
   }

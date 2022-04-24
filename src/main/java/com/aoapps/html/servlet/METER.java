@@ -41,7 +41,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class METER<
-  PC extends Union_Palpable_Phrasing<PC>
+    PC extends Union_Palpable_Phrasing<PC>
 > extends AnyMETER<DocumentEE, PC, METER<PC>, METER__<PC>, METER_c<PC>> {
 
   METER(DocumentEE document, PC pc) {

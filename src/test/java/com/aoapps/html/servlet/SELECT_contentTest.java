@@ -45,12 +45,12 @@ public class SELECT_contentTest extends AnySELECT_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      SELECT_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_DATALIST_OPTGROUP.class
+        SELECT_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_DATALIST_OPTGROUP.class
     );
   }
 
@@ -59,12 +59,12 @@ public class SELECT_contentTest extends AnySELECT_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      SELECT_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      ScriptSupportingContent.class
+        SELECT_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        ScriptSupportingContent.class
     );
   }
 
@@ -73,11 +73,11 @@ public class SELECT_contentTest extends AnySELECT_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      SELECT_content.class,
-      //
-      // Per-element content models:
-      //
-      OPTGROUP_content.class
+        SELECT_content.class,
+        //
+        // Per-element content models:
+        //
+        OPTGROUP_content.class
     );
   }
 
@@ -85,9 +85,9 @@ public class SELECT_contentTest extends AnySELECT_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), SELECT_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), SELECT_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, SELECT_content.class);
   }

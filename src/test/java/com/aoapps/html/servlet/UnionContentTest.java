@@ -39,27 +39,27 @@ public class UnionContentTest {
    * Gets the set of all <code>Union_*</code> interfaces.
    */
   static Class<? extends ContentEE>[] getAllUnions() {
-    return new Class[] {
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_DATALIST_OPTGROUP.class,
-      Union_DIV_DL.class,
-      Union_DL_Palpable.class,
-      Union_Embedded_Interactive.class,
-      Union_Embedded_Palpable_Phrasing.class,
-      Union_Interactive_Phrasing.class,
-      Union_Metadata_Phrasing.class,
-      Union_Palpable_Phrasing.class,
-      Union_TBODY_THEAD_TFOOT.class
+    return new Class[]{
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_DATALIST_OPTGROUP.class,
+        Union_DIV_DL.class,
+        Union_DL_Palpable.class,
+        Union_Embedded_Interactive.class,
+        Union_Embedded_Palpable_Phrasing.class,
+        Union_Interactive_Phrasing.class,
+        Union_Metadata_Phrasing.class,
+        Union_Palpable_Phrasing.class,
+        Union_TBODY_THEAD_TFOOT.class
     };
   }
 
   static void testUnions(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
     InheritanceTestHelper.testInterfaces(
-      ContentEE.class,
-      iface -> iface.getSimpleName().startsWith("Union_"),
-      getAllUnions(),
-      clazz,
-      expected
+        ContentEE.class,
+        iface -> iface.getSimpleName().startsWith("Union_"),
+        getAllUnions(),
+        clazz,
+        expected
     );
   }
 

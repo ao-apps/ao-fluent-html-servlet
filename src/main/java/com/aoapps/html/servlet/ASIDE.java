@@ -41,7 +41,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class ASIDE<
-  PC extends SectioningContent<PC>
+    PC extends SectioningContent<PC>
 > extends AnyASIDE<DocumentEE, PC, ASIDE<PC>, ASIDE__<PC>, ASIDE_c<PC>> {
 
   ASIDE(DocumentEE document, PC pc) {

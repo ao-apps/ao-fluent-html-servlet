@@ -45,17 +45,17 @@ public class FlowContentTest extends AnyFlowContentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      FlowContent.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class,
-      Union_DL_Palpable.class,
-      Union_Embedded_Interactive.class,
-      Union_Embedded_Palpable_Phrasing.class,
-      Union_Interactive_Phrasing.class,
-      Union_Metadata_Phrasing.class,
-      Union_Palpable_Phrasing.class
+        FlowContent.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class,
+        Union_DL_Palpable.class,
+        Union_Embedded_Interactive.class,
+        Union_Embedded_Palpable_Phrasing.class,
+        Union_Interactive_Phrasing.class,
+        Union_Metadata_Phrasing.class,
+        Union_Palpable_Phrasing.class
     );
   }
 
@@ -64,19 +64,19 @@ public class FlowContentTest extends AnyFlowContentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      FlowContent.class,
-      //
-      // Content models:
-      //
-      ContentEE.class,
-      EmbeddedContent.class,
-      HeadingContent.class,
-      InteractiveContent.class,
-      PalpableContent.class,
-      PhrasingContent.class,
-      ScriptSupportingContent.class,
-      SectioningContent.class,
-      TextContent.class
+        FlowContent.class,
+        //
+        // Content models:
+        //
+        ContentEE.class,
+        EmbeddedContent.class,
+        HeadingContent.class,
+        InteractiveContent.class,
+        PalpableContent.class,
+        PhrasingContent.class,
+        ScriptSupportingContent.class,
+        SectioningContent.class,
+        TextContent.class
     );
   }
 
@@ -85,11 +85,11 @@ public class FlowContentTest extends AnyFlowContentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      FlowContent.class
-      //
-      // Per-element content models:
-      //
-      // None
+        FlowContent.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -97,9 +97,9 @@ public class FlowContentTest extends AnyFlowContentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
-      -1,
-      AoArrays.indexOf(ContentModelTest.getAllContentModels(), FlowContent.class)
+        "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
+        -1,
+        AoArrays.indexOf(ContentModelTest.getAllContentModels(), FlowContent.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, FlowContent.class);
   }

@@ -35,12 +35,12 @@ import java.io.IOException;
  * @author  AO Industries, Inc.
  */
 public interface Union_DATALIST_OPTGROUP<
-  __ extends Union_DATALIST_OPTGROUP<__>
+    __ extends Union_DATALIST_OPTGROUP<__>
 > extends AnyUnion_DATALIST_OPTGROUP<DocumentEE, __>,
-  //
-  // Content models:
-  //
-  ContentEE<__>
+    //
+    // Content models:
+    //
+    ContentEE<__>
 {
   //
   // Factories:
@@ -50,7 +50,7 @@ public interface Union_DATALIST_OPTGROUP<
   @SuppressWarnings("deprecation")
   default OPTION<__> option() throws IOException {
     @SuppressWarnings("unchecked")
-    __ pc = (__)this;
+    __ pc = (__) this;
     DocumentEE document = getDocument();
     return new OPTION<>(document, pc).writeOpen(document.getRawUnsafe(null));
   }

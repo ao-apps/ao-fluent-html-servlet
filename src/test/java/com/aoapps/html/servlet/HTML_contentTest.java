@@ -45,11 +45,11 @@ public class HTML_contentTest extends AnyHTML_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      HTML_content.class
-      //
-      // Unions:
-      //
-      // None
+        HTML_content.class
+    //
+    // Unions:
+    //
+    // None
     );
   }
 
@@ -58,11 +58,11 @@ public class HTML_contentTest extends AnyHTML_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      HTML_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        HTML_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -71,11 +71,11 @@ public class HTML_contentTest extends AnyHTML_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      HTML_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        HTML_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -83,9 +83,9 @@ public class HTML_contentTest extends AnyHTML_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), HTML_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), HTML_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, HTML_content.class);
   }

@@ -39,19 +39,19 @@ public class ContentModelTest {
    * Gets the set of all <code>*ContentEE</code> content model interfaces.
    */
   static Class<? extends ContentEE>[] getAllContentModels() {
-    return new Class[] {
-      AnyContentEE.class,
-      ContentEE.class
+    return new Class[]{
+        AnyContentEE.class,
+        ContentEE.class
     };
   }
 
   static void testContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
     InheritanceTestHelper.testInterfaces(
-      ContentEE.class,
-      iface -> iface.getSimpleName().endsWith("ContentEE"),
-      getAllContentModels(),
-      clazz,
-      expected
+        ContentEE.class,
+        iface -> iface.getSimpleName().endsWith("ContentEE"),
+        getAllContentModels(),
+        clazz,
+        expected
     );
   }
 

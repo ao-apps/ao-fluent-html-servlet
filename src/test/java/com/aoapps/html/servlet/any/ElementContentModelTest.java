@@ -39,18 +39,18 @@ public class ElementContentModelTest {
    * Gets the set of all <code>*_content</code> per-element content model interfaces.
    */
   static Class<? extends ContentEE>[] getAllElementContentModels() {
-    return new Class[] {
-      // None
-    };
+    return new Class[]{
+        // None
+        };
   }
 
   static void testElementContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
     InheritanceTestHelper.testInterfaces(
-      ContentEE.class,
-      iface -> iface.getSimpleName().endsWith("_content"),
-      getAllElementContentModels(),
-      clazz,
-      expected
+        ContentEE.class,
+        iface -> iface.getSimpleName().endsWith("_content"),
+        getAllElementContentModels(),
+        clazz,
+        expected
     );
   }
 

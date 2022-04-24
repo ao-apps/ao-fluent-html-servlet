@@ -41,7 +41,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class OUTPUT<
-  PC extends Union_Palpable_Phrasing<PC>
+    PC extends Union_Palpable_Phrasing<PC>
 > extends AnyOUTPUT<DocumentEE, PC, OUTPUT<PC>, OUTPUT__<PC>, OUTPUT_c<PC>> {
 
   OUTPUT(DocumentEE document, PC pc) {

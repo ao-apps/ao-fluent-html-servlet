@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class UL<
-  PC extends PalpableContent<PC>
+    PC extends PalpableContent<PC>
 > extends AnyUL<DocumentEE, PC, UL<PC>, UL__<PC>, UL_c<PC>> {
 
   UL(DocumentEE document, PC pc) {

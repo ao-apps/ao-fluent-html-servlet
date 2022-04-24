@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 @SuppressWarnings("deprecation")
 public final class HR<
-  PC extends FlowContent<PC>
+    PC extends FlowContent<PC>
 > extends AnyHR<DocumentEE, PC, HR<PC>> {
 
   HR(DocumentEE document, PC pc) {

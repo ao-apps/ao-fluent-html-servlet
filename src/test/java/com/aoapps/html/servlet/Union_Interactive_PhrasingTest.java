@@ -46,11 +46,11 @@ public class Union_Interactive_PhrasingTest extends AnyUnion_Interactive_Phrasin
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      Union_Interactive_Phrasing.class,
-      //
-      // Unions:
-      //
-      Union_Embedded_Interactive.class
+        Union_Interactive_Phrasing.class,
+        //
+        // Unions:
+        //
+        Union_Embedded_Interactive.class
     );
   }
 
@@ -59,11 +59,11 @@ public class Union_Interactive_PhrasingTest extends AnyUnion_Interactive_Phrasin
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      Union_Interactive_Phrasing.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        Union_Interactive_Phrasing.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -72,11 +72,11 @@ public class Union_Interactive_PhrasingTest extends AnyUnion_Interactive_Phrasin
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      Union_Interactive_Phrasing.class
-      //
-      // Per-element content models:
-      //
-      // None
+        Union_Interactive_Phrasing.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -84,8 +84,8 @@ public class Union_Interactive_PhrasingTest extends AnyUnion_Interactive_Phrasin
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals("Must be included in " + UnionContentTest.class.getSimpleName() + ".getAllUnions()",
-      -1,
-      AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Interactive_Phrasing.class)
+        -1,
+        AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Interactive_Phrasing.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_Interactive_Phrasing.class);
   }

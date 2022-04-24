@@ -37,17 +37,17 @@ import java.io.IOException;
  * @author  AO Industries, Inc.
  */
 public interface ScriptSupportingContent<
-  __ extends ScriptSupportingContent<__>
+    __ extends ScriptSupportingContent<__>
 > extends AnyScriptSupportingContent<DocumentEE, __>,
-  //
-  // Unions:
-  //
-  Union_COLGROUP_ScriptSupporting<__>
+    //
+    // Unions:
+    //
+    Union_COLGROUP_ScriptSupporting<__>
 
-  //
-  // Content models:
-  //
-  // Inherited: ContentEE<__>
+//
+// Content models:
+//
+// Inherited: ContentEE<__>
 {
   //
   // Factories:
@@ -57,7 +57,7 @@ public interface ScriptSupportingContent<
   @SuppressWarnings("deprecation")
   default SCRIPT<__> script() throws IOException {
     @SuppressWarnings("unchecked")
-    __ pc = (__)this;
+    __ pc = (__) this;
     DocumentEE document = getDocument();
     return new SCRIPT<>(document, pc).writeOpen(document.getRawUnsafe(null));
   }
@@ -66,7 +66,7 @@ public interface ScriptSupportingContent<
   @SuppressWarnings("deprecation")
   default SCRIPT<__> script(String type) throws IOException {
     @SuppressWarnings("unchecked")
-    __ pc = (__)this;
+    __ pc = (__) this;
     DocumentEE document = getDocument();
     return new SCRIPT<>(document, pc, type).writeOpen(document.getRawUnsafe(null));
   }
@@ -83,7 +83,7 @@ public interface ScriptSupportingContent<
   @SuppressWarnings("deprecation")
   default SCRIPT<__> script(AnySCRIPT.Type type) throws IOException {
     @SuppressWarnings("unchecked")
-    __ pc = (__)this;
+    __ pc = (__) this;
     DocumentEE document = getDocument();
     return new SCRIPT<>(document, pc, type).writeOpen(document.getRawUnsafe(null));
   }

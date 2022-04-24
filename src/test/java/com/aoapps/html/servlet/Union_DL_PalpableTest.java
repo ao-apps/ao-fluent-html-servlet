@@ -46,11 +46,11 @@ public class Union_DL_PalpableTest extends AnyUnion_DL_PalpableTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      Union_DL_Palpable.class
-      //
-      // Unions:
-      //
-      // None
+        Union_DL_Palpable.class
+    //
+    // Unions:
+    //
+    // None
     );
   }
 
@@ -59,11 +59,11 @@ public class Union_DL_PalpableTest extends AnyUnion_DL_PalpableTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      Union_DL_Palpable.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        Union_DL_Palpable.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -72,11 +72,11 @@ public class Union_DL_PalpableTest extends AnyUnion_DL_PalpableTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      Union_DL_Palpable.class
-      //
-      // Per-element content models:
-      //
-      // None
+        Union_DL_Palpable.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -84,8 +84,8 @@ public class Union_DL_PalpableTest extends AnyUnion_DL_PalpableTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals("Must be included in " + UnionContentTest.class.getSimpleName() + ".getAllUnions()",
-      -1,
-      AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_DL_Palpable.class)
+        -1,
+        AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_DL_Palpable.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_DL_Palpable.class);
   }

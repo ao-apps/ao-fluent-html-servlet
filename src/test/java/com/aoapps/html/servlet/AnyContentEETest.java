@@ -41,11 +41,11 @@ public class AnyContentEETest extends com.aoapps.html.servlet.any.AnyContentEETe
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      AnyContentEE.class,
-      //
-      // Unions:
-      //
-      UnionContentTest.getAllUnions()
+        AnyContentEE.class,
+        //
+        // Unions:
+        //
+        UnionContentTest.getAllUnions()
     );
   }
 
@@ -53,11 +53,11 @@ public class AnyContentEETest extends com.aoapps.html.servlet.any.AnyContentEETe
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      AnyContentEE.class,
-      //
-      // Content models:
-      //
-      ContentModelTest.getAllContentModels()
+        AnyContentEE.class,
+        //
+        // Content models:
+        //
+        ContentModelTest.getAllContentModels()
     );
   }
 
@@ -65,11 +65,11 @@ public class AnyContentEETest extends com.aoapps.html.servlet.any.AnyContentEETe
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      AnyContentEE.class,
-      //
-      // Per-element content models:
-      //
-      ElementContentModelTest.getAllElementContentModels()
+        AnyContentEE.class,
+        //
+        // Per-element content models:
+        //
+        ElementContentModelTest.getAllElementContentModels()
     );
   }
 

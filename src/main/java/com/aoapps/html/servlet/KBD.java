@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class KBD<
-  PC extends Union_Palpable_Phrasing<PC>
+    PC extends Union_Palpable_Phrasing<PC>
 > extends AnyKBD<DocumentEE, PC, KBD<PC>, KBD__<PC>, KBD_c<PC>> {
 
   KBD(DocumentEE document, PC pc) {

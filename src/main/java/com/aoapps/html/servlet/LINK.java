@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class LINK<
-  PC extends Union_Metadata_Phrasing<PC>
+    PC extends Union_Metadata_Phrasing<PC>
 > extends AnyLINK<DocumentEE, PC, LINK<PC>> {
 
   LINK(DocumentEE document, PC pc) {

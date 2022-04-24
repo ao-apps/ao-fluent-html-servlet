@@ -44,13 +44,13 @@ public abstract class AnyDocumentEE<D extends AnyDocumentEE<D>> extends AnyDocum
    *              with {@code encoder = null}.
    */
   protected AnyDocumentEE(
-    HttpServletResponse response,
-    EncodingContextEE encodingContext,
-    Writer out
+      HttpServletResponse response,
+      EncodingContextEE encodingContext,
+      Writer out
   ) {
     super(
-      encodingContext,
-      out
+        encodingContext,
+        out
     );
     this.response = response;
   }

@@ -72,7 +72,7 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   private static final ScopeEE.Request.Attribute<Boolean> AUTONLI_REQUEST_ATTRIBUTE =
-    ScopeEE.REQUEST.attribute(AUTONLI_INIT_PARAM);
+      ScopeEE.REQUEST.attribute(AUTONLI_INIT_PARAM);
 
   /**
    * Registers the document autonli in effect for the request.
@@ -147,7 +147,7 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   private static final ScopeEE.Request.Attribute<Boolean> INDENT_REQUEST_ATTRIBUTE =
-    ScopeEE.REQUEST.attribute(INDENT_INIT_PARAM);
+      ScopeEE.REQUEST.attribute(INDENT_INIT_PARAM);
 
   /**
    * Registers the document indent in effect for the request.
@@ -191,6 +191,7 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   public static boolean getIndent(ServletContext servletContext, ServletRequest request) {
     return INDENT_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(__ -> getDefaultIndent(servletContext));
   }
+
   // </editor-fold>
 
   /**
@@ -206,15 +207,15 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   //           Sub-requests include semanticcms-core-servlet:capturePage along with ao-web-framework searches.
   //       Track at AnyDocumentEE level?
   public DocumentEE(
-    HttpServletResponse response,
-    EncodingContextEE encodingContext,
-    Writer out,
-    boolean autonli, boolean indent
+      HttpServletResponse response,
+      EncodingContextEE encodingContext,
+      Writer out,
+      boolean autonli, boolean indent
   ) {
     super(
-      response,
-      encodingContext,
-      out
+        response,
+        encodingContext,
+        out
     );
     setAutonli(autonli);
     setIndent(indent);
@@ -225,14 +226,14 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    *              with {@code encoder = null}.
    */
   public DocumentEE(
-    ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out,
-    boolean autonli, boolean indent
+      ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out,
+      boolean autonli, boolean indent
   ) {
     this(
-      response,
-      new EncodingContextEE(servletContext, request, response),
-      out,
-      autonli, indent
+        response,
+        new EncodingContextEE(servletContext, request, response),
+        out,
+        autonli, indent
     );
   }
 
@@ -249,9 +250,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    */
   public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
     this(
-      servletContext, request, response, out,
-      getAutonli(servletContext, request),
-      getIndent(servletContext, request)
+        servletContext, request, response, out,
+        getAutonli(servletContext, request),
+        getIndent(servletContext, request)
     );
   }
 
@@ -259,8 +260,8 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    * @see  ServletResponse#getWriter()
    */
   public DocumentEE(
-    ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
-    boolean autonli, boolean indent
+      ServletContext servletContext, HttpServletRequest request, HttpServletResponse response,
+      boolean autonli, boolean indent
   ) throws IOException {
     this(servletContext, request, response, response.getWriter(), autonli, indent);
   }
@@ -275,9 +276,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    */
   public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
     this(
-      servletContext, request, response,
-      getAutonli(servletContext, request),
-      getIndent(servletContext, request)
+        servletContext, request, response,
+        getAutonli(servletContext, request),
+        getIndent(servletContext, request)
     );
   }
 
@@ -286,8 +287,8 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    *              with {@code encoder = null}.
    */
   public DocumentEE(
-    HttpServletRequest request, HttpServletResponse response, Writer out,
-    boolean autonli, boolean indent
+      HttpServletRequest request, HttpServletResponse response, Writer out,
+      boolean autonli, boolean indent
   ) {
     this(request.getServletContext(), request, response, out, autonli, indent);
   }
@@ -312,8 +313,8 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    * @see  ServletResponse#getWriter()
    */
   public DocumentEE(
-    HttpServletRequest request, HttpServletResponse response,
-    boolean autonli, boolean indent
+      HttpServletRequest request, HttpServletResponse response,
+      boolean autonli, boolean indent
   ) throws IOException {
     this(request.getServletContext(), request, response, response.getWriter(), autonli, indent);
   }

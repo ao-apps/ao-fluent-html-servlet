@@ -38,17 +38,17 @@ import java.io.IOException;
  * @author  AO Industries, Inc.
  */
 public interface COLGROUP_content<
-  __ extends COLGROUP_content<__>
+    __ extends COLGROUP_content<__>
 > extends AnyCOLGROUP_content<DocumentEE, __>,
-  //
-  // Unions:
-  //
-  Union_COLGROUP_ScriptSupporting<__>
+    //
+    // Unions:
+    //
+    Union_COLGROUP_ScriptSupporting<__>
 
-  //
-  // Content models:
-  //
-  // Inherited: ContentEE<__>
+//
+// Content models:
+//
+// Inherited: ContentEE<__>
 {
   //
   // Factories:
@@ -58,7 +58,7 @@ public interface COLGROUP_content<
   @SuppressWarnings("deprecation")
   default COL<__> col() throws IOException {
     @SuppressWarnings("unchecked")
-    __ pc = (__)this;
+    __ pc = (__) this;
     DocumentEE document = getDocument();
     return new COL<>(document, pc).writeOpen(document.getRawUnsafe(null));
   }

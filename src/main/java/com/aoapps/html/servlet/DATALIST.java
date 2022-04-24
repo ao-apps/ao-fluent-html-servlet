@@ -41,7 +41,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class DATALIST<
-  PC extends PhrasingContent<PC>
+    PC extends PhrasingContent<PC>
 > extends AnyDATALIST<DocumentEE, PC, DATALIST<PC>, DATALIST__<PC>, DATALIST_c<PC>> {
 
   DATALIST(DocumentEE document, PC pc) {

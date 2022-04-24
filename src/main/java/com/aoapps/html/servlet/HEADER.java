@@ -41,7 +41,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class HEADER<
-  PC extends PalpableContent<PC>
+    PC extends PalpableContent<PC>
 > extends AnyHEADER<DocumentEE, PC, HEADER<PC>, HEADER__<PC>, HEADER_c<PC>> {
 
   HEADER(DocumentEE document, PC pc) {

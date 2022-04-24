@@ -39,7 +39,7 @@ import java.io.Writer;
  * @author  AO Industries, Inc.
  */
 public final class OBJECT<
-  PC extends Union_Embedded_Interactive<PC>
+    PC extends Union_Embedded_Interactive<PC>
 > extends AnyOBJECT<DocumentEE, PC, OBJECT<PC>, OBJECT__<PC>, OBJECT_c<PC>> {
 
   OBJECT(DocumentEE document, PC pc) {

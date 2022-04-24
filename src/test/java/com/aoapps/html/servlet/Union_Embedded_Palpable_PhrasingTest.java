@@ -46,11 +46,11 @@ public class Union_Embedded_Palpable_PhrasingTest extends AnyUnion_Embedded_Palp
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      Union_Embedded_Palpable_Phrasing.class
-      //
-      // Unions:
-      //
-      // None
+        Union_Embedded_Palpable_Phrasing.class
+    //
+    // Unions:
+    //
+    // None
     );
   }
 
@@ -59,11 +59,11 @@ public class Union_Embedded_Palpable_PhrasingTest extends AnyUnion_Embedded_Palp
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      Union_Embedded_Palpable_Phrasing.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        Union_Embedded_Palpable_Phrasing.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -72,11 +72,11 @@ public class Union_Embedded_Palpable_PhrasingTest extends AnyUnion_Embedded_Palp
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      Union_Embedded_Palpable_Phrasing.class
-      //
-      // Per-element content models:
-      //
-      // None
+        Union_Embedded_Palpable_Phrasing.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -84,8 +84,8 @@ public class Union_Embedded_Palpable_PhrasingTest extends AnyUnion_Embedded_Palp
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals("Must be included in " + UnionContentTest.class.getSimpleName() + ".getAllUnions()",
-      -1,
-      AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Embedded_Palpable_Phrasing.class)
+        -1,
+        AoArrays.indexOf(UnionContentTest.getAllUnions(), Union_Embedded_Palpable_Phrasing.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, Union_Embedded_Palpable_Phrasing.class);
   }

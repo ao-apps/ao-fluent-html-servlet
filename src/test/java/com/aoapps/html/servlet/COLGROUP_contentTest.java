@@ -45,11 +45,11 @@ public class COLGROUP_contentTest extends AnyCOLGROUP_contentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      COLGROUP_content.class,
-      //
-      // Unions:
-      //
-      Union_COLGROUP_ScriptSupporting.class
+        COLGROUP_content.class,
+        //
+        // Unions:
+        //
+        Union_COLGROUP_ScriptSupporting.class
     );
   }
 
@@ -58,11 +58,11 @@ public class COLGROUP_contentTest extends AnyCOLGROUP_contentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      COLGROUP_content.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        COLGROUP_content.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -71,11 +71,11 @@ public class COLGROUP_contentTest extends AnyCOLGROUP_contentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      COLGROUP_content.class
-      //
-      // Per-element content models:
-      //
-      // None
+        COLGROUP_content.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -83,9 +83,9 @@ public class COLGROUP_contentTest extends AnyCOLGROUP_contentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
-      -1,
-      AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), COLGROUP_content.class)
+        "Must be included in " + ElementContentModelTest.class.getSimpleName() + ".getAllElementContentModels()",
+        -1,
+        AoArrays.indexOf(ElementContentModelTest.getAllElementContentModels(), COLGROUP_content.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, COLGROUP_content.class);
   }

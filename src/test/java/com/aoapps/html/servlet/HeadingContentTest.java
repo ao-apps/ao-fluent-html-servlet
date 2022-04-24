@@ -45,11 +45,11 @@ public class HeadingContentTest extends AnyHeadingContentTest {
   @Override
   public void testUnions() {
     UnionContentTest.testUnions(
-      HeadingContent.class
-      //
-      // Unions:
-      //
-      // None
+        HeadingContent.class
+    //
+    // Unions:
+    //
+    // None
     );
   }
 
@@ -58,11 +58,11 @@ public class HeadingContentTest extends AnyHeadingContentTest {
   @Override
   public void testContentModels() {
     ContentModelTest.testContentModels(
-      HeadingContent.class,
-      //
-      // Content models:
-      //
-      ContentEE.class
+        HeadingContent.class,
+        //
+        // Content models:
+        //
+        ContentEE.class
     );
   }
 
@@ -71,11 +71,11 @@ public class HeadingContentTest extends AnyHeadingContentTest {
   @Override
   public void testElementContentModels() {
     ElementContentModelTest.testElementContentModels(
-      HeadingContent.class
-      //
-      // Per-element content models:
-      //
-      // None
+        HeadingContent.class
+    //
+    // Per-element content models:
+    //
+    // None
     );
   }
 
@@ -83,9 +83,9 @@ public class HeadingContentTest extends AnyHeadingContentTest {
   @Override
   public void testNoImplementInherited() {
     Assert.assertNotEquals(
-      "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
-      -1,
-      AoArrays.indexOf(ContentModelTest.getAllContentModels(), HeadingContent.class)
+        "Must be included in " + ContentModelTest.class.getSimpleName() + ".getAllContentModels()",
+        -1,
+        AoArrays.indexOf(ContentModelTest.getAllContentModels(), HeadingContent.class)
     );
     InheritanceTestHelper.testNoImplementInherited(ContentEE.class, HeadingContent.class);
   }

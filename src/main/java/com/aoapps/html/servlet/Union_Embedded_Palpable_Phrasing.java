@@ -34,12 +34,12 @@ import com.aoapps.html.any.AnyUnion_Embedded_Palpable_Phrasing;
  * @author  AO Industries, Inc.
  */
 public interface Union_Embedded_Palpable_Phrasing<
-  __ extends Union_Embedded_Palpable_Phrasing<__>
+    __ extends Union_Embedded_Palpable_Phrasing<__>
 > extends AnyUnion_Embedded_Palpable_Phrasing<DocumentEE, __>,
-  //
-  // Content models:
-  //
-  ContentEE<__>
+    //
+    // Content models:
+    //
+    ContentEE<__>
 {
   //
   // Factories:
