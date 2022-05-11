@@ -42,7 +42,7 @@ import java.io.Writer;
  */
 public final class OUTPUT<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyOUTPUT<DocumentEE, PC, OUTPUT<PC>, OUTPUT__<PC>, OUTPUT_c<PC>> {
+    > extends AnyOUTPUT<DocumentEE, PC, OUTPUT<PC>, OUTPUT__<PC>, OUTPUT_c<PC>> {
 
   OUTPUT(DocumentEE document, PC pc) {
     super(document, pc);

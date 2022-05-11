@@ -40,7 +40,7 @@ import com.aoapps.html.any.AnySECTION__;
  */
 public final class SECTION__<
     PC extends SectioningContent<PC>
->
+    >
     extends AnySECTION__<DocumentEE, PC, SECTION__<PC>>
     implements FlowContent<SECTION__<PC>> {
 

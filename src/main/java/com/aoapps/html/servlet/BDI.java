@@ -42,7 +42,7 @@ import java.io.Writer;
  */
 public final class BDI<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyBDI<DocumentEE, PC, BDI<PC>, BDI__<PC>, BDI_c<PC>> {
+    > extends AnyBDI<DocumentEE, PC, BDI<PC>, BDI__<PC>, BDI_c<PC>> {
 
   BDI(DocumentEE document, PC pc) {
     super(document, pc);

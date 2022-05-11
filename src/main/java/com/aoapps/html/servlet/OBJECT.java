@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class OBJECT<
     PC extends Union_Embedded_Interactive<PC>
-> extends AnyOBJECT<DocumentEE, PC, OBJECT<PC>, OBJECT__<PC>, OBJECT_c<PC>> {
+    > extends AnyOBJECT<DocumentEE, PC, OBJECT<PC>, OBJECT__<PC>, OBJECT_c<PC>> {
 
   OBJECT(DocumentEE document, PC pc) {
     super(document, pc);

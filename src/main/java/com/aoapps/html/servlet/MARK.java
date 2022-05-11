@@ -42,7 +42,7 @@ import java.io.Writer;
  */
 public final class MARK<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyMARK<DocumentEE, PC, MARK<PC>, MARK__<PC>, MARK_c<PC>> {
+    > extends AnyMARK<DocumentEE, PC, MARK<PC>, MARK__<PC>, MARK_c<PC>> {
 
   MARK(DocumentEE document, PC pc) {
     super(document, pc);

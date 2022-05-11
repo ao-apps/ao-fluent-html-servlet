@@ -36,12 +36,11 @@ import java.io.IOException;
  */
 public interface Union_DIV_DL<
     __ extends Union_DIV_DL<__>
-> extends AnyUnion_DIV_DL<DocumentEE, __>,
+    > extends AnyUnion_DIV_DL<DocumentEE, __>,
     //
     // Content models:
     //
-    ContentEE<__>
-{
+    ContentEE<__> {
   //
   // Factories:
   //

@@ -41,7 +41,7 @@ import java.io.Writer;
 @SuppressWarnings("deprecation")
 public final class COL<
     PC extends COLGROUP_content<PC>
-> extends AnyCOL<DocumentEE, PC, COL<PC>> {
+    > extends AnyCOL<DocumentEE, PC, COL<PC>> {
 
   COL(DocumentEE document, PC pc) {
     super(document, pc);

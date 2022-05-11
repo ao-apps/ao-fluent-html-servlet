@@ -40,7 +40,7 @@ import com.aoapps.html.any.AnyMAIN_c;
  */
 public final class MAIN_c<
     PC extends PalpableContent<PC>
->
+    >
     extends AnyMAIN_c<DocumentEE, PC, MAIN_c<PC>>
     implements FlowContent<MAIN_c<PC>> {
 

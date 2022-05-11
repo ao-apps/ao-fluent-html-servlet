@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class ADDRESS<
     PC extends PalpableContent<PC>
-> extends AnyADDRESS<DocumentEE, PC, ADDRESS<PC>, ADDRESS__<PC>, ADDRESS_c<PC>> {
+    > extends AnyADDRESS<DocumentEE, PC, ADDRESS<PC>, ADDRESS__<PC>, ADDRESS_c<PC>> {
 
   ADDRESS(DocumentEE document, PC pc) {
     super(document, pc);

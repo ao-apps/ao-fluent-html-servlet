@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class SCRIPT<
     PC extends ScriptSupportingContent<PC>
-> extends AnySCRIPT<DocumentEE, PC, SCRIPT<PC>> {
+    > extends AnySCRIPT<DocumentEE, PC, SCRIPT<PC>> {
 
   SCRIPT(DocumentEE document, PC pc) {
     super(document, pc);

@@ -39,18 +39,18 @@ import java.io.IOException;
  */
 public interface InteractiveContent<
     __ extends InteractiveContent<__>
-> extends AnyInteractiveContent<DocumentEE, __>,
+    > extends AnyInteractiveContent<DocumentEE, __>,
     //
     // Unions:
     //
     // Inherited: Union_Embedded_Interactive<__>
-    Union_Interactive_Phrasing<__>
+    Union_Interactive_Phrasing<__> {
 
-//
-// Content models:
-//
-// Inherited: ContentEE<__>
-{
+  //
+  // Content models:
+  //
+  // Inherited: ContentEE<__>
+
   //
   // Factories:
   //

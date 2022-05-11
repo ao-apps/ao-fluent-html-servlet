@@ -37,18 +37,18 @@ import com.aoapps.html.any.AnyEmbeddedContent;
  */
 public interface EmbeddedContent<
     __ extends EmbeddedContent<__>
-> extends AnyEmbeddedContent<DocumentEE, __>,
+    > extends AnyEmbeddedContent<DocumentEE, __>,
     //
     // Unions:
     //
     Union_Embedded_Interactive<__>,
-    Union_Embedded_Palpable_Phrasing<__>
+    Union_Embedded_Palpable_Phrasing<__> {
 
-//
-// Content models:
-//
-// Inherited: ContentEE<__>
-{
+  //
+  // Content models:
+  //
+  // Inherited: ContentEE<__>
+
   //
   // Factories:
   //

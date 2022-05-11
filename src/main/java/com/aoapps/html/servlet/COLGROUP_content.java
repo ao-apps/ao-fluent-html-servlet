@@ -39,17 +39,17 @@ import java.io.IOException;
  */
 public interface COLGROUP_content<
     __ extends COLGROUP_content<__>
-> extends AnyCOLGROUP_content<DocumentEE, __>,
+    > extends AnyCOLGROUP_content<DocumentEE, __>,
     //
     // Unions:
     //
-    Union_COLGROUP_ScriptSupporting<__>
+    Union_COLGROUP_ScriptSupporting<__> {
 
-//
-// Content models:
-//
-// Inherited: ContentEE<__>
-{
+  //
+  // Content models:
+  //
+  // Inherited: ContentEE<__>
+
   //
   // Factories:
   //

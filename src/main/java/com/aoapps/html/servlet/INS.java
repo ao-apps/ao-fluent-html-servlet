@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class INS<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyINS<DocumentEE, PC, INS<PC>, INS_c<PC>> {
+    > extends AnyINS<DocumentEE, PC, INS<PC>, INS_c<PC>> {
 
   INS(DocumentEE document, PC pc) {
     super(document, pc);

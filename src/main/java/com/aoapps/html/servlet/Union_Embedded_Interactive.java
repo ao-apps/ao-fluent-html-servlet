@@ -38,12 +38,11 @@ import java.io.IOException;
  */
 public interface Union_Embedded_Interactive<
     __ extends Union_Embedded_Interactive<__>
-> extends AnyUnion_Embedded_Interactive<DocumentEE, __>,
+    > extends AnyUnion_Embedded_Interactive<DocumentEE, __>,
     //
     // Content models:
     //
-    ContentEE<__>
-{
+    ContentEE<__> {
   //
   // Factories:
   //
@@ -69,6 +68,8 @@ public interface Union_Embedded_Interactive<
   }
 
   /**
+   * {@inheritDoc}
+   *
    * @param  <Ex>  An arbitrary exception type that may be thrown
    */
   @Override

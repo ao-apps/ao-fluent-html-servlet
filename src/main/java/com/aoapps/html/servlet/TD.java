@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class TD<
     PC extends TR_content<PC>
-> extends AnyTD<DocumentEE, PC, TD<PC>, TD__<PC>, TD_c<PC>> {
+    > extends AnyTD<DocumentEE, PC, TD<PC>, TD__<PC>, TD_c<PC>> {
 
   TD(DocumentEE document, PC pc) {
     super(document, pc);

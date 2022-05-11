@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class ABBR<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyABBR<DocumentEE, PC, ABBR<PC>, ABBR__<PC>, ABBR_c<PC>> {
+    > extends AnyABBR<DocumentEE, PC, ABBR<PC>, ABBR__<PC>, ABBR_c<PC>> {
 
   ABBR(DocumentEE document, PC pc) {
     super(document, pc);

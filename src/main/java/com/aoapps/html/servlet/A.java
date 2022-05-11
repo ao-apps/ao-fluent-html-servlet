@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class A<
     PC extends Union_Interactive_Phrasing<PC>
-> extends AnyA<DocumentEE, PC, A<PC>, A_c<PC>> {
+    > extends AnyA<DocumentEE, PC, A<PC>, A_c<PC>> {
 
   A(DocumentEE document, PC pc) {
     super(document, pc);

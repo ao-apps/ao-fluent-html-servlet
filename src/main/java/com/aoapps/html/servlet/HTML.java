@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class HTML<
     PC extends ContentEE<PC>
-> extends AnyHTMLEE<DocumentEE, PC, HTML<PC>, HTML__<PC>, HTML_c<PC>> {
+    > extends AnyHTMLEE<DocumentEE, PC, HTML<PC>, HTML__<PC>, HTML_c<PC>> {
 
   HTML(DocumentEE document, PC pc) {
     super(document, pc);

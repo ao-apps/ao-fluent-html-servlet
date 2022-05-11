@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class P<
     PC extends PalpableContent<PC>
-> extends AnyP<DocumentEE, PC, P<PC>, P__<PC>, P_c<PC>> {
+    > extends AnyP<DocumentEE, PC, P<PC>, P__<PC>, P_c<PC>> {
 
   P(DocumentEE document, PC pc) {
     super(document, pc);

@@ -38,7 +38,7 @@ import com.aoapps.html.any.AnyTABLE_c;
  */
 public final class TABLE_c<
     PC extends PalpableContent<PC>
->
+    >
     extends AnyTABLE_c<DocumentEE, PC, TABLE_c<PC>>
     implements TABLE_content<TABLE_c<PC>> {
 

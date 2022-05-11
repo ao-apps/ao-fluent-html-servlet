@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class EM<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyEM<DocumentEE, PC, EM<PC>, EM__<PC>, EM_c<PC>> {
+    > extends AnyEM<DocumentEE, PC, EM<PC>, EM__<PC>, EM_c<PC>> {
 
   EM(DocumentEE document, PC pc) {
     super(document, pc);

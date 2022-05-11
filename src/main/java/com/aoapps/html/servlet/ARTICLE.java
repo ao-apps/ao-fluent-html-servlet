@@ -42,7 +42,7 @@ import java.io.Writer;
  */
 public final class ARTICLE<
     PC extends SectioningContent<PC>
-> extends AnyARTICLE<DocumentEE, PC, ARTICLE<PC>, ARTICLE__<PC>, ARTICLE_c<PC>> {
+    > extends AnyARTICLE<DocumentEE, PC, ARTICLE<PC>, ARTICLE__<PC>, ARTICLE_c<PC>> {
 
   ARTICLE(DocumentEE document, PC pc) {
     super(document, pc);

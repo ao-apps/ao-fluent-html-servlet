@@ -40,12 +40,11 @@ import java.io.IOException;
  */
 public interface HTML_content<
     __ extends HTML_content<__>
-> extends AnyHTML_content<DocumentEE, __>,
+    > extends AnyHTML_content<DocumentEE, __>,
     //
     // Content models:
     //
-    ContentEE<__>
-{
+    ContentEE<__> {
   //
   // Factories:
   //

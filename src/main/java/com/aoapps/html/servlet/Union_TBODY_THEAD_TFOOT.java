@@ -47,7 +47,7 @@ import java.io.IOException;
  */
 public interface Union_TBODY_THEAD_TFOOT<
     __ extends Union_TBODY_THEAD_TFOOT<__>
-> extends AnyUnion_TBODY_THEAD_TFOOT<DocumentEE, __>,
+    > extends AnyUnion_TBODY_THEAD_TFOOT<DocumentEE, __>,
     //
     // Unions:
     //
@@ -57,8 +57,7 @@ public interface Union_TBODY_THEAD_TFOOT<
     // Content models:
     //
     // Inherited: ContentEE<__>
-    ScriptSupportingContent<__>
-{
+    ScriptSupportingContent<__> {
   //
   // Factories:
   //

@@ -41,12 +41,11 @@ import java.io.IOException;
  */
 public interface SectioningContent<
     __ extends SectioningContent<__>
-> extends AnySectioningContent<DocumentEE, __>,
+    > extends AnySectioningContent<DocumentEE, __>,
     //
     // Content models:
     //
-    ContentEE<__>
-{
+    ContentEE<__> {
   //
   // Factories:
   //

@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class OL<
     PC extends PalpableContent<PC>
-> extends AnyOL<DocumentEE, PC, OL<PC>, OL__<PC>, OL_c<PC>> {
+    > extends AnyOL<DocumentEE, PC, OL<PC>, OL__<PC>, OL_c<PC>> {
 
   OL(DocumentEE document, PC pc) {
     super(document, pc);

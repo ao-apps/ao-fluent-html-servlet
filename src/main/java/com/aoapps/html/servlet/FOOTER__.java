@@ -40,7 +40,7 @@ import com.aoapps.html.any.AnyFOOTER__;
  */
 public final class FOOTER__<
     PC extends PalpableContent<PC>
->
+    >
     extends AnyFOOTER__<DocumentEE, PC, FOOTER__<PC>>
     implements FlowContent<FOOTER__<PC>> {
 

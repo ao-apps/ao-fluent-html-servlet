@@ -41,7 +41,7 @@ import java.io.Writer;
 @SuppressWarnings("deprecation")
 public final class IMG<
     PC extends Union_Embedded_Interactive<PC>
-> extends AnyIMG<DocumentEE, PC, IMG<PC>> {
+    > extends AnyIMG<DocumentEE, PC, IMG<PC>> {
 
   IMG(DocumentEE document, PC pc) {
     super(document, pc);

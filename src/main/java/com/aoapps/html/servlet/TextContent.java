@@ -35,7 +35,7 @@ import com.aoapps.html.any.AnyTextContent;
 @SuppressWarnings("MarkerInterface")
 public interface TextContent<
     __ extends TextContent<__>
-> extends AnyTextContent<DocumentEE, __>,
+    > extends AnyTextContent<DocumentEE, __>,
     ContentEE<__> {
 
 }

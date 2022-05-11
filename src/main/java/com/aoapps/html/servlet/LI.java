@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class LI<
     PC extends ListContent<PC>
-> extends AnyLI<DocumentEE, PC, LI<PC>, LI__<PC>, LI_c<PC>> {
+    > extends AnyLI<DocumentEE, PC, LI<PC>, LI__<PC>, LI_c<PC>> {
 
   LI(DocumentEE document, PC pc) {
     super(document, pc);

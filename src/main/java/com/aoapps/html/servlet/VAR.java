@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class VAR<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyVAR<DocumentEE, PC, VAR<PC>, VAR__<PC>, VAR_c<PC>> {
+    > extends AnyVAR<DocumentEE, PC, VAR<PC>, VAR__<PC>, VAR_c<PC>> {
 
   VAR(DocumentEE document, PC pc) {
     super(document, pc);

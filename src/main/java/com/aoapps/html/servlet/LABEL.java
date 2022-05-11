@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class LABEL<
     PC extends Union_Interactive_Phrasing<PC>
-> extends AnyLABEL<DocumentEE, PC, LABEL<PC>, LABEL__<PC>, LABEL_c<PC>> {
+    > extends AnyLABEL<DocumentEE, PC, LABEL<PC>, LABEL__<PC>, LABEL_c<PC>> {
 
   LABEL(DocumentEE document, PC pc) {
     super(document, pc);

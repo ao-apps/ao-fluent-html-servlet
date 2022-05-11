@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class PARAM<
     PC extends OBJECT_content<PC>
-> extends AnyPARAM<DocumentEE, PC, PARAM<PC>> {
+    > extends AnyPARAM<DocumentEE, PC, PARAM<PC>> {
 
   PARAM(DocumentEE document, PC pc) {
     super(document, pc);

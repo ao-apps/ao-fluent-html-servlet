@@ -38,7 +38,7 @@ import com.aoapps.html.any.AnyDIV_content;
  */
 public interface DIV_content<
     __ extends DIV_content<__>
-> extends AnyDIV_content<DocumentEE, __>,
+    > extends AnyDIV_content<DocumentEE, __>,
     //
     // Unions:
     //
@@ -56,15 +56,15 @@ public interface DIV_content<
     //
     // Inherited: ContentEE<__>
     // Inherited: EmbeddedContent<__>
-    FlowContent<__>
-// Inherited: HeadingContent<__>
-// Inherited: InteractiveContent<__>
-// Inherited: PalpableContent<__>
-// Inherited: PhrasingContent<__>
-// Inherited: ScriptSupportingContent<__>
-// Inherited: SectioningContent<__>
-// Inherited: TextContent<__>
-{
+    FlowContent<__> {
+  // Inherited: HeadingContent<__>
+  // Inherited: InteractiveContent<__>
+  // Inherited: PalpableContent<__>
+  // Inherited: PhrasingContent<__>
+  // Inherited: ScriptSupportingContent<__>
+  // Inherited: SectioningContent<__>
+  // Inherited: TextContent<__>
+
   //
   // Factories:
   //

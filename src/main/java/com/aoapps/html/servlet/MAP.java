@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class MAP<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyMAP<DocumentEE, PC, MAP<PC>, MAP_c<PC>> {
+    > extends AnyMAP<DocumentEE, PC, MAP<PC>, MAP_c<PC>> {
 
   MAP(DocumentEE document, PC pc) {
     super(document, pc);

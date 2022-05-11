@@ -114,7 +114,7 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    * </p>
    */
   public static boolean getAutonli(ServletContext servletContext, ServletRequest request) {
-    return AUTONLI_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(__ -> getDefaultAutonli(servletContext));
+    return AUTONLI_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(name -> getDefaultAutonli(servletContext));
   }
   // </editor-fold>
 
@@ -189,7 +189,7 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
    * </p>
    */
   public static boolean getIndent(ServletContext servletContext, ServletRequest request) {
-    return INDENT_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(__ -> getDefaultIndent(servletContext));
+    return INDENT_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(name -> getDefaultIndent(servletContext));
   }
 
   // </editor-fold>
@@ -202,7 +202,8 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   //       Default new DocumentEE to settings and indentation depth of the last DocumentEE.
   //           Use default settings when no existing document, unless settings specified by caller then use them.
   //       Possibly re-use the existing DocumentEE when has the same out object - but this might cause unexpected interaction (nested code changing configuration affecting outer)
-  //       Caller would then need to release the DocumentEE, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves) - implements AutoCloseable for this?
+  //       Caller would then need to release the DocumentEE, which would remove it from the stack (and possibly all above it, in case they didn't remove themselves)
+  //           - implements AutoCloseable for this?
   //       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
   //           Sub-requests include semanticcms-core-servlet:capturePage along with ao-web-framework searches.
   //       Track at AnyDocumentEE level?

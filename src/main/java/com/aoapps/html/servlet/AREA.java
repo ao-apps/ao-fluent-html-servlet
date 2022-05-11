@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class AREA<
     PC extends PhrasingContent<PC>
-> extends AnyAREA<DocumentEE, PC, AREA<PC>> {
+    > extends AnyAREA<DocumentEE, PC, AREA<PC>> {
 
   AREA(DocumentEE document, PC pc) {
     super(document, pc);

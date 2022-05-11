@@ -50,7 +50,7 @@ public abstract class AnyHTMLEE<
     __ extends AnyHTMLEE__<D, PC, __>,
     // Would prefer "_c extends __ & Closeable<D, PC>", but "a type variable may not be followed by other bounds"
     _c extends AnyHTMLEE_c<D, PC, _c>
-> extends AnyHTML<D, PC, E, __, _c> {
+    > extends AnyHTML<D, PC, E, __, _c> {
 
   protected AnyHTMLEE(D document, PC pc) {
     super(document, pc);

@@ -40,7 +40,7 @@ import com.aoapps.html.any.AnyDATALIST_content;
  */
 public interface DATALIST_content<
     __ extends DATALIST_content<__>
-> extends AnyDATALIST_content<DocumentEE, __>,
+    > extends AnyDATALIST_content<DocumentEE, __>,
     //
     // Unions:
     //
@@ -57,10 +57,10 @@ public interface DATALIST_content<
     //
     // Inherited: ContentEE<__>
     // Inherited: EmbeddedContent<__>
-    PhrasingContent<__>
-// Inherited: ScriptSupportingContent<__>
-// Inherited: TextContent<__>
-{
+    PhrasingContent<__> {
+  // Inherited: ScriptSupportingContent<__>
+  // Inherited: TextContent<__>
+
   //
   // Factories:
   //

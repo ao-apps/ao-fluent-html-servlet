@@ -42,7 +42,7 @@ import java.io.Writer;
  */
 public final class NAV<
     PC extends SectioningContent<PC>
-> extends AnyNAV<DocumentEE, PC, NAV<PC>, NAV__<PC>, NAV_c<PC>> {
+    > extends AnyNAV<DocumentEE, PC, NAV<PC>, NAV__<PC>, NAV_c<PC>> {
 
   NAV(DocumentEE document, PC pc) {
     super(document, pc);

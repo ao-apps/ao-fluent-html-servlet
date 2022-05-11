@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class BODY<
     PC extends HTML_content<PC>
-> extends AnyBODY<DocumentEE, PC, BODY<PC>, BODY__<PC>, BODY_c<PC>> {
+    > extends AnyBODY<DocumentEE, PC, BODY<PC>, BODY__<PC>, BODY_c<PC>> {
 
   BODY(DocumentEE document, PC pc) {
     super(document, pc);

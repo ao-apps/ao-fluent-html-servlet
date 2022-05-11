@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class TITLE<
     PC extends MetadataContent<PC>
-> extends AnyTITLE<DocumentEE, PC, TITLE<PC>, TITLE__<PC>, TITLE_c<PC>> {
+    > extends AnyTITLE<DocumentEE, PC, TITLE<PC>, TITLE__<PC>, TITLE_c<PC>> {
 
   TITLE(DocumentEE document, PC pc) {
     super(document, pc);

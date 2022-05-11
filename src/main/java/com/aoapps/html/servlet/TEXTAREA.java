@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class TEXTAREA<
     PC extends Union_Interactive_Phrasing<PC>
-> extends AnyTEXTAREA<DocumentEE, PC, TEXTAREA<PC>, TEXTAREA__<PC>, TEXTAREA_c<PC>> {
+    > extends AnyTEXTAREA<DocumentEE, PC, TEXTAREA<PC>, TEXTAREA__<PC>, TEXTAREA_c<PC>> {
 
   TEXTAREA(DocumentEE document, PC pc) {
     super(document, pc);

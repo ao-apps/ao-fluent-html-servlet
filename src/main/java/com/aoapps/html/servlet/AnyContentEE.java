@@ -35,7 +35,7 @@ import java.io.IOException;
  */
 public interface AnyContentEE<
     __ extends AnyContentEE<__>
-> extends com.aoapps.html.servlet.any.AnyContentEE<DocumentEE, __>,
+    > extends com.aoapps.html.servlet.any.AnyContentEE<DocumentEE, __>,
     //
     // Unions:
     //
@@ -78,13 +78,13 @@ public interface AnyContentEE<
     // Inherited: OPTGROUP_content<__>
     SELECT_content<__>,
     TABLE_content<__>,
-    TR_content<__>
+    TR_content<__> {
 
-//
-// Others:
-//
-// Inherited: Whitespace
-{
+  //
+  // Others:
+  //
+  // Inherited: Whitespace
+
   //
   // Factories:
   //

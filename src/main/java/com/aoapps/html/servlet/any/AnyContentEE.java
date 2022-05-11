@@ -36,12 +36,11 @@ import java.io.IOException;
 public interface AnyContentEE<
     D  extends AnyDocumentEE<D>,
     __ extends AnyContentEE<D, __>
-> extends com.aoapps.html.any.AnyContent<D, __>,
+    > extends com.aoapps.html.any.AnyContent<D, __>,
     //
     // Content models:
     //
-    ContentEE<D, __>
-{
+    ContentEE<D, __> {
   //
   // Factories:
   //

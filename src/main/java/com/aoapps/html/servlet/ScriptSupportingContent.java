@@ -38,17 +38,17 @@ import java.io.IOException;
  */
 public interface ScriptSupportingContent<
     __ extends ScriptSupportingContent<__>
-> extends AnyScriptSupportingContent<DocumentEE, __>,
+    > extends AnyScriptSupportingContent<DocumentEE, __>,
     //
     // Unions:
     //
-    Union_COLGROUP_ScriptSupporting<__>
+    Union_COLGROUP_ScriptSupporting<__> {
 
-//
-// Content models:
-//
-// Inherited: ContentEE<__>
-{
+  //
+  // Content models:
+  //
+  // Inherited: ContentEE<__>
+
   //
   // Factories:
   //
@@ -72,6 +72,8 @@ public interface ScriptSupportingContent<
   }
 
   /**
+   * {@inheritDoc}
+   *
    * @param  <Ex>  An arbitrary exception type that may be thrown
    */
   @Override
@@ -89,6 +91,8 @@ public interface ScriptSupportingContent<
   }
 
   /**
+   * {@inheritDoc}
+   *
    * @param  <Ex>  An arbitrary exception type that may be thrown
    */
   @Override

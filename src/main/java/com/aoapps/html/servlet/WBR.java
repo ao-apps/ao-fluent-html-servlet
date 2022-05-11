@@ -42,7 +42,7 @@ import java.io.Writer;
  */
 public final class WBR<
     PC extends PhrasingContent<PC>
-> extends AnyWBR<DocumentEE, PC, WBR<PC>> {
+    > extends AnyWBR<DocumentEE, PC, WBR<PC>> {
 
   WBR(DocumentEE document, PC pc) {
     super(document, pc);

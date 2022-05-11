@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
+Copyright (C) 2022  AO Industries, Inc.
+    support@aoindustries.com
+    7262 Bull Pen Cir
+    Mobile, AL 36695
+
+This file is part of ao-fluent-html-servlet.
+
+ao-fluent-html-servlet is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+ao-fluent-html-servlet is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE suppressions PUBLIC
+  "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+  "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+
+  <!-- TODO: Complete Javadocs -->
+  <suppress checks="SummaryJavadoc" />
+
+  <!-- Using "Ex" for generic exceptions, since "E" if often "Element" -->
+  <suppress
+    checks="MethodTypeParameterName"
+    message="'Ex'"
+  />
+
+  <!-- Special Union_* types -->
+  <suppress
+    checks="(AbbreviationAsWordInName|TypeName)"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\](tests[/\\])?Union_[A-Za-z_]+\.java$"
+    message="'Union_[A-Za-z_]+'"
+  />
+
+  <!-- All-caps HTML tag types -->
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+\.java$"
+    message="'[A-Z]+'"
+  />
+
+  <!-- *__ and *_c types -->
+  <suppress
+    checks="(AbbreviationAsWordInName|TypeName)"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+[0-9]?(__|_c)\.java$"
+    message="'[A-Z]+[0-9]?(__|_c)'"
+  />
+  <suppress
+    checks="(AbbreviationAsWordInName|TypeName)"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]Any[A-Z]+[0-9]?(__|_c)\.java$"
+    message="'Any[A-Z]+[0-9]?(__|_c)'"
+  />
+
+  <!-- *_content and *_contentTest types -->
+  <suppress
+    checks="(AbbreviationAsWordInName|TypeName)"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+_content(Test)?\.java$"
+    message="'[A-Z]+_content(Test)?'"
+  />
+
+  <!-- elem__() element methods -->
+  <suppress
+    checks="MethodName"
+    message="'[a-z]+__'"
+  />
+
+  <!-- @param  <PC>  The parent content model this element is within -->
+  <suppress
+    checks="ClassTypeParameterName"
+    message="'PC'"
+  />
+
+  <!-- @param  <__>  This content model, which will be the parent content model of child elements -->
+  <suppress
+    checks="(ClassTypeParameterName|InterfaceTypeParameterName)"
+    message="'__'"
+  />
+
+  <!-- @param  <_c>  This content model as {@link Closeable}, which will be the parent content model of child elements -->
+  <suppress
+    checks="ClassTypeParameterName"
+    message="'_c'"
+  />
+
+  <!-- Will keep "EE" suffix for consistency with "Java EE" and "Jakarta EE" -->
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]AnyContentEE(Test)?\.java$"
+    message="'AnyContentEE(Test)?'"
+  />
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]ContentEE(Test)?\.java$"
+    message="'ContentEE(Test)?'"
+  />
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]DocumentEE(Test)?\.java$"
+    message="'DocumentEE(Test)?'"
+  />
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]AnyContentEE(Test)?\.java$"
+    message="'AnyContentEE(Test)?'"
+  />
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]AnyDocumentEE(Test)?\.java$"
+    message="'AnyDocumentEE(Test)?'"
+  />
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]AnyHTMLEE(__|_c)?\.java$"
+    message="'AnyHTMLEE(__|_c)?'"
+  />
+  <suppress
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]ContentEE(Test)?\.java$"
+    message="'ContentEE(Test)?'"
+  />
+
+</suppressions>

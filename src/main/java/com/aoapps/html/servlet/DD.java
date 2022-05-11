@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class DD<
     PC extends Union_DIV_DL<PC>
-> extends AnyDD<DocumentEE, PC, DD<PC>, DD__<PC>, DD_c<PC>> {
+    > extends AnyDD<DocumentEE, PC, DD<PC>, DD__<PC>, DD_c<PC>> {
 
   DD(DocumentEE document, PC pc) {
     super(document, pc);

@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class H5<
     PC extends HeadingContent<PC>
-> extends AnyH5<DocumentEE, PC, H5<PC>, H5__<PC>, H5_c<PC>> {
+    > extends AnyH5<DocumentEE, PC, H5<PC>, H5__<PC>, H5_c<PC>> {
 
   H5(DocumentEE document, PC pc) {
     super(document, pc);

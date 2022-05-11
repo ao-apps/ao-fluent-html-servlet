@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class U<
     PC extends Union_Palpable_Phrasing<PC>
-> extends AnyU<DocumentEE, PC, U<PC>, U__<PC>, U_c<PC>> {
+    > extends AnyU<DocumentEE, PC, U<PC>, U__<PC>, U_c<PC>> {
 
   U(DocumentEE document, PC pc) {
     super(document, pc);

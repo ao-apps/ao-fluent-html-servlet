@@ -40,7 +40,7 @@ import java.io.Writer;
  */
 public final class PRE<
     PC extends PalpableContent<PC>
-> extends AnyPRE<DocumentEE, PC, PRE<PC>, PRE__<PC>, PRE_c<PC>> {
+    > extends AnyPRE<DocumentEE, PC, PRE<PC>, PRE__<PC>, PRE_c<PC>> {
 
   PRE(DocumentEE document, PC pc) {
     super(document, pc);
