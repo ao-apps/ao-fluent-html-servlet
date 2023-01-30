@@ -129,9 +129,17 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
           -->
           <ignoreNonCompile>true</ignoreNonCompile>
           <usedDependencies>
-            <!-- Direct -->
-            <dependency>com.aoapps:ao-encoding</dependency><!-- Required for module-info.java -->
+            <!-- Javadoc-only -->
+            <dependency>com.aoapps:ao-encoding</dependency>
           </usedDependencies>
+          <!-- Workaround MDEP-791: https://issues.apache.org/jira/browse/MDEP-791 -->
+          <ignoredNonTestScopedDependencies>
+            <!--
+              In Maven 3, any dependency declared in Test Direct is removed from Transitive dependencies.
+              Ideally, we want ao-collections to exist in both Transitive and Test Direct.
+            -->
+            <ignoredNonTestScopedDependency>com.aoapps:ao-collections</ignoredNonTestScopedDependency>
+          </ignoredNonTestScopedDependencies>
         </configuration>
       </plugin>
       <!-- Java 1.8: see https://maven.apache.org/plugins/maven-compiler-plugin/examples/module-info.html -->
@@ -375,6 +383,8 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     </dependency>
     <dependency>
       <groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>
+      <!-- Javadoc-only -->
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId>
