@@ -23,7 +23,7 @@ Fluent Java DSL for high-performance HTML generation in a Servlet environment.
 * [Project Home](https://oss.aoapps.com/fluent-html/servlet/)
 * [Changelog](https://oss.aoapps.com/fluent-html/servlet/changelog)
 * [API Docs](https://oss.aoapps.com/fluent-html/servlet/apidocs/)
-* [Maven Central Repository](https://search.maven.org/artifact/com.aoapps/ao-fluent-html-servlet)
+* [Maven Central Repository](https://central.sonatype.com/search?namespace=com.aoapps&q=a%3Aao-fluent-html-servlet)
 * [GitHub](https://github.com/ao-apps/ao-fluent-html-servlet)
 
 ## Features
