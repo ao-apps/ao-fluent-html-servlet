@@ -125,10 +125,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
             https://issues.apache.org/jira/browse/MNG-1378
           -->
           <ignoreNonCompile>true</ignoreNonCompile>
-          <usedDependencies>
-            <!-- Javadoc-only -->
-            <dependency>com.aoapps:ao-encoding</dependency>
-          </usedDependencies>
           <!-- Workaround MDEP-791: https://issues.apache.org/jira/browse/MDEP-791 -->
           <ignoredNonTestScopedDependencies>
             <!--
@@ -399,8 +395,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     </dependency>
     <dependency>
       <groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>
-      <!-- Javadoc-only -->
-      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId>
