@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022, 2024  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -76,10 +76,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 
   /**
    * Registers the document autonli in effect for the request.
-   * <p>
-   * This does not change existing instances of {@link DocumentEE};
-   * it only affects the configuration of new instances.
-   * </p>
+   *
+   * <p>This does not change existing instances of {@link DocumentEE};
+   * it only affects the configuration of new instances.</p>
    */
   public static void setAutonli(ServletRequest request, Boolean autonli) {
     AUTONLI_REQUEST_ATTRIBUTE.context(request).set(autonli);
@@ -87,10 +86,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 
   /**
    * Replaces the document autonli in effect for the request.
-   * <p>
-   * This does not change existing instances of {@link DocumentEE};
-   * it only affects the configuration of new instances.
-   * </p>
+   *
+   * <p>This does not change existing instances of {@link DocumentEE};
+   * it only affects the configuration of new instances.</p>
    *
    * @return  The previous attribute value, if any
    */
@@ -104,14 +102,12 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   /**
    * Gets the document autonli in effect for the request, or {@linkplain #getDefaultAutonli(javax.servlet.ServletContext) the default}
    * when not yet {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) set}.
-   * <p>
-   * Once the default is resolved,
-   * {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.
-   * </p>
-   * <p>
-   * This does not change existing instances of {@link DocumentEE};
-   * it only affects the configuration of new instances.
-   * </p>
+   *
+   * <p>Once the default is resolved,
+   * {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
+   *
+   * <p>This does not change existing instances of {@link DocumentEE};
+   * it only affects the configuration of new instances.</p>
    */
   public static boolean getAutonli(ServletContext servletContext, ServletRequest request) {
     return AUTONLI_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(name -> getDefaultAutonli(servletContext));
@@ -151,10 +147,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 
   /**
    * Registers the document indent in effect for the request.
-   * <p>
-   * This does not change existing instances of {@link DocumentEE};
-   * it only affects the configuration of new instances.
-   * </p>
+   *
+   * <p>This does not change existing instances of {@link DocumentEE};
+   * it only affects the configuration of new instances.</p>
    */
   public static void setIndent(ServletRequest request, Boolean indent) {
     INDENT_REQUEST_ATTRIBUTE.context(request).set(indent);
@@ -162,10 +157,9 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 
   /**
    * Replaces the document indent in effect for the request.
-   * <p>
-   * This does not change existing instances of {@link DocumentEE};
-   * it only affects the configuration of new instances.
-   * </p>
+   *
+   * <p>This does not change existing instances of {@link DocumentEE};
+   * it only affects the configuration of new instances.</p>
    *
    * @return  The previous attribute value, if any
    */
@@ -179,14 +173,12 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   /**
    * Gets the document indent in effect for the request, or {@linkplain #getDefaultIndent(javax.servlet.ServletContext) the default}
    * when not yet {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) set}.
-   * <p>
-   * Once the default is resolved,
-   * {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.
-   * </p>
-   * <p>
-   * This does not change existing instances of {@link DocumentEE};
-   * it only affects the configuration of new instances.
-   * </p>
+   *
+   * <p>Once the default is resolved,
+   * {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
+   *
+   * <p>This does not change existing instances of {@link DocumentEE};
+   * it only affects the configuration of new instances.</p>
    */
   public static boolean getIndent(ServletContext servletContext, ServletRequest request) {
     return INDENT_REQUEST_ATTRIBUTE.context(request).computeIfAbsent(name -> getDefaultIndent(servletContext));
