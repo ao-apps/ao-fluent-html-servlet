@@ -29,17 +29,13 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId><version>0.7.0-POST-SNAPSHOT</version>
+  <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId><version>0.8.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <properties>
     <!-- Must be set to ${git.commit.time} for snapshots or ISO 8601 timestamp for releases. -->
     <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
     <module.name>com.aoapps.html.servlet</module.name>
-    <!-- Java 1.8 -->
-    <javase.version>1.8</javase.version>
-    <javase.release>8</javase.release>
-    <javadoc.link.javase>${javadoc.link.javase.8}</javadoc.link.javase>
 
     <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://oss.aoapps.com/">AO OSS</a>
 / <a target="${javadoc.target}" href="https://oss.aoapps.com/fluent-html/">Fluent HTML</a>
@@ -133,28 +129,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
           </ignoredNonTestScopedDependencies>
         </configuration>
       </plugin>
-      <!-- Java 1.8: see https://maven.apache.org/plugins/maven-compiler-plugin/examples/module-info.html -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId>
-        <executions>
-          <!-- compile everything to ensure module-info contains right entries -->
-          <execution>
-            <id>default-compile</id>
-            <configuration>
-              <release>9</release>
-            </configuration>
-          </execution>
-          <!-- recompile everything for target VM except the module-info.java -->
-          <execution>
-            <id>base-compile</id><goals><goal>compile</goal></goals>
-            <configuration>
-              <excludes>
-                <exclude>module-info.java</exclude>
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId>
         <configuration>
@@ -167,9 +141,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
         <configuration>
           <!-- Only show public docs, since this project is not intended to be extended. -->
           <show>public</show>
-          <!-- Java 1.8: generate future-proof modular javadocs -->
-          <source>11</source>
-          <release>11</release>
         </configuration>
       </plugin>
       <plugin>
@@ -344,7 +315,7 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
         <groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId><version>4.2.0${POST-SNAPSHOT}</version>
       </dependency>
       <dependency>
-        <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.8.0${POST-SNAPSHOT}</version>
+        <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.9.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
       </dependency>
       <dependency>
         <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId><version>5.7.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
@@ -370,7 +341,7 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
       <!-- javaee-web-api-bom: <groupId>javax.servlet.jsp</groupId><artifactId>javax.servlet.jsp-api</artifactId> -->
       <!-- Test Direct -->
       <dependency>
-        <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.8.0${POST-SNAPSHOT}</version><classifier>tests</classifier>
+        <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId><version>0.9.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version><classifier>tests</classifier>
       </dependency>
       <dependency>
         <groupId>org.apache.bcel</groupId><artifactId>bcel</artifactId><version>6.10.0</version>
