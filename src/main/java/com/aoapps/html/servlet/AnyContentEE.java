@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022, 2025  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -95,7 +95,9 @@ public interface AnyContentEE<
     @SuppressWarnings("unchecked")
     __ pc = (__) this;
     DocumentEE document = getDocument();
-    return new HTML<>(document, pc).writeOpen(document.getRawUnsafe(null));
+    HTML<__> e = new HTML<>(document, pc);
+    e.writeOpen(document.getRawUnsafe(null));
+    return e;
   }
 
   /**

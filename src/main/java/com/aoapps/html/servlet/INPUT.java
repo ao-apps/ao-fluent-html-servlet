@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021, 2022, 2023, 2024  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022, 2023, 2024, 2025  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -71,8 +71,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Dynamic<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -91,8 +91,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Button<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -111,8 +111,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Checkbox<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -133,8 +133,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Color<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -155,8 +155,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Date<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -177,8 +177,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.DatetimeLocal<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -199,8 +199,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Email<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -222,8 +222,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.File<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -242,8 +242,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Hidden<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -266,8 +266,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Image<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -288,8 +288,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Month<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -310,8 +310,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Number<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -330,8 +330,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Password<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -350,8 +350,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Radio<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -372,8 +372,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Range<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -392,8 +392,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Reset<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -414,8 +414,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Search<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -437,8 +437,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Submit<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -459,8 +459,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Tel<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -479,8 +479,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Text<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -501,8 +501,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Time<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -523,8 +523,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Url<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 
@@ -545,8 +545,8 @@ public final class INPUT {
 
     // Expose to this package, avoiding public to keep a clean API for optimal code assist
     @Override
-    protected INPUT.Week<PC> writeOpen(Writer unsafe) throws IOException {
-      return super.writeOpen(unsafe);
+    protected void writeOpen(Writer unsafe) throws IOException {
+      super.writeOpen(unsafe);
     }
   }
 }
