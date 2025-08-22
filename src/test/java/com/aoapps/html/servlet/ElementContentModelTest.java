@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2025  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -53,7 +53,7 @@ public class ElementContentModelTest {
     };
   }
 
-  static void testElementContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE> ... expected) {
+  static void testElementContentModels(Class<? extends ContentEE> clazz, Class<? extends ContentEE>... expected) {
     InheritanceTestHelper.testInterfaces(
         ContentEE.class,
         iface -> iface.getSimpleName().endsWith("_content"),
