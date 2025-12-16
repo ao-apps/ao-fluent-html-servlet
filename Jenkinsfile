@@ -36,10 +36,10 @@ def upstreamProjects = [
   // Direct
   'collections', // <groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
   'encoding', // <groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>
-  'encoding-servlet', // <groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId>
+  'encoding-servlet-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-encoding-servlet</artifactId>
   'fluent-html-any', // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-any</artifactId>
   'lang', // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
-  'servlet-util', // <groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId>
+  'servlet-util-javaee', // <groupId>com.aoapps</groupId><artifactId>ao-servlet-util</artifactId>
   // No Jenkins: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
 
   // Test Direct
