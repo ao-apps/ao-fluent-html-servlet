@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -25,8 +25,8 @@ package com.aoapps.html.servlet.any;
 
 import com.aoapps.html.any.AnyHTML;
 import com.aoapps.html.any.Closeable;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
-import javax.servlet.ServletResponse;
 
 /**
  * <ul>

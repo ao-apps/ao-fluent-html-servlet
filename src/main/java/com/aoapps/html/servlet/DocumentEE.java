@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021, 2022, 2024  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022, 2024, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -28,13 +28,13 @@ import com.aoapps.html.servlet.any.AnyDocumentEE;
 import com.aoapps.lang.Coercion;
 import com.aoapps.servlet.attribute.AttributeEE;
 import com.aoapps.servlet.attribute.ScopeEE;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * Fluent Java DSL for high-performance HTML generation in a Servlet environment.
@@ -100,11 +100,11 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   /**
-   * Gets the document autonli in effect for the request, or {@linkplain #getDefaultAutonli(javax.servlet.ServletContext) the default}
-   * when not yet {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) set}.
+   * Gets the document autonli in effect for the request, or {@linkplain #getDefaultAutonli(jakarta.servlet.ServletContext) the default}
+   * when not yet {@linkplain #setAutonli(jakarta.servlet.ServletRequest, java.lang.Boolean) set}.
    *
    * <p>Once the default is resolved,
-   * {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
+   * {@linkplain #setAutonli(jakarta.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
    *
    * <p>This does not change existing instances of {@link DocumentEE};
    * it only affects the configuration of new instances.</p>
@@ -171,11 +171,11 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   /**
-   * Gets the document indent in effect for the request, or {@linkplain #getDefaultIndent(javax.servlet.ServletContext) the default}
-   * when not yet {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) set}.
+   * Gets the document indent in effect for the request, or {@linkplain #getDefaultIndent(jakarta.servlet.ServletContext) the default}
+   * when not yet {@linkplain #setIndent(jakarta.servlet.ServletRequest, java.lang.Boolean) set}.
    *
    * <p>Once the default is resolved,
-   * {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
+   * {@linkplain #setIndent(jakarta.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
    *
    * <p>This does not change existing instances of {@link DocumentEE};
    * it only affects the configuration of new instances.</p>
@@ -231,15 +231,15 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default indentation settings}.
    *
    * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
    *              with {@code encoder = null}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
+   * @see  #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #DocumentEE(jakarta.servlet.ServletContext, jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
    */
   public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
     this(
@@ -260,12 +260,12 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default indentation settings}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
+   * @see  #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #DocumentEE(jakarta.servlet.ServletContext, jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, boolean, boolean)
    */
   public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
     this(
@@ -287,15 +287,15 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default indentation settings}.
    *
    * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
    *              with {@code encoder = null}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
+   * @see  #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #DocumentEE(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
    */
   public DocumentEE(HttpServletRequest request, HttpServletResponse response, Writer out) {
     this(request.getServletContext(), request, response, out);
@@ -313,12 +313,12 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest) current or default indentation settings}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
+   * @see  #getAutonli(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #getIndent(jakarta.servlet.ServletContext, jakarta.servlet.ServletRequest)
+   * @see  #DocumentEE(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse, boolean, boolean)
    */
   public DocumentEE(HttpServletRequest request, HttpServletResponse response) throws IOException {
     this(request.getServletContext(), request, response, response.getWriter());
