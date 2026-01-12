@@ -62,11 +62,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]([A-Za-z]*Content|[A-Z]+[0-9]?)(__|_c)\.java$"
     message="'([A-Za-z]*Content|[A-Z]+[0-9]?)(__|_c)'"
   />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]Any[A-Z]+[0-9]?(__|_c)\.java$"
-    message="'Any[A-Z]+[0-9]?(__|_c)'"
-  />
 
   <!-- *_content types -->
   <suppress
@@ -95,7 +90,7 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
   <!-- *Content(Model)?_cTest types -->
   <suppress
     checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\](any[/\\])?tests[/\\]([A-Z][A-Za-z]+)?Content(Model)?_cTest\.java$"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]([A-Z][A-Za-z]+)?Content(Model)?_cTest\.java$"
     message="'([A-Z][A-Za-z]+)?Content(Model)?_cTest'"
   />
 
@@ -141,26 +136,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
   />
   <suppress
     checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]AnyContentEE(_c)?\.java$"
-    message="'AnyContentEE(_c)?'"
-  />
-  <suppress
-    checks="AbbreviationAsWordInName"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]AnyDocumentEE\.java$"
-    message="'AnyDocumentEE'"
-  />
-  <suppress
-    checks="AbbreviationAsWordInName"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]AnyHTMLEE(__|_c)?\.java$"
-    message="'AnyHTMLEE(__|_c)?'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]ContentEE(_c)?\.java$"
-    message="'ContentEE(_c)?'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
     files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]AnyContentEE(_c)?Test\.java$"
     message="'AnyContentEE(_c)?Test'"
   />
@@ -173,21 +148,6 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     checks="AbbreviationAsWordInName"
     files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]DocumentEETest\.java$"
     message="'DocumentEETest'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]tests[/\\]AnyContentEE(_c)?Test\.java$"
-    message="'AnyContentEE(_c)?Test'"
-  />
-  <suppress
-    checks="AbbreviationAsWordInName"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]tests[/\\]AnyDocumentEETest\.java$"
-    message="'AnyDocumentEETest'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]any[/\\]tests[/\\]ContentEE(_c)?Test\.java$"
-    message="'ContentEE(_c)?Test'"
   />
 
 </suppressions>

@@ -37,7 +37,7 @@ public interface AnyContentEE_c<
     PC extends ContentEE<PC>,
     _c extends AnyContentEE_c<PC, _c>
     >
-    extends com.aoapps.html.servlet.any.AnyContentEE_c<DocumentEE, PC, _c>,
+    extends com.aoapps.html.any.AnyContent_c<DocumentEE, PC, _c>,
     AnyContentEE<_c>,
     //
     // Unions:

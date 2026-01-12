@@ -34,7 +34,7 @@ import org.junit.Test;
  *
  * @author  AO Industries, Inc.
  */
-public class ContentEE_cTest extends com.aoapps.html.servlet.any.tests.ContentEE_cTest {
+public class ContentEE_cTest extends com.aoapps.html.any.tests.Content_cTest {
 
   public ContentEE_cTest() {
     super(ContentEE_c.class);

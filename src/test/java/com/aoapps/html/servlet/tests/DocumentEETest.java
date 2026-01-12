@@ -23,10 +23,10 @@
 
 package com.aoapps.html.servlet.tests;
 
+import com.aoapps.html.any.tests.AnyDocumentTest;
 import com.aoapps.html.any.tests.InheritanceTestHelper;
 import com.aoapps.html.servlet.ContentEE;
 import com.aoapps.html.servlet.DocumentEE;
-import com.aoapps.html.servlet.any.tests.AnyDocumentEETest;
 import org.junit.Test;
 
 /**
@@ -34,7 +34,7 @@ import org.junit.Test;
  *
  * @author  AO Industries, Inc.
  */
-public class DocumentEETest extends AnyDocumentEETest {
+public class DocumentEETest extends AnyDocumentTest {
 
   public DocumentEETest() {
     super(DocumentEE.class);

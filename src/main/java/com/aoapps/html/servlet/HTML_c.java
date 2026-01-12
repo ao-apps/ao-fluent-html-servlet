@@ -23,7 +23,7 @@
 
 package com.aoapps.html.servlet;
 
-import com.aoapps.html.servlet.any.AnyHTMLEE_c;
+import com.aoapps.html.any.AnyHTML_c;
 
 /**
  * <ul>
@@ -39,7 +39,7 @@ import com.aoapps.html.servlet.any.AnyHTMLEE_c;
 public final class HTML_c<
     PC extends ContentEE<PC>
     >
-    extends AnyHTMLEE_c<DocumentEE, PC, HTML_c<PC>>
+    extends AnyHTML_c<DocumentEE, PC, HTML_c<PC>>
     implements HTML_content_c<PC, HTML_c<PC>> {
 
   HTML_c(HTML<PC> element) {
