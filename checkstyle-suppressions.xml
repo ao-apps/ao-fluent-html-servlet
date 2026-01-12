@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
-Copyright (C) 2022, 2023, 2024, 2026  AO Industries, Inc.
+Copyright (C) 2022, 2023, 2024  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -59,39 +59,15 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
   <!-- *__ and *_c types -->
   <suppress
     checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]([A-Za-z]*Content|[A-Z]+[0-9]?)(__|_c)\.java$"
-    message="'([A-Za-z]*Content|[A-Z]+[0-9]?)(__|_c)'"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+[0-9]?(__|_c)\.java$"
+    message="'[A-Z]+[0-9]?(__|_c)'"
   />
 
-  <!-- *_content types -->
+  <!-- *_content and *_contentTest types -->
   <suppress
     checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+_content\.java$"
-    message="'[A-Z]+_content'"
-  />
-  <!-- *content_c types -->
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+_content_c\.java$"
-    message="'[A-Z]+_content_c'"
-  />
-  <!-- *_contentTest types -->
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\][A-Z]+_contentTest\.java$"
-    message="'[A-Z]+_contentTest'"
-  />
-  <!-- *_content_cTest types -->
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\][A-Z]+_content_cTest\.java$"
-    message="'[A-Z]+_content_cTest'"
-  />
-  <!-- *Content(Model)?_cTest types -->
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]([A-Z][A-Za-z]+)?Content(Model)?_cTest\.java$"
-    message="'([A-Z][A-Za-z]+)?Content(Model)?_cTest'"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\][A-Z]+_content(Test)?\.java$"
+    message="'[A-Z]+_content(Test)?'"
   />
 
   <!-- elem__() element methods -->
@@ -102,7 +78,7 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
 
   <!-- @param  <PC>  The parent content model this element is within -->
   <suppress
-    checks="(ClassTypeParameterName|InterfaceTypeParameterName)"
+    checks="ClassTypeParameterName"
     message="'PC'"
   />
 
@@ -114,40 +90,25 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
 
   <!-- @param  <_c>  This content model as {@link Closeable}, which will be the parent content model of child elements -->
   <suppress
-    checks="(ClassTypeParameterName|InterfaceTypeParameterName)"
+    checks="ClassTypeParameterName"
     message="'_c'"
   />
 
   <!-- Will keep "EE" suffix for consistency with "Java EE" and "Jakarta EE" -->
   <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]AnyContentEE(_c)?\.java$"
-    message="'AnyContentEE(_c)?'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]ContentEE(_c)?\.java$"
-    message="'ContentEE(_c)?'"
+    checks="AbbreviationAsWordInName"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]AnyContentEE(Test)?\.java$"
+    message="'AnyContentEE(Test)?'"
   />
   <suppress
     checks="AbbreviationAsWordInName"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]DocumentEE\.java$"
-    message="'DocumentEE'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]AnyContentEE(_c)?Test\.java$"
-    message="'AnyContentEE(_c)?Test'"
-  />
-  <suppress
-    checks="(AbbreviationAsWordInName|TypeName)"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]ContentEE(_c)?Test\.java$"
-    message="'ContentEE(_c)?Test'"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]ContentEE(Test)?\.java$"
+    message="'ContentEE(Test)?'"
   />
   <suppress
     checks="AbbreviationAsWordInName"
-    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]tests[/\\]DocumentEETest\.java$"
-    message="'DocumentEETest'"
+    files="[/\\]com[/\\]aoapps[/\\]html[/\\]servlet[/\\]DocumentEE(Test)?\.java$"
+    message="'DocumentEE(Test)?'"
   />
 
 </suppressions>

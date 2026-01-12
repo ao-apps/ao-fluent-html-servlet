@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -42,7 +42,7 @@ public final class PROGRESS_c<
     PC extends Union_Palpable_Phrasing<PC>
     >
     extends AnyPROGRESS_c<DocumentEE, PC, PROGRESS_c<PC>>
-    implements PhrasingContent_c<PC, PROGRESS_c<PC>> {
+    implements PhrasingContent<PROGRESS_c<PC>> {
 
   PROGRESS_c(PROGRESS<PC> element) {
     super(element);

@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -40,7 +40,7 @@ public final class TBODY_c<
     PC extends TABLE_content<PC>
     >
     extends AnyTBODY_c<DocumentEE, PC, TBODY_c<PC>>
-    implements Union_TBODY_THEAD_TFOOT_c<PC, TBODY_c<PC>> {
+    implements Union_TBODY_THEAD_TFOOT<TBODY_c<PC>> {
 
   TBODY_c(TBODY<PC> element) {
     super(element);
