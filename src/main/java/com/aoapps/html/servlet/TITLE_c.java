@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2022  AO Industries, Inc.
+ * Copyright (C) 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -40,7 +40,7 @@ public final class TITLE_c<
     PC extends MetadataContent<PC>
     >
     extends AnyTITLE_c<DocumentEE, PC, TITLE_c<PC>>
-    implements TextContent<TITLE_c<PC>> {
+    implements TextContent_c<PC, TITLE_c<PC>> {
 
   TITLE_c(TITLE<PC> element) {
     super(element);

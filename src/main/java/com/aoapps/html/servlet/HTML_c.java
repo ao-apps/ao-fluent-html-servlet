@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -40,7 +40,7 @@ public final class HTML_c<
     PC extends ContentEE<PC>
     >
     extends AnyHTMLEE_c<DocumentEE, PC, HTML_c<PC>>
-    implements HTML_content<HTML_c<PC>> {
+    implements HTML_content_c<PC, HTML_c<PC>> {
 
   HTML_c(HTML<PC> element) {
     super(element);
