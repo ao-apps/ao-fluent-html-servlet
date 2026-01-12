@@ -24,7 +24,7 @@
 package com.aoapps.html.servlet;
 
 import com.aoapps.encoding.servlet.EncodingContextEE;
-import com.aoapps.html.servlet.any.AnyDocumentEE;
+import com.aoapps.html.any.AnyDocument;
 import com.aoapps.lang.Coercion;
 import com.aoapps.servlet.attribute.AttributeEE;
 import com.aoapps.servlet.attribute.ScopeEE;
@@ -41,7 +41,7 @@ import java.io.Writer;
  *
  * @author  AO Industries, Inc.
  */
-public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyContentEE<DocumentEE> {
+public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyContentEE<DocumentEE> {
 
   // <editor-fold desc="Automatic Newline and Indentation">
   /**
@@ -186,6 +186,8 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
 
   // </editor-fold>
 
+  protected final HttpServletResponse response;
+
   /**
    * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
    *              with {@code encoder = null}.
@@ -198,18 +200,14 @@ public final class DocumentEE extends AnyDocumentEE<DocumentEE> implements AnyCo
   //           - implements AutoCloseable for this?
   //       Sub-requests would need to reset the state fully, which could be done by removing the stack, then restoring after subrequest.
   //           Sub-requests include semanticcms-core-servlet:capturePage along with ao-web-framework searches.
-  //       Track at AnyDocumentEE level?
   public DocumentEE(
       HttpServletResponse response,
       EncodingContextEE encodingContext,
       Writer out,
       boolean autonli, boolean indent
   ) {
-    super(
-        response,
-        encodingContext,
-        out
-    );
+    super(encodingContext, out);
+    this.response = response;
     setAutonli(autonli);
     setIndent(indent);
   }

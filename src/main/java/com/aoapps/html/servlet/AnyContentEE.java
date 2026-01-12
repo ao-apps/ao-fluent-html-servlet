@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2019, 2020, 2021, 2022, 2025  AO Industries, Inc.
+ * Copyright (C) 2019, 2020, 2021, 2022, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -35,7 +35,7 @@ import java.io.IOException;
  */
 public interface AnyContentEE<
     __ extends AnyContentEE<__>
-    > extends com.aoapps.html.servlet.any.AnyContentEE<DocumentEE, __>,
+    > extends com.aoapps.html.any.AnyContent<DocumentEE, __>,
     //
     // Unions:
     //
@@ -229,7 +229,6 @@ public interface AnyContentEE<
    * {@inheritDoc}
    *
    * @param  <Ex>  An arbitrary exception type that may be thrown
-   *              it is recommended to always use <code>&lt;tbody&gt;</code>.
    */
   @Override
   @SuppressWarnings("deprecation")

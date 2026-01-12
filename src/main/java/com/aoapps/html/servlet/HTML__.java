@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -23,7 +23,7 @@
 
 package com.aoapps.html.servlet;
 
-import com.aoapps.html.servlet.any.AnyHTMLEE__;
+import com.aoapps.html.any.AnyHTML__;
 
 /**
  * <ul>
@@ -39,7 +39,7 @@ import com.aoapps.html.servlet.any.AnyHTMLEE__;
 public final class HTML__<
     PC extends ContentEE<PC>
     >
-    extends AnyHTMLEE__<DocumentEE, PC, HTML__<PC>>
+    extends AnyHTML__<DocumentEE, PC, HTML__<PC>>
     implements HTML_content<HTML__<PC>> {
 
   HTML__(HTML<PC> element) {

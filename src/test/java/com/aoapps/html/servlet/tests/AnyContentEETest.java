@@ -33,7 +33,7 @@ import org.junit.Test;
  *
  * @author  AO Industries, Inc.
  */
-public class AnyContentEETest extends com.aoapps.html.servlet.any.tests.AnyContentEETest {
+public class AnyContentEETest extends com.aoapps.html.any.tests.AnyContentTest {
 
   public AnyContentEETest() {
     super(AnyContentEE.class);

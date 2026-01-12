@@ -22,7 +22,6 @@
  */
 module com.aoapps.html.servlet {
   exports com.aoapps.html.servlet;
-  exports com.aoapps.html.servlet.any;
   // Direct
   requires com.aoapps.collections; // <groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
   requires com.aoapps.encoding; // <groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>

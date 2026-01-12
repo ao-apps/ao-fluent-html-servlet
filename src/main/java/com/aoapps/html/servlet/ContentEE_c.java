@@ -41,6 +41,6 @@ public interface ContentEE_c<
     PC extends ContentEE<PC>,
     _c extends ContentEE_c<PC, _c>
     >
-    extends com.aoapps.html.servlet.any.ContentEE_c<DocumentEE, PC, _c>,
+    extends com.aoapps.html.any.Content_c<DocumentEE, PC, _c>,
     ContentEE<_c> {
 }

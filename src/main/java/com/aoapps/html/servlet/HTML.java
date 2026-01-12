@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022, 2025  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -23,7 +23,8 @@
 
 package com.aoapps.html.servlet;
 
-import com.aoapps.html.servlet.any.AnyHTMLEE;
+import com.aoapps.html.any.AnyHTML;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.io.Writer;
 
@@ -40,7 +41,7 @@ import java.io.Writer;
  */
 public final class HTML<
     PC extends ContentEE<PC>
-    > extends AnyHTMLEE<DocumentEE, PC, HTML<PC>, HTML__<PC>, HTML_c<PC>> {
+    > extends AnyHTML<DocumentEE, PC, HTML<PC>, HTML__<PC>, HTML_c<PC>> {
 
   HTML(DocumentEE document, PC pc) {
     super(document, pc);
@@ -60,5 +61,15 @@ public final class HTML<
   @Override
   protected HTML_c<PC> new_c() {
     return new HTML_c<>(this);
+  }
+
+  /**
+   * Adds a lang attribute based on the {@linkplain ServletResponse#getLocale() response locale}.
+   */
+  public HTML<PC> lang() throws IOException {
+    // TODO: Add getLocale() to EncodingContext, and move this method to AnyDocument?
+    //       This might also tie into the idea of automatic lang attributes where language changed
+    //       Have to decide to use response locale (probably not since cannot change after committed?), ThreadLocale, or other.
+    return lang(document.response.getLocale());
   }
 }
