@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -40,7 +40,7 @@ public final class DT_c<
     PC extends Union_DIV_DL<PC>
     >
     extends AnyDT_c<DocumentEE, PC, DT_c<PC>>
-    implements FlowContent<DT_c<PC>> {
+    implements FlowContent_c<PC, DT_c<PC>> {
 
   DT_c(DT<PC> element) {
     super(element);

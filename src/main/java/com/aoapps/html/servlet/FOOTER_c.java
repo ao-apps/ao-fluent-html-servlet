@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -42,7 +42,7 @@ public final class FOOTER_c<
     PC extends PalpableContent<PC>
     >
     extends AnyFOOTER_c<DocumentEE, PC, FOOTER_c<PC>>
-    implements FlowContent<FOOTER_c<PC>> {
+    implements FlowContent_c<PC, FOOTER_c<PC>> {
 
   FOOTER_c(FOOTER<PC> element) {
     super(element);

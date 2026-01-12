@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -42,7 +42,7 @@ public final class NAV_c<
     PC extends SectioningContent<PC>
     >
     extends AnyNAV_c<DocumentEE, PC, NAV_c<PC>>
-    implements FlowContent<NAV_c<PC>> {
+    implements FlowContent_c<PC, NAV_c<PC>> {
 
   NAV_c(NAV<PC> element) {
     super(element);

@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -40,7 +40,7 @@ public final class OL_c<
     PC extends PalpableContent<PC>
     >
     extends AnyOL_c<DocumentEE, PC, OL_c<PC>>
-    implements ListContent<OL_c<PC>> {
+    implements ListContent_c<PC, OL_c<PC>> {
 
   OL_c(OL<PC> element) {
     super(element);
