@@ -1,6 +1,6 @@
 /*
  * ao-fluent-html-servlet - Fluent Java DSL for high-performance HTML generation in a Servlet environment.
- * Copyright (C) 2021, 2022, 2026  AO Industries, Inc.
+ * Copyright (C) 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -40,7 +40,7 @@ public final class TABLE_c<
     PC extends PalpableContent<PC>
     >
     extends AnyTABLE_c<DocumentEE, PC, TABLE_c<PC>>
-    implements TABLE_content_c<PC, TABLE_c<PC>> {
+    implements TABLE_content<TABLE_c<PC>> {
 
   TABLE_c(TABLE<PC> element) {
     super(element);

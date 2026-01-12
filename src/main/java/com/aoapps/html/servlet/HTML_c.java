@@ -40,7 +40,7 @@ public final class HTML_c<
     PC extends ContentEE<PC>
     >
     extends AnyHTML_c<DocumentEE, PC, HTML_c<PC>>
-    implements HTML_content_c<PC, HTML_c<PC>> {
+    implements HTML_content<HTML_c<PC>> {
 
   HTML_c(HTML<PC> element) {
     super(element);
