@@ -52,7 +52,7 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
 
   /**
    * Determines the default document autonli by first checking for {@linkplain ServletContext#getInitParameter(java.lang.String) context-param}
-   * of {@link #AUTONLI_INIT_PARAM}, then using {@code false} when unspecified or "auto".
+   * of {@link DocumentEE#AUTONLI_INIT_PARAM}, then using {@code false} when unspecified or "auto".
    */
   public static boolean getDefaultAutonli(ServletContext servletContext) {
     String initParam = servletContext.getInitParameter(AUTONLI_INIT_PARAM);
@@ -100,11 +100,11 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
   }
 
   /**
-   * Gets the document autonli in effect for the request, or {@linkplain #getDefaultAutonli(javax.servlet.ServletContext) the default}
-   * when not yet {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) set}.
+   * Gets the document autonli in effect for the request, or {@linkplain DocumentEE#getDefaultAutonli(javax.servlet.ServletContext) the default}
+   * when not yet {@linkplain DocumentEE#setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) set}.
    *
    * <p>Once the default is resolved,
-   * {@linkplain #setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
+   * {@linkplain DocumentEE#setAutonli(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
    *
    * <p>This does not change existing instances of {@link DocumentEE};
    * it only affects the configuration of new instances.</p>
@@ -123,7 +123,7 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
 
   /**
    * Determines the default document indent by first checking for {@linkplain ServletContext#getInitParameter(java.lang.String) context-param}
-   * of {@link #INDENT_INIT_PARAM}, then using {@code false} when unspecified or "auto".
+   * of {@link DocumentEE#INDENT_INIT_PARAM}, then using {@code false} when unspecified or "auto".
    */
   public static boolean getDefaultIndent(ServletContext servletContext) {
     String initParam = servletContext.getInitParameter(INDENT_INIT_PARAM);
@@ -171,11 +171,11 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
   }
 
   /**
-   * Gets the document indent in effect for the request, or {@linkplain #getDefaultIndent(javax.servlet.ServletContext) the default}
-   * when not yet {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) set}.
+   * Gets the document indent in effect for the request, or {@linkplain DocumentEE#getDefaultIndent(javax.servlet.ServletContext) the default}
+   * when not yet {@linkplain DocumentEE#setIndent(javax.servlet.ServletRequest, java.lang.Boolean) set}.
    *
    * <p>Once the default is resolved,
-   * {@linkplain #setIndent(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
+   * {@linkplain DocumentEE#setIndent(javax.servlet.ServletRequest, java.lang.Boolean) sets the request attribute}.</p>
    *
    * <p>This does not change existing instances of {@link DocumentEE};
    * it only affects the configuration of new instances.</p>
@@ -229,15 +229,15 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
    *
    * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
    *              with {@code encoder = null}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
+   * @see  DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
    */
   public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Writer out) {
     this(
@@ -258,12 +258,12 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
+   * @see  DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#DocumentEE(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
    */
   public DocumentEE(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response) throws IOException {
     this(
@@ -285,15 +285,15 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
    *
    * @param  out  Will be through {@link Coercion#optimize(java.io.Writer, com.aoapps.lang.io.Encoder)}
    *              with {@code encoder = null}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
+   * @see  DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.io.Writer, boolean, boolean)
    */
   public DocumentEE(HttpServletRequest request, HttpServletResponse response, Writer out) {
     this(request.getServletContext(), request, response, out);
@@ -311,12 +311,12 @@ public final class DocumentEE extends AnyDocument<DocumentEE> implements AnyCont
   }
 
   /**
-   * Uses the {@linkplain #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
-   * and {@linkplain #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
+   * Uses the {@linkplain DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default autonli settings}
+   * and {@linkplain DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest) current or default indentation settings}.
    *
-   * @see  #getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
-   * @see  #DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
+   * @see  DocumentEE#getAutonli(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#getIndent(javax.servlet.ServletContext, javax.servlet.ServletRequest)
+   * @see  DocumentEE#DocumentEE(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, boolean, boolean)
    */
   public DocumentEE(HttpServletRequest request, HttpServletResponse response) throws IOException {
     this(request.getServletContext(), request, response, response.getWriter());
