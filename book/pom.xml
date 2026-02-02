@@ -29,12 +29,12 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet-book</artifactId><version>0.9.0</version>
+  <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet-book</artifactId><version>0.9.0-POST-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <properties>
     <!-- Must be set to ${git.commit.time} for snapshots or ISO 8601 timestamp for releases. -->
-    <project.build.outputTimestamp>2026-02-02T12:35:02Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
     <module.name>com.aoapps.html.servlet.book</module.name>
     <subproject.subpath>book/</subproject.subpath>
     <!-- Java 17 -->
@@ -87,7 +87,7 @@ along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
     <connection>scm:git:git://github.com/ao-apps/ao-fluent-html-servlet.git</connection>
     <developerConnection>scm:git:git@github.com:ao-apps/ao-fluent-html-servlet.git</developerConnection>
     <url>https://github.com/ao-apps/ao-fluent-html-servlet</url>
-    <tag>ao-fluent-html-servlet-book-0.9.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
