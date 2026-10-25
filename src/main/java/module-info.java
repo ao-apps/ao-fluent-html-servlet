@@ -21,7 +21,6 @@
  * along with ao-fluent-html-servlet.  If not, see <https://www.gnu.org/licenses/>.
  */
 module com.aoapps.html.servlet {
-  exports com.aoapps.html.servlet;
   // Direct
   requires com.aoapps.collections; // <groupId>com.aoapps</groupId><artifactId>ao-collections</artifactId>
   requires com.aoapps.encoding; // <groupId>com.aoapps</groupId><artifactId>ao-encoding</artifactId>
@@ -32,4 +31,6 @@ module com.aoapps.html.servlet {
   requires jakarta.servlet; // <groupId>jakarta.servlet</groupId><artifactId>jakarta.servlet-api</artifactId>
   // Java SE
   requires java.desktop;
+
+  exports com.aoapps.html.servlet;
 }
